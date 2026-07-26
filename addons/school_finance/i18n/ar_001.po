@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 19.0-20260630\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-26 01:57+0000\n"
+"POT-Creation-Date: 2026-07-26 04:11+0000\n"
 "PO-Revision-Date: 2026-07-26 01:57+0000\n"
 "Last-Translator: KhaledElG3ndy\n"
 "Language-Team: Arabic\n"
@@ -80,8 +80,7 @@ msgstr "رمز ولي الأمر مطلوب لكل ولي أمر."
 
 #. module: school_finance
 #: model_terms:ir.ui.view,arch_db:school_finance.view_account_move_reversal_school_finance
-msgid ""
-"A reason is mandatory when creating a credit note for a school fee invoice."
+msgid "A reason is mandatory when creating a credit note for a school fee invoice."
 msgstr "يجب إدخال سبب عند إنشاء إشعار دائن لفاتورة رسوم مدرسية."
 
 #. module: school_finance
@@ -156,14 +155,28 @@ msgid "Account Move Reversal"
 msgstr "عكس حركة الحساب"
 
 #. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Accounting intelligence"
+msgstr "الرؤية المحاسبية"
+
+#. module: school_finance
 #: model:ir.model.fields,help:school_finance.field_account_bank_statement_line__school_collection_residual
 #: model:ir.model.fields,help:school_finance.field_account_move__school_collection_residual
-msgid ""
-"Accounting residual less linked payments that are still awaiting bank/cash "
-"matching in Odoo 19."
-msgstr ""
-"الرصيد المحاسبي المتبقي بعد خصم الدفعات المرتبطة التي ما زالت بانتظار "
-"المطابقة البنكية/النقدية في أودو 19."
+msgid "Accounting residual less linked payments that are still awaiting bank/cash matching in Odoo 19."
+msgstr "الرصيد المحاسبي المتبقي بعد خصم الدفعات المرتبطة التي ما زالت بانتظار المطابقة البنكية/النقدية في أودو 19."
+
+#. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Accounting shortcuts"
+msgstr "اختصارات المحاسبة"
+
+#. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Accounting trends"
+msgstr "الاتجاهات المحاسبية"
 
 #. module: school_finance
 #: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__message_needaction
@@ -205,6 +218,12 @@ msgid "Activity Type Icon"
 msgstr "أيقونة نوع النشاط"
 
 #. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Actual"
+msgstr "الفعلي"
+
+#. module: school_finance
 #. odoo-python
 #: code:addons/school_finance/models/fee_batch.py:0
 msgid "Add at least one fee line."
@@ -212,9 +231,14 @@ msgstr "أضف بند رسوم واحدًا على الأقل."
 
 #. module: school_finance
 #: model_terms:ir.ui.view,arch_db:school_finance.view_account_payment_form_school_finance
-msgid ""
-"Add payment proof using the standard attachment control in the chatter."
+msgid "Add payment proof using the standard attachment control in the chatter."
 msgstr "أرفق إثبات الدفع باستخدام أداة المرفقات القياسية في سجل المحادثات."
+
+#. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "All cost centers"
+msgstr "جميع مراكز التكلفة"
 
 #. module: school_finance
 #: model:ir.model.fields.selection,name:school_finance.selection__res_company__school_cash_negative_policy__allow
@@ -227,11 +251,23 @@ msgid "Analytic Cost Center"
 msgstr "مركز التكلفة التحليلي"
 
 #. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Analytic cost center"
+msgstr "مركز التكلفة التحليلي"
+
+#. module: school_finance
 #: model:ir.model.fields.selection,name:school_finance.selection__account_move__school_term__annual
 #: model:ir.model.fields.selection,name:school_finance.selection__school_fee_batch__term__annual
 #: model:ir.model.fields.selection,name:school_finance.selection__school_fee_type__frequency__annual
 msgid "Annual"
 msgstr "سنوي"
+
+#. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Apply"
+msgstr "تطبيق"
 
 #. module: school_finance
 #: model:ir.model.fields,field_description:school_finance.field_account_asset_asset__school_approved_date
@@ -316,6 +352,14 @@ msgid "Asset/Revenue Recognition"
 msgstr "إثبات الأصل/الإيراد"
 
 #. module: school_finance
+#. odoo-javascript
+#. odoo-python
+#: code:addons/school_finance/models/accounting_overview.py:0
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.js:0
+msgid "Assets"
+msgstr "الأصول"
+
+#. module: school_finance
 #: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__message_attachment_count
 msgid "Attachment Count"
 msgstr "عدد المرفقات"
@@ -327,22 +371,47 @@ msgstr "المستخدمون المصرح لهم"
 
 #. module: school_finance
 #: model_terms:ir.ui.view,arch_db:school_finance.view_account_journal_form_school_finance
-msgid ""
-"Authorized Users is optional. When empty, standard Odoo accounting access "
-"rules apply."
-msgstr ""
-"المستخدمون المصرح لهم خيار اختياري. عند تركه فارغًا تُطبق قواعد صلاحيات "
-"المحاسبة القياسية في أودو."
+msgid "Authorized Users is optional. When empty, standard Odoo accounting access rules apply."
+msgstr "المستخدمون المصرح لهم خيار اختياري. عند تركه فارغًا تُطبق قواعد صلاحيات المحاسبة القياسية في أودو."
 
 #. module: school_finance
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__available_cash
-msgid "Available Cash"
-msgstr "النقدية المتاحة"
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Available bank and cash"
+msgstr "الرصيد المتاح بالبنوك والصناديق"
 
 #. module: school_finance
-#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
-msgid "Available Cash / Bank"
-msgstr "النقدية / البنك المتاح"
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.js:0
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Bank"
+msgstr "البنوك"
+
+#. module: school_finance
+#. odoo-javascript
+#. odoo-python
+#: code:addons/school_finance/models/accounting_overview.py:0
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.js:0
+msgid "Bank Journals"
+msgstr "دفاتر يومية البنوك"
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/accounting_overview.py:0
+msgid "Bank and Cash Journal Items"
+msgstr "بنود يومية البنوك والصناديق"
+
+#. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Bank and cash balances"
+msgstr "أرصدة البنوك والصناديق"
+
+#. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Bank and cash chart"
+msgstr "رسم أرصدة البنوك والصناديق"
 
 #. module: school_finance
 #: model:ir.model.fields,field_description:school_finance.field_school_fee_batch_line__batch_id
@@ -374,48 +443,27 @@ msgid "Budget"
 msgstr "الدخل"
 
 #. module: school_finance
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__budget_actual
-msgid "Budget Actual"
-msgstr "الميزانية الفعلية"
-
-#. module: school_finance
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__bank_balance
-msgid "Bank Balance"
-msgstr "رصيد الحسابات البنكية"
-
-#. module: school_finance
-#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
-msgid "Bank accounts:"
-msgstr "الحسابات البنكية:"
-
-#. module: school_finance
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__cash_box_balance
-msgid "Cash Box Balance"
-msgstr "رصيد الصناديق"
-
-#. module: school_finance
-#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
-msgid "Cash boxes:"
-msgstr "الصناديق:"
-
-#. module: school_finance
 #: model_terms:ir.ui.view,arch_db:school_finance.res_config_settings_view_form_school_finance
 msgid "Budget Approval"
 msgstr "اعتماد الميزانيات"
 
 #. module: school_finance
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__budget_planned
-msgid "Budget Planned"
-msgstr "الميزانية المخططة"
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Budget control"
+msgstr "الرقابة على الموازنة"
 
 #. module: school_finance
-#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
-msgid "Budget vs Actual"
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Budget versus actual"
 msgstr "الموازنة مقابل الفعلي"
 
 #. module: school_finance
+#. odoo-javascript
 #. odoo-python
-#: code:addons/school_finance/models/dashboard.py:0
+#: code:addons/school_finance/models/accounting_overview.py:0
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.js:0
 msgid "Budgets"
 msgstr "الميزانيات"
 
@@ -428,6 +476,27 @@ msgstr "إلغاء"
 #: model:ir.model.fields.selection,name:school_finance.selection__school_fee_batch__state__cancel
 msgid "Cancelled"
 msgstr "تم الإلغاء"
+
+#. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.js:0
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Cash"
+msgstr "الصناديق النقدية"
+
+#. module: school_finance
+#. odoo-javascript
+#. odoo-python
+#: code:addons/school_finance/models/accounting_overview.py:0
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.js:0
+msgid "Cash Journals"
+msgstr "دفاتر يومية الصناديق"
+
+#. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Click any card to open its original Accounting records."
+msgstr "اضغط على أي بطاقة لفتح سجلاتها الأصلية في المحاسبة."
 
 #. module: school_finance
 #: model_terms:ir.ui.view,arch_db:school_finance.view_school_academic_year_form
@@ -449,17 +518,24 @@ msgid "Code"
 msgstr "رمز"
 
 #. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Collection status"
+msgstr "حالة التحصيل"
+
+#. module: school_finance
 #: model:ir.model,name:school_finance.model_res_company
 msgid "Companies"
 msgstr "الشركات"
 
 #. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
 #: model:ir.model.fields,field_description:school_finance.field_school_academic_year__company_id
 #: model:ir.model.fields,field_description:school_finance.field_school_department__company_id
 #: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__company_id
 #: model:ir.model.fields,field_description:school_finance.field_school_fee_batch_line__company_id
 #: model:ir.model.fields,field_description:school_finance.field_school_fee_type__company_id
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__company_id
 #: model:ir.model.fields,field_description:school_finance.field_school_finance_demo_generator__company_id
 #: model:ir.model.fields,field_description:school_finance.field_school_installment_plan__company_id
 msgid "Company"
@@ -469,11 +545,6 @@ msgstr "الشركة"
 #: model:ir.model,name:school_finance.model_res_config_settings
 msgid "Config Settings"
 msgstr "تهيئة الإعدادات"
-
-#. module: school_finance
-#: model:ir.ui.menu,name:school_finance.menu_school_finance_configuration
-msgid "Configuration"
-msgstr "الإعدادات"
 
 #. module: school_finance
 #. odoo-python
@@ -504,8 +575,6 @@ msgstr "جهة الاتصال"
 #: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__create_uid
 #: model:ir.model.fields,field_description:school_finance.field_school_fee_batch_line__create_uid
 #: model:ir.model.fields,field_description:school_finance.field_school_fee_type__create_uid
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__create_uid
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard_period__create_uid
 #: model:ir.model.fields,field_description:school_finance.field_school_finance_demo_generator__create_uid
 #: model:ir.model.fields,field_description:school_finance.field_school_installment_plan__create_uid
 msgid "Created by"
@@ -517,8 +586,6 @@ msgstr "أنشئ بواسطة"
 #: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__create_date
 #: model:ir.model.fields,field_description:school_finance.field_school_fee_batch_line__create_date
 #: model:ir.model.fields,field_description:school_finance.field_school_fee_type__create_date
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__create_date
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard_period__create_date
 #: model:ir.model.fields,field_description:school_finance.field_school_finance_demo_generator__create_date
 #: model:ir.model.fields,field_description:school_finance.field_school_installment_plan__create_date
 msgid "Created on"
@@ -527,39 +594,23 @@ msgstr "أنشئ في"
 #. module: school_finance
 #. odoo-python
 #: code:addons/school_finance/wizard/demo_generator.py:0
-msgid ""
-"Created synthetic master data and %(count)s draft invoices. All names are "
-"prefixed [TEST] and records are tagged as TEST / DEMO."
-msgstr ""
-"تم إنشاء بيانات رئيسية اصطناعية و%(count)s فاتورة مسودة. تبدأ جميع الأسماء "
-"بالبادئة [اختبار] والسجلات موسومة كاختبار / تجريب."
+msgid "Created synthetic master data and %(count)s draft invoices. All names are prefixed [TEST] and records are tagged as TEST / DEMO."
+msgstr "تم إنشاء بيانات رئيسية اصطناعية و%(count)s فاتورة مسودة. تبدأ جميع الأسماء بالبادئة [اختبار] والسجلات موسومة كاختبار / تجريب."
 
 #. module: school_finance
 #: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__currency_id
 #: model:ir.model.fields,field_description:school_finance.field_school_fee_batch_line__currency_id
 #: model:ir.model.fields,field_description:school_finance.field_school_fee_type__currency_id
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__currency_id
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard_period__currency_id
 msgid "Currency"
 msgstr "العملة"
 
 #. module: school_finance
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard_period__dashboard_id
-#: model:ir.ui.menu,name:school_finance.menu_school_finance_dashboard
-msgid "Dashboard"
-msgstr "لوحة المعلومات"
-
-#. module: school_finance
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__date_from
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard_period__date_from
-msgid "Date From"
-msgstr "من تاريخ"
-
-#. module: school_finance
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__date_to
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard_period__date_to
-msgid "Date To"
-msgstr "إلى تاريخ"
+#. odoo-javascript
+#. odoo-python
+#: code:addons/school_finance/models/accounting_overview.py:0
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.js:0
+msgid "Customer Invoices"
+msgstr "فواتير العملاء"
 
 #. module: school_finance
 #: model:ir.model.fields,field_description:school_finance.field_school_fee_type__default_amount
@@ -579,12 +630,8 @@ msgstr "ضرائب افتراضية"
 #. module: school_finance
 #. odoo-python
 #: code:addons/school_finance/wizard/demo_generator.py:0
-msgid ""
-"Demo generation is blocked on this database. Use a clone/test database or "
-"mark a dedicated company as TEST / DEMO."
-msgstr ""
-"إنشاء البيانات التجريبية محظور في قاعدة البيانات هذه. استخدم قاعدة "
-"مستنسخة/اختبارية أو علّم شركة مخصصة بأنها اختبار / تجريب."
+msgid "Demo generation is blocked on this database. Use a clone/test database or mark a dedicated company as TEST / DEMO."
+msgstr "إنشاء البيانات التجريبية محظور في قاعدة البيانات هذه. استخدم قاعدة مستنسخة/اختبارية أو علّم شركة مخصصة بأنها اختبار / تجريب."
 
 #. module: school_finance
 #: model:ir.model.fields,field_description:school_finance.field_school_fee_batch_line__department_id
@@ -596,7 +643,6 @@ msgstr "القسم"
 #: model:ir.model.fields,field_description:school_finance.field_account_move_line__school_department_id
 #: model:ir.model.fields,field_description:school_finance.field_res_partner__school_department_id
 #: model:ir.model.fields,field_description:school_finance.field_res_users__school_department_id
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__department_id
 msgid "Department / Cost Center"
 msgstr "القسم / مركز التكلفة"
 
@@ -650,8 +696,6 @@ msgstr "يجب أن تكون نسبة الخصم بين 0 و100 بالمائة."
 #: model:ir.model.fields,field_description:school_finance.field_school_fee_batch_line__display_name
 #: model:ir.model.fields,field_description:school_finance.field_school_fee_type__display_name
 #: model:ir.model.fields,field_description:school_finance.field_school_finance_approval_mixin__display_name
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__display_name
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard_period__display_name
 #: model:ir.model.fields,field_description:school_finance.field_school_finance_demo_generator__display_name
 #: model:ir.model.fields,field_description:school_finance.field_school_installment_plan__display_name
 msgid "Display Name"
@@ -724,30 +768,20 @@ msgid "Draft"
 msgstr "مسودة"
 
 #. module: school_finance
-#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
-msgid "Drill Down"
-msgstr "عرض التفاصيل"
-
-#. module: school_finance
 #: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__due_date
 msgid "Due Date"
 msgstr "موعد إجراء المكالمة"
 
 #. module: school_finance
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__due_vendor_bill_amount
-msgid "Due Vendor Bill Amount"
-msgstr "مبلغ فواتير الموردين المستحقة"
-
-#. module: school_finance
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__due_vendor_bill_count
-msgid "Due Vendor Bill Count"
-msgstr "عدد فواتير الموردين المستحقة"
-
-#. module: school_finance
 #. odoo-python
-#: code:addons/school_finance/models/dashboard.py:0
-#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
+#: code:addons/school_finance/models/accounting_overview.py:0
 msgid "Due Vendor Bills"
+msgstr "فواتير الموردين المستحقة"
+
+#. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Due vendor bills"
 msgstr "فواتير الموردين المستحقة"
 
 #. module: school_finance
@@ -776,17 +810,19 @@ msgstr "أدخل سبب الإعادة قبل إعادة المستند."
 #. module: school_finance
 #. odoo-python
 #: code:addons/school_finance/models/asset.py:0
-msgid ""
-"Enter the disposal type and reason before selling or disposing an asset."
+msgid "Enter the disposal type and reason before selling or disposing an asset."
 msgstr "أدخل نوع وسبب الاستبعاد قبل بيع الأصل أو استبعاده."
 
 #. module: school_finance
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard_period__expense
-msgid "Expense"
-msgstr "النفقة"
+#. odoo-python
+#: code:addons/school_finance/models/accounting_overview.py:0
+msgid "Expense Journal Items"
+msgstr "بنود يومية المصروفات"
 
 #. module: school_finance
-#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.js:0
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
 msgid "Expenses"
 msgstr "النفقات"
 
@@ -798,11 +834,8 @@ msgstr "الروابط العائلية"
 #. module: school_finance
 #. odoo-python
 #: code:addons/school_finance/models/account_move.py:0
-msgid ""
-"Fee %(fee)s is already invoiced to student %(student)s for the same academic"
-" period."
-msgstr ""
-"تمت فوترة الرسم %(fee)s بالفعل للطالب %(student)s عن الفترة الدراسية نفسها."
+msgid "Fee %(fee)s is already invoiced to student %(student)s for the same academic period."
+msgstr "تمت فوترة الرسم %(fee)s بالفعل للطالب %(student)s عن الفترة الدراسية نفسها."
 
 #. module: school_finance
 #: model:ir.model.fields,field_description:school_finance.field_account_bank_statement_line__school_fee_batch_id
@@ -871,16 +904,6 @@ msgid "Finance Approver"
 msgstr "معتمد مالي"
 
 #. module: school_finance
-#. odoo-python
-#: code:addons/school_finance/models/dashboard.py:0
-#: model:ir.actions.act_window,name:school_finance.action_school_finance_dashboard
-#: model:ir.model,name:school_finance.model_school_finance_dashboard
-#: model:ir.ui.menu,name:school_finance.menu_school_finance_dashboard
-#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
-msgid "School Financial Overview"
-msgstr "الملخص المالي للمدرسة"
-
-#. module: school_finance
 #: model:res.groups,name:school_finance.group_school_finance_entry
 msgid "Finance Entry User"
 msgstr "مدخل بيانات مالية"
@@ -900,9 +923,7 @@ msgstr "مراجع مالي"
 #. module: school_finance
 #. odoo-python
 #: code:addons/school_finance/models/approval_mixin.py:0
-msgid ""
-"Finance approval must be completed before this document can be posted or "
-"validated."
+msgid "Finance approval must be completed before this document can be posted or validated."
 msgstr "يجب إكمال الاعتماد المالي قبل ترحيل هذا المستند أو اعتماده."
 
 #. module: school_finance
@@ -910,6 +931,18 @@ msgstr "يجب إكمال الاعتماد المالي قبل ترحيل هذا
 #: model_terms:ir.ui.view,arch_db:school_finance.view_partner_search_school_finance
 msgid "Financial Guardian"
 msgstr "ولي الأمر المسؤول ماليًا"
+
+#. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Financial movement and liquidity"
+msgstr "الحركة المالية والسيولة"
+
+#. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Financial position"
+msgstr "المركز المالي"
 
 #. module: school_finance
 #: model:ir.model.fields,field_description:school_finance.field_res_partner__school_financial_guardian_id
@@ -936,12 +969,18 @@ msgstr "المتابعين (الشركاء)"
 #. module: school_finance
 #: model:ir.model.fields,help:school_finance.field_school_fee_batch__activity_type_icon
 msgid "Font awesome icon e.g. fa-tasks"
-msgstr "أيقونة من Font awesome مثال: fa-tasks"
+msgstr "أيقونة فونت أوسم، مثل الرمز: fa-tasks"
 
 #. module: school_finance
 #: model:ir.model.fields,field_description:school_finance.field_school_fee_type__frequency
 msgid "Frequency"
 msgstr "معدل الحدوث"
+
+#. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "From date"
+msgstr "من تاريخ"
 
 #. module: school_finance
 #: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_demo_generator_form
@@ -967,7 +1006,7 @@ msgstr "إنشاء بيانات تجريبية اصطناعية لمالية ا�
 #: model:ir.actions.act_window,name:school_finance.action_school_finance_demo_generator
 #: model:ir.ui.menu,name:school_finance.menu_school_demo_generator
 msgid "Generate TEST / DEMO Data"
-msgstr "إنشاء بيانات TEST / DEMO"
+msgstr "إنشاء بيانات اختبارية / تجريبية"
 
 #. module: school_finance
 #: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__invoice_ids
@@ -1025,7 +1064,7 @@ msgstr "يحتوي على رسالة"
 #. module: school_finance
 #: model:ir.model.fields,field_description:school_finance.field_school_finance_demo_generator__confirm_demo
 msgid "I confirm this is a TEST / DEMO database"
-msgstr "أؤكد أن هذه قاعدة TEST / DEMO"
+msgstr "أؤكد أن هذه قاعدة بيانات اختبارية / تجريبية"
 
 #. module: school_finance
 #: model:ir.model.fields,field_description:school_finance.field_account_asset_asset__id
@@ -1045,8 +1084,6 @@ msgstr "أؤكد أن هذه قاعدة TEST / DEMO"
 #: model:ir.model.fields,field_description:school_finance.field_school_fee_batch_line__id
 #: model:ir.model.fields,field_description:school_finance.field_school_fee_type__id
 #: model:ir.model.fields,field_description:school_finance.field_school_finance_approval_mixin__id
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__id
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard_period__id
 #: model:ir.model.fields,field_description:school_finance.field_school_finance_demo_generator__id
 #: model:ir.model.fields,field_description:school_finance.field_school_installment_plan__id
 msgid "ID"
@@ -1093,19 +1130,13 @@ msgstr "خطط الأقساط"
 
 #. module: school_finance
 #: model:ir.model.fields,help:school_finance.field_school_installment_plan__payment_term_id
-msgid ""
-"Installment due dates and percentages are maintained in the standard Odoo "
-"payment term."
+msgid "Installment due dates and percentages are maintained in the standard Odoo payment term."
 msgstr "تُدار تواريخ استحقاق الأقساط ونسبها في شروط الدفع القياسية في أودو."
 
 #. module: school_finance
 #: model_terms:ir.ui.view,arch_db:school_finance.view_school_installment_plan_form
-msgid ""
-"Installment percentages and due-date rules are maintained in the linked "
-"standard Odoo payment term."
-msgstr ""
-"تُدار نسب الأقساط وقواعد تواريخ الاستحقاق في شروط الدفع القياسية المرتبطة في"
-" أودو."
+msgid "Installment percentages and due-date rules are maintained in the linked standard Odoo payment term."
+msgstr "تُدار نسب الأقساط وقواعد تواريخ الاستحقاق في شروط الدفع القياسية المرتبطة في أودو."
 
 #. module: school_finance
 #: model:ir.model.fields,field_description:school_finance.field_account_bank_statement_line__school_installment_line_ids
@@ -1156,6 +1187,14 @@ msgid "Journal"
 msgstr "دفتر اليومية"
 
 #. module: school_finance
+#. odoo-javascript
+#. odoo-python
+#: code:addons/school_finance/models/accounting_overview.py:0
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.js:0
+msgid "Journal Entries"
+msgstr "القيود اليومية"
+
+#. module: school_finance
 #: model:ir.model,name:school_finance.model_account_move
 msgid "Journal Entry"
 msgstr "قيد اليومية"
@@ -1171,13 +1210,17 @@ msgid "Journal Item"
 msgstr "عنصر اليومية"
 
 #. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Key accounting indicators"
+msgstr "المؤشرات المحاسبية الرئيسية"
+
+#. module: school_finance
 #: model:ir.model.fields,field_description:school_finance.field_school_academic_year__write_uid
 #: model:ir.model.fields,field_description:school_finance.field_school_department__write_uid
 #: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__write_uid
 #: model:ir.model.fields,field_description:school_finance.field_school_fee_batch_line__write_uid
 #: model:ir.model.fields,field_description:school_finance.field_school_fee_type__write_uid
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__write_uid
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard_period__write_uid
 #: model:ir.model.fields,field_description:school_finance.field_school_finance_demo_generator__write_uid
 #: model:ir.model.fields,field_description:school_finance.field_school_installment_plan__write_uid
 msgid "Last Updated by"
@@ -1189,8 +1232,6 @@ msgstr "آخر تحديث بواسطة"
 #: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__write_date
 #: model:ir.model.fields,field_description:school_finance.field_school_fee_batch_line__write_date
 #: model:ir.model.fields,field_description:school_finance.field_school_fee_type__write_date
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__write_date
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard_period__write_date
 #: model:ir.model.fields,field_description:school_finance.field_school_finance_demo_generator__write_date
 #: model:ir.model.fields,field_description:school_finance.field_school_installment_plan__write_date
 msgid "Last Updated on"
@@ -1200,6 +1241,24 @@ msgstr "آخر تحديث في"
 #: model:ir.model.fields,help:school_finance.field_account_journal__school_authorized_user_ids
 msgid "Leave empty to use the standard Odoo accounting access rules."
 msgstr "اتركه فارغًا لاستخدام قواعد صلاحيات المحاسبة القياسية في أودو."
+
+#. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Liquidity mix"
+msgstr "توزيع السيولة"
+
+#. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Live indicators from posted Accounting records."
+msgstr "مؤشرات مباشرة من سجلات المحاسبة المُرحّلة."
+
+#. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Loading accounting data..."
+msgstr "جارٍ تحميل بيانات المحاسبة..."
 
 #. module: school_finance
 #: model:ir.model.fields,help:school_finance.field_res_company__school_is_demo_company
@@ -1233,7 +1292,6 @@ msgstr "الموعد النهائي لنشاطاتي"
 #: model:ir.model.fields,field_description:school_finance.field_school_department__name
 #: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__name
 #: model:ir.model.fields,field_description:school_finance.field_school_fee_type__name
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard_period__name
 #: model:ir.model.fields,field_description:school_finance.field_school_installment_plan__name
 msgid "Name"
 msgstr "الاسم"
@@ -1246,10 +1304,9 @@ msgid "Negative Cash Balance Policy"
 msgstr "سياسة الرصيد النقدي السالب"
 
 #. module: school_finance
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__net_result
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard_period__net_result
-#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
-msgid "Net Result"
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Net result"
 msgstr "صافي النتيجة"
 
 #. module: school_finance
@@ -1400,24 +1457,46 @@ msgid "Open"
 msgstr "فتح"
 
 #. module: school_finance
-#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
-msgid "Open Bills"
-msgstr "فتح الفواتير"
+#. odoo-python
+#: code:addons/school_finance/models/accounting_overview.py:0
+msgid "Open Payable Journal Items"
+msgstr "بنود اليومية الدائنة المفتوحة"
 
 #. module: school_finance
-#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
-msgid "Open Budgets"
+#. odoo-python
+#: code:addons/school_finance/models/accounting_overview.py:0
+msgid "Open Receivable Journal Items"
+msgstr "بنود اليومية المدينة المفتوحة"
+
+#. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Open budgets"
 msgstr "فتح الموازنات"
 
 #. module: school_finance
-#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
-msgid "Open Invoices"
-msgstr "فتح الفواتير"
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Open invoice indicators"
+msgstr "مؤشرات الفواتير المفتوحة"
 
 #. module: school_finance
-#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
-msgid "Open Overdue"
-msgstr "فتح المتأخرات"
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Open payables"
+msgstr "الذمم الدائنة المفتوحة"
+
+#. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Open receivables"
+msgstr "الذمم المدينة المفتوحة"
+
+#. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Open the original Accounting screens"
+msgstr "فتح شاشات المحاسبة الأصلية"
 
 #. module: school_finance
 #: model:ir.model.fields.selection,name:school_finance.selection__account_asset_asset__school_disposal_type__other
@@ -1428,29 +1507,26 @@ msgstr "أخرى"
 
 #. module: school_finance
 #: model:ir.model.fields,help:school_finance.field_account_journal__school_disbursement_approval_limit
-msgid ""
-"Outbound payments at or above this amount require the school finance "
-"workflow."
-msgstr ""
-"الدفعات الصادرة التي تبلغ هذا المبلغ أو تتجاوزه تتطلب مسار عمل مالية "
-"المدرسة."
-
-#. module: school_finance
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__overdue_student_invoice_amount
-msgid "Overdue Student Invoice Amount"
-msgstr "مبلغ فواتير الطلاب المتأخرة"
-
-#. module: school_finance
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__overdue_student_invoice_count
-msgid "Overdue Student Invoice Count"
-msgstr "عدد فواتير الطلاب المتأخرة"
+msgid "Outbound payments at or above this amount require the school finance workflow."
+msgstr "الدفعات الصادرة التي تبلغ هذا المبلغ أو تتجاوزه تتطلب مسار عمل مالية المدرسة."
 
 #. module: school_finance
 #. odoo-python
-#: code:addons/school_finance/models/dashboard.py:0
-#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
+#: code:addons/school_finance/models/accounting_overview.py:0
 msgid "Overdue Student Invoices"
 msgstr "فواتير الطلاب المتأخرة"
+
+#. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Overdue student invoices"
+msgstr "فواتير الطلاب المتأخرة"
+
+#. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Overview filters"
+msgstr "مرشحات الملخص"
 
 #. module: school_finance
 #: model:ir.model,name:school_finance.model_account_payment_register
@@ -1458,11 +1534,10 @@ msgid "Pay"
 msgstr "الدفع"
 
 #. module: school_finance
-#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
-msgid "Payables"
-msgstr "الدائنون"
-
-#. module: school_finance
+#. odoo-javascript
+#. odoo-python
+#: code:addons/school_finance/models/accounting_overview.py:0
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.js:0
 #: model:ir.model,name:school_finance.model_account_payment
 msgid "Payments"
 msgstr "الدفعات"
@@ -1490,15 +1565,40 @@ msgid "Pending Review"
 msgstr "بانتظار المراجعة"
 
 #. module: school_finance
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__period_line_ids
-msgid "Period Movement"
-msgstr "حركة الفترات"
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Period movement"
+msgstr "حركة الفترة"
 
 #. module: school_finance
-#. odoo-python
-#: code:addons/school_finance/models/dashboard.py:0
-msgid "Posted Journal Items"
-msgstr "عناصر اليومية المُرحّلة"
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Planned"
+msgstr "المخطط"
+
+#. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Posted expense accounts"
+msgstr "حسابات المصروفات المُرحّلة"
+
+#. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Posted income accounts"
+msgstr "حسابات الإيرادات المُرحّلة"
+
+#. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Posted payable journal items"
+msgstr "بنود اليومية الدائنة المُرحّلة"
+
+#. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Posted receivable journal items"
+msgstr "بنود اليومية المدينة المُرحّلة"
 
 #. module: school_finance
 #: model:ir.model.fields,field_description:school_finance.field_res_company__school_prevent_self_approval
@@ -1509,17 +1609,19 @@ msgstr "منع الاعتماد الذاتي"
 
 #. module: school_finance
 #: model_terms:ir.ui.view,arch_db:school_finance.res_config_settings_view_form_school_finance
-msgid ""
-"Prevents the same fee type from being invoiced twice to one student in the "
-"same academic year and period."
-msgstr ""
-"يمنع فوترة نوع الرسم نفسه مرتين لطالب واحد في السنة والفترة الدراسية "
-"نفسيهما."
+msgid "Prevents the same fee type from being invoiced twice to one student in the same academic year and period."
+msgstr "يمنع فوترة نوع الرسم نفسه مرتين لطالب واحد في السنة والفترة الدراسية نفسيهما."
 
 #. module: school_finance
 #: model:ir.model.fields,field_description:school_finance.field_school_fee_type__product_id
 msgid "Product"
 msgstr "المنتج"
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/accounting_overview.py:0
+msgid "Profit and Loss Journal Items"
+msgstr "بنود يومية الأرباح والخسائر"
 
 #. module: school_finance
 #: model:ir.model.fields,field_description:school_finance.field_school_fee_batch_line__quantity
@@ -1543,14 +1645,16 @@ msgid "Receipts Awaiting Bank Matching"
 msgstr "مقبوضات بانتظار المطابقة البنكية"
 
 #. module: school_finance
-#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
-msgid "Receivables"
-msgstr "المدينون"
-
-#. module: school_finance
-#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
 msgid "Refresh"
 msgstr "تحديث"
+
+#. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Refreshing accounting data"
+msgstr "جارٍ تحديث بيانات المحاسبة"
 
 #. module: school_finance
 #: model:ir.model.fields,field_description:school_finance.field_account_bank_statement_line__school_refund_reason
@@ -1642,6 +1746,12 @@ msgid "Required when returning the batch for correction."
 msgstr "مطلوب عند إعادة الدفعة للتصحيح."
 
 #. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Reset"
+msgstr "إعادة تعيين"
+
+#. module: school_finance
 #: model_terms:ir.ui.view,arch_db:school_finance.view_school_academic_year_form
 msgid "Reset to Draft"
 msgstr "إعادة التعيين كمسودة"
@@ -1678,15 +1788,35 @@ msgid "Returned for Correction"
 msgstr "معاد للتصحيح"
 
 #. module: school_finance
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard_period__revenue
-#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.js:0
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
 msgid "Revenue"
 msgstr "الإيرادات"
 
 #. module: school_finance
-#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
-msgid "Revenue and Expense Movement"
-msgstr "حركة الإيرادات والمصروفات"
+#. odoo-python
+#: code:addons/school_finance/models/accounting_overview.py:0
+msgid "Revenue Journal Items"
+msgstr "بنود يومية الإيرادات"
+
+#. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Revenue and expense chart"
+msgstr "رسم الإيرادات والمصروفات"
+
+#. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Revenue and expenses"
+msgstr "الإيرادات والمصروفات"
+
+#. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Revenue less expenses"
+msgstr "الإيرادات ناقص المصروفات"
 
 #. module: school_finance
 #: model_terms:ir.ui.view,arch_db:school_finance.view_school_fee_batch_form
@@ -1761,6 +1891,11 @@ msgid "School Collection Balance"
 msgstr "الرصيد المتبقي للتحصيل"
 
 #. module: school_finance
+#: model:ir.ui.menu,name:school_finance.menu_school_finance_configuration
+msgid "School Configuration"
+msgstr "إعدادات المدرسة"
+
+#. module: school_finance
 #: model_terms:ir.ui.view,arch_db:school_finance.view_account_journal_form_school_finance
 msgid "School Controls"
 msgstr "ضوابط المدرسة"
@@ -1820,11 +1955,6 @@ msgid "School Finance Control"
 msgstr "الرقابة المالية المدرسية"
 
 #. module: school_finance
-#: model:ir.model,name:school_finance.model_school_finance_dashboard_period
-msgid "School Financial Overview Period"
-msgstr "فترة الملخص المالي للمدرسة"
-
-#. module: school_finance
 #: model:res.groups,name:school_finance.group_school_finance_manager
 msgid "School Finance Manager"
 msgstr "مدير مالية المدرسة"
@@ -1833,6 +1963,14 @@ msgstr "مدير مالية المدرسة"
 #: model_terms:ir.ui.view,arch_db:school_finance.res_config_settings_view_form_school_finance
 msgid "School Finance Validation Policies"
 msgstr "سياسات التحقق المالي المدرسية"
+
+#. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+#: model:ir.actions.client,name:school_finance.action_school_accounting_overview
+#: model:ir.ui.menu,name:school_finance.menu_school_finance_dashboard
+msgid "School Financial Overview"
+msgstr "الملخص المالي للمدرسة"
 
 #. module: school_finance
 #: model:ir.model,name:school_finance.model_school_installment_plan
@@ -1879,6 +2017,18 @@ msgstr "الفصل الثاني"
 #: code:addons/school_finance/models/res_partner.py:0
 msgid "Select a financial guardian when invoices are issued to a guardian."
 msgstr "حدد ولي الأمر المسؤول ماليًا عندما تُصدر الفواتير باسم ولي الأمر."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/accounting_overview.py:0
+msgid "Select a valid company."
+msgstr "اختر شركة صالحة."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/accounting_overview.py:0
+msgid "Select a valid cost center."
+msgstr "اختر مركز تكلفة صالحًا."
 
 #. module: school_finance
 #. odoo-python
@@ -2068,7 +2218,7 @@ msgstr "توجد بالفعل بيانات مدرسية تجريبية اصطن�
 #. module: school_finance
 #: model:ir.model.fields,field_description:school_finance.field_res_company__school_is_demo_company
 msgid "TEST / DEMO Company"
-msgstr "شركة TEST / DEMO"
+msgstr "شركة اختبارية / تجريبية"
 
 #. module: school_finance
 #: model:ir.model.fields,field_description:school_finance.field_account_bank_statement_line__school_demo_data
@@ -2082,7 +2232,7 @@ msgstr "شركة TEST / DEMO"
 #: model:ir.model.fields,field_description:school_finance.field_school_fee_type__school_demo_data
 #: model:ir.model.fields,field_description:school_finance.field_school_installment_plan__school_demo_data
 msgid "TEST / DEMO Data"
-msgstr "بيانات TEST / DEMO"
+msgstr "بيانات اختبارية / تجريبية"
 
 #. module: school_finance
 #: model:ir.model.fields,field_description:school_finance.field_school_fee_batch_line__tax_ids
@@ -2104,6 +2254,12 @@ msgstr "يجب أن يكون رمز السنة الدراسية فريدًا ل�
 #: code:addons/school_finance/models/master_data.py:0
 msgid "The academic year end date must follow its start date."
 msgstr "يجب أن يأتي تاريخ نهاية السنة الدراسية بعد تاريخ بدايتها."
+
+#. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "The chart shows the latest 18 months in the selected period."
+msgstr "يعرض الرسم آخر 18 شهرًا ضمن الفترة المحددة."
 
 #. module: school_finance
 #. odoo-python
@@ -2152,9 +2308,14 @@ msgstr "يجب أن يكون رمز خطة الأقساط فريدًا لكل ش
 #. module: school_finance
 #. odoo-python
 #: code:addons/school_finance/models/account_move.py:0
-msgid ""
-"The invoice customer must match the student's configured invoice recipient."
+msgid "The invoice customer must match the student's configured invoice recipient."
 msgstr "يجب أن يطابق عميل الفاتورة مستلم الفاتورة المحدد للطالب."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/accounting_overview.py:0
+msgid "The requested accounting view is not available."
+msgstr "شاشة المحاسبة المطلوبة غير متاحة."
 
 #. module: school_finance
 #. odoo-python
@@ -2167,6 +2328,12 @@ msgstr "جهة الاتصال المحددة غير معيّنة كطالب."
 #: code:addons/school_finance/models/account_move.py:0
 msgid "The selected guardian is not marked as a guardian."
 msgstr "جهة الاتصال المحددة غير معيّنة كولي أمر."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/accounting_overview.py:0
+msgid "The start date must be before the end date."
+msgstr "يجب أن يكون تاريخ البداية قبل تاريخ النهاية."
 
 #. module: school_finance
 #: model:ir.model.constraint,message:school_finance.constraint_res_partner_student_code_unique
@@ -2201,24 +2368,10 @@ msgstr ""
 "                    أو تكن الشركة المحددة موسومة صراحة بأنها شركة اختبار / تجريب."
 
 #. module: school_finance
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__total_expense
-msgid "Total Expense"
-msgstr "إجمالي المصروفات"
-
-#. module: school_finance
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__total_payable
-msgid "Total Payable"
-msgstr "إجمالي الذمم الدائنة"
-
-#. module: school_finance
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__total_receivable
-msgid "Total Receivable"
-msgstr "إجمالي الذمم المدينة"
-
-#. module: school_finance
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__total_revenue
-msgid "Total Revenue"
-msgstr "إجمالي الإيرادات"
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "To date"
+msgstr "إلى تاريخ"
 
 #. module: school_finance
 #: model:ir.model.fields,help:school_finance.field_school_fee_batch__activity_exception_decoration
@@ -2226,31 +2379,40 @@ msgid "Type of the exception activity on record."
 msgstr "نوع النشاط المستثنى في السجل."
 
 #. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.js:0
+msgid "Unable to load the accounting overview."
+msgstr "تعذر تحميل الملخص المحاسبي."
+
+#. module: school_finance
 #: model:ir.model.fields,field_description:school_finance.field_school_fee_batch_line__unit_price
 msgid "Unit Price"
 msgstr "سعر الوحدة"
 
 #. module: school_finance
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__unpaid_student_invoice_amount
-msgid "Unpaid Student Invoice Amount"
-msgstr "مبلغ فواتير الطلاب غير المسددة"
-
-#. module: school_finance
-#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__unpaid_student_invoice_count
-msgid "Unpaid Student Invoice Count"
-msgstr "عدد فواتير الطلاب غير المسددة"
-
-#. module: school_finance
 #. odoo-python
-#: code:addons/school_finance/models/dashboard.py:0
-#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
+#: code:addons/school_finance/models/accounting_overview.py:0
 msgid "Unpaid Student Invoices"
+msgstr "فواتير الطلاب غير المدفوعة"
+
+#. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "Unpaid student invoices"
 msgstr "فواتير الطلاب غير المدفوعة"
 
 #. module: school_finance
 #: model_terms:ir.ui.view,arch_db:school_finance.res_config_settings_view_form_school_finance
 msgid "Vendor Bill Approval"
 msgstr "اعتماد فواتير الموردين"
+
+#. module: school_finance
+#. odoo-javascript
+#. odoo-python
+#: code:addons/school_finance/models/accounting_overview.py:0
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.js:0
+msgid "Vendor Bills"
+msgstr "فواتير الموردين"
 
 #. module: school_finance
 #: model_terms:ir.ui.view,arch_db:school_finance.res_config_settings_view_form_school_finance
@@ -2285,6 +2447,24 @@ msgstr "منسحب"
 
 #. module: school_finance
 #. odoo-python
+#: code:addons/school_finance/models/accounting_overview.py:0
+msgid "You are not allowed to access the school accounting overview."
+msgstr "غير مصرح لك بالوصول إلى الملخص المحاسبي للمدرسة."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/accounting_overview.py:0
+msgid "You are not allowed to access this company."
+msgstr "غير مصرح لك بالوصول إلى هذه الشركة."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/accounting_overview.py:0
+msgid "You are not allowed to access this cost center."
+msgstr "غير مصرح لك بالوصول إلى مركز التكلفة هذا."
+
+#. module: school_finance
+#. odoo-python
 #: code:addons/school_finance/models/account_payment.py:0
 msgid "You are not authorized to use this journal."
 msgstr "غير مصرح لك باستخدام دفتر اليومية هذا."
@@ -2303,9 +2483,15 @@ msgstr "لا يمكنك اعتماد دفعة رسوم أنشأتها."
 
 #. module: school_finance
 #. odoo-python
-#: code:addons/school_finance/models/dashboard.py:0
+#: code:addons/school_finance/models/accounting_overview.py:0
 msgid "company_id"
 msgstr "الشركة"
+
+#. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "due bills"
+msgstr "فواتير مستحقة"
 
 #. module: school_finance
 #. odoo-python
@@ -2320,22 +2506,91 @@ msgid "move_id"
 msgstr "الحركة المحاسبية"
 
 #. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "open invoices"
+msgstr "فواتير مفتوحة"
+
+#. module: school_finance
+#. odoo-javascript
+#: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
+msgid "overdue invoices"
+msgstr "فواتير متأخرة"
+
+#. module: school_finance
 #. odoo-python
 #: code:addons/school_finance/models/res_partner.py:0
 msgid "school_student_id"
 msgstr "الطالب"
 
-#. module: school_finance
-#: model:ir.ui.menu,name:school_finance.menu_school_finance_configuration
-msgid "School Configuration"
-msgstr "إعدادات المدرسة"
+#~ msgid "Available Cash / Bank"
+#~ msgstr "النقدية / البنك المتاح"
 
-#. module: school_finance
-#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
-msgid "<span>Bank accounts:</span>"
-msgstr "<span>الحسابات البنكية:</span>"
+#~ msgid "Bank accounts:"
+#~ msgstr "الحسابات البنكية:"
 
-#. module: school_finance
-#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
-msgid "<span>Cash boxes:</span>"
-msgstr "<span>الصناديق النقدية:</span>"
+#~ msgid "Cash Box Balance"
+#~ msgstr "رصيد الصناديق"
+
+#~ msgid "Cash boxes:"
+#~ msgstr "الصناديق:"
+
+#~ msgid "Configuration"
+#~ msgstr "الإعدادات"
+
+#~ msgid "Dashboard"
+#~ msgstr "لوحة المعلومات"
+
+#~ msgid "Date From"
+#~ msgstr "من تاريخ"
+
+#~ msgid "Date To"
+#~ msgstr "إلى تاريخ"
+
+#~ msgid "Drill Down"
+#~ msgstr "عرض التفاصيل"
+
+#~ msgid "Due Vendor Bill Amount"
+#~ msgstr "مبلغ فواتير الموردين المستحقة"
+
+#~ msgid "Due Vendor Bill Count"
+#~ msgstr "عدد فواتير الموردين المستحقة"
+
+#~ msgid "Expense"
+#~ msgstr "النفقة"
+
+#~ msgid "Open Overdue"
+#~ msgstr "فتح المتأخرات"
+
+#~ msgid "Overdue Student Invoice Amount"
+#~ msgstr "مبلغ فواتير الطلاب المتأخرة"
+
+#~ msgid "Overdue Student Invoice Count"
+#~ msgstr "عدد فواتير الطلاب المتأخرة"
+
+#~ msgid "School Financial Overview Period"
+#~ msgstr "فترة الملخص المالي للمدرسة"
+
+#~ msgid "Total Expense"
+#~ msgstr "إجمالي المصروفات"
+
+#~ msgid "Total Payable"
+#~ msgstr "إجمالي الذمم الدائنة"
+
+#~ msgid "Total Receivable"
+#~ msgstr "إجمالي الذمم المدينة"
+
+#~ msgid "Total Revenue"
+#~ msgstr "إجمالي الإيرادات"
+
+#~ msgid "Unpaid Student Invoice Amount"
+#~ msgstr "مبلغ فواتير الطلاب غير المسددة"
+
+#~ msgid "Unpaid Student Invoice Count"
+#~ msgstr "عدد فواتير الطلاب غير المسددة"
+
+#~ msgid "<span>Bank accounts:</span>"
+#~ msgstr "<span>الحسابات البنكية:</span>"
+
+#~ msgid "<span>Cash boxes:</span>"
+#~ msgstr "<span>الصناديق النقدية:</span>"

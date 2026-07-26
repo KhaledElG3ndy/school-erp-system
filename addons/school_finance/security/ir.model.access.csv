@@ -10,7 +10,4 @@ access_school_installment_plan_manager,school.installment.plan manager,model_sch
 access_school_fee_batch_entry,school.fee.batch entry,model_school_fee_batch,group_school_finance_entry,1,1,1,0
 access_school_fee_batch_manager,school.fee.batch manager,model_school_fee_batch,group_school_finance_manager,1,1,1,1
 access_school_fee_batch_line_entry,school.fee.batch.line entry,model_school_fee_batch_line,group_school_finance_entry,1,1,1,1
-access_school_dashboard_user,school.finance.dashboard user,model_school_finance_dashboard,group_school_finance_entry,1,1,1,1
-access_school_dashboard_period_user,school.finance.dashboard.period user,model_school_finance_dashboard_period,group_school_finance_entry,1,1,1,1
 access_school_demo_generator_manager,school.finance.demo.generator manager,model_school_finance_demo_generator,group_school_finance_manager,1,1,1,1
-

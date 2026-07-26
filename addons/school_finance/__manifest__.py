@@ -1,7 +1,7 @@
 {
     "name": "Saudi School Finance",
-    "summary": "School students, guardians, fees, installments, approvals and finance dashboard",
-    "version": "19.0.1.0.4",
+    "summary": "School students, guardians, fees, installments, approvals and accounting overview",
+    "version": "19.0.1.0.5",
     "category": "Accounting",
     "author": "TelNova",
     "license": "LGPL-3",
@@ -34,6 +34,13 @@
         "report/account_document_templates.xml",
         "views/school_finance_menus.xml",
     ],
+    "assets": {
+        "web.assets_backend": [
+            "school_finance/static/src/accounting_overview/accounting_overview.js",
+            "school_finance/static/src/accounting_overview/accounting_overview.xml",
+            "school_finance/static/src/accounting_overview/accounting_overview.scss",
+        ],
+    },
     "application": False,
     "installable": True,
 }

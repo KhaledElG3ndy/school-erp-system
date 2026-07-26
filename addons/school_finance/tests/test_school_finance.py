@@ -460,30 +460,76 @@ class TestSchoolFinance(TransactionCase):
         with self.assertRaises(UserError):
             asset.set_to_close()
 
-    def test_dashboard_reads_posted_school_data(self):
+    def test_accounting_overview_reads_posted_data_without_dashboard_model(self):
         invoice = self._create_fee_invoice(term="term_3", amount=750.0)
         invoice.action_post()
-        dashboard = self.env["school.finance.dashboard"].create(
+        overview = self.env["account.move.line"].get_school_accounting_overview(
             {
                 "date_from": fields.Date.today().replace(month=1, day=1),
                 "date_to": fields.Date.today(),
                 "company_id": self.company.id,
-                "department_id": self.department.id,
+                "analytic_account_id": self.analytic_account.id,
             }
         )
-        self.assertEqual(dashboard.unpaid_student_invoice_count, 1)
-        self.assertEqual(dashboard.unpaid_student_invoice_amount, 750.0)
-        self.assertEqual(dashboard.total_revenue, 750.0)
-        self.assertIsNotNone(dashboard.bank_balance)
-        self.assertIsNotNone(dashboard.cash_box_balance)
-        self.assertTrue(dashboard.period_line_ids)
-        self.assertEqual(
-            dashboard.with_context(lang="en_US").display_name,
-            "School Financial Overview",
+        self.assertNotIn("school.finance.dashboard", self.env.registry.models)
+        self.assertNotIn(
+            "school.finance.dashboard.period", self.env.registry.models
         )
+        self.assertEqual(overview["kpis"]["unpaid_student_invoice_count"], 1)
         self.assertEqual(
-            dashboard.with_context(lang="ar_001").display_name,
-            "الملخص المالي للمدرسة",
+            overview["kpis"]["unpaid_student_invoice_amount"], 750.0
+        )
+        self.assertEqual(overview["kpis"]["revenue"], 750.0)
+        self.assertIsNotNone(overview["kpis"]["bank_balance"])
+        self.assertIsNotNone(overview["kpis"]["cash_balance"])
+        self.assertTrue(overview["charts"]["movement"])
+        overview_model = self.env["account.move.line"]
+        invoice_action = overview_model.open_school_accounting_overview_target(
+            "student_invoices", overview["filters"]
+        )
+        self.assertEqual(invoice_action["res_model"], "account.move")
+        self.assertIn(
+            invoice.id,
+            self.env["account.move"].search(invoice_action["domain"]).ids,
+        )
+        expected_target_models = {
+            "revenue": "account.move.line",
+            "expenses": "account.move.line",
+            "net_result": "account.move.line",
+            "available_cash": "account.move.line",
+            "receivables": "account.move.line",
+            "payables": "account.move.line",
+            "student_invoices": "account.move",
+            "overdue_student_invoices": "account.move",
+            "due_vendor_bills": "account.move",
+            "vendor_bills": "account.move",
+            "customer_invoices": "account.move",
+            "payments": "account.payment",
+            "bank_journals": "account.journal",
+            "cash_journals": "account.journal",
+            "journal_entries": "account.move",
+            "budgets": "crossovered.budget",
+            "assets": "account.asset.asset",
+        }
+        for target, model_name in expected_target_models.items():
+            target_action = (
+                overview_model.open_school_accounting_overview_target(
+                    target, overview["filters"]
+                )
+            )
+            self.assertEqual(target_action["res_model"], model_name)
+            self.assertTrue(target_action["views"])
+            self.assertTrue(
+                all(
+                    len(view) == 2 and view[1]
+                    for view in target_action["views"]
+                )
+            )
+        self.assertEqual(
+            self.env.ref(
+                "school_finance.action_school_accounting_overview"
+            ).tag,
+            "school_finance.accounting_overview",
         )
 
     def test_sa_localization_arabic_and_correct_lock_date_mapping(self):
@@ -499,6 +545,22 @@ class TestSchoolFinance(TransactionCase):
         self.assertEqual(
             self.env.ref("school_finance.menu_school_finance_dashboard").parent_id,
             self.env.ref("account.menu_finance"),
+        )
+        self.assertEqual(
+            self.env.ref("school_finance.menu_school_finance_dashboard").action,
+            self.env.ref("school_finance.action_school_accounting_overview"),
+        )
+        self.assertFalse(
+            self.env.ref(
+                "school_finance.action_school_finance_dashboard",
+                raise_if_not_found=False,
+            )
+        )
+        self.assertFalse(
+            self.env.ref(
+                "school_finance.view_school_finance_dashboard_form",
+                raise_if_not_found=False,
+            )
         )
         self.assertEqual(
             self.env.ref("school_finance.menu_school_finance_students_root").parent_id,

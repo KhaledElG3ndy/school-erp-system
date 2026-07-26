@@ -1,126 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="view_school_finance_dashboard_form" model="ir.ui.view">
-        <field name="name">school.finance.dashboard.form</field>
-        <field name="model">school.finance.dashboard</field>
-        <field name="arch" type="xml">
-            <form string="School Financial Overview" delete="false">
-                <header>
-                    <button name="action_refresh" string="Refresh" type="object" class="oe_highlight"/>
-                </header>
-                <sheet>
-                    <group>
-                        <group>
-                            <field name="date_from"/>
-                            <field name="date_to"/>
-                        </group>
-                        <group>
-                            <field name="company_id" groups="base.group_multi_company"/>
-                            <field name="department_id"/>
-                            <field name="currency_id" invisible="1"/>
-                        </group>
-                    </group>
-                    <div class="row g-3 mt-2">
-                        <div class="col-12 col-md-4">
-                            <div class="card h-100"><div class="card-body">
-                                <h5 class="card-title">Revenue</h5>
-                                <field name="total_revenue" class="fs-3"/>
-                            </div></div>
-                        </div>
-                        <div class="col-12 col-md-4">
-                            <div class="card h-100"><div class="card-body">
-                                <h5 class="card-title">Expenses</h5>
-                                <field name="total_expense" class="fs-3"/>
-                            </div></div>
-                        </div>
-                        <div class="col-12 col-md-4">
-                            <div class="card h-100"><div class="card-body">
-                                <h5 class="card-title">Net Result</h5>
-                                <field name="net_result" class="fs-3"/>
-                            </div></div>
-                        </div>
-                    </div>
-                    <div class="row g-3 mt-1">
-                        <div class="col-12 col-md-4">
-                            <div class="card h-100"><div class="card-body">
-                                <h5 class="card-title">Available Cash / Bank</h5>
-                                <field name="available_cash" class="fs-3"/>
-                                <div>
-                                    <span>Bank accounts:</span>
-                                    <field name="bank_balance"/>
-                                </div>
-                                <div>
-                                    <span>Cash boxes:</span>
-                                    <field name="cash_box_balance"/>
-                                </div>
-                                <button name="action_open_journal_items" string="Drill Down" type="object" class="btn-link"/>
-                            </div></div>
-                        </div>
-                        <div class="col-12 col-md-4">
-                            <div class="card h-100"><div class="card-body">
-                                <h5 class="card-title">Receivables</h5>
-                                <field name="total_receivable" class="fs-3"/>
-                            </div></div>
-                        </div>
-                        <div class="col-12 col-md-4">
-                            <div class="card h-100"><div class="card-body">
-                                <h5 class="card-title">Payables</h5>
-                                <field name="total_payable" class="fs-3"/>
-                            </div></div>
-                        </div>
-                    </div>
-                    <div class="row g-3 mt-1">
-                        <div class="col-12 col-lg-4">
-                            <div class="card h-100"><div class="card-body">
-                                <h5 class="card-title">Unpaid Student Invoices</h5>
-                                <field name="unpaid_student_invoice_count"/> /
-                                <field name="unpaid_student_invoice_amount"/>
-                                <button name="action_open_student_invoices" string="Open Invoices" type="object" class="btn-link"/>
-                            </div></div>
-                        </div>
-                        <div class="col-12 col-lg-4">
-                            <div class="card h-100"><div class="card-body">
-                                <h5 class="card-title">Overdue Student Invoices</h5>
-                                <field name="overdue_student_invoice_count"/> /
-                                <field name="overdue_student_invoice_amount"/>
-                                <button name="action_open_overdue_student_invoices" string="Open Overdue" type="object" class="btn-link"/>
-                            </div></div>
-                        </div>
-                        <div class="col-12 col-lg-4">
-                            <div class="card h-100"><div class="card-body">
-                                <h5 class="card-title">Due Vendor Bills</h5>
-                                <field name="due_vendor_bill_count"/> /
-                                <field name="due_vendor_bill_amount"/>
-                                <button name="action_open_vendor_bills" string="Open Bills" type="object" class="btn-link"/>
-                            </div></div>
-                        </div>
-                    </div>
-                    <group string="Budget vs Actual" class="mt-3">
-                        <field name="budget_planned"/>
-                        <field name="budget_actual"/>
-                        <button name="action_open_budget" string="Open Budgets" type="object" class="btn-link"/>
-                    </group>
-                    <separator string="Revenue and Expense Movement"/>
-                    <field name="period_line_ids" readonly="1">
-                        <list create="false" delete="false">
-                            <field name="name"/>
-                            <field name="date_from"/>
-                            <field name="date_to"/>
-                            <field name="revenue"/>
-                            <field name="expense"/>
-                            <field name="net_result"/>
-                            <field name="currency_id" column_invisible="True"/>
-                        </list>
-                    </field>
-                </sheet>
-            </form>
-        </field>
-    </record>
-    <record id="action_school_finance_dashboard" model="ir.actions.act_window">
+    <delete model="ir.ui.view"
+            search="[('model', '=', 'school.finance.dashboard')]"/>
+    <delete model="ir.actions.act_window"
+            search="[('res_model', '=', 'school.finance.dashboard')]"/>
+    <delete model="ir.model.access"
+            search="[('name', 'in', ('school.finance.dashboard user', 'school.finance.dashboard.period user'))]"/>
+
+    <record id="action_school_accounting_overview" model="ir.actions.client">
         <field name="name">School Financial Overview</field>
-        <field name="res_model">school.finance.dashboard</field>
-        <field name="view_mode">form</field>
-        <field name="view_id" ref="view_school_finance_dashboard_form"/>
-        <field name="target">current</field>
+        <field name="tag">school_finance.accounting_overview</field>
     </record>
 </odoo>

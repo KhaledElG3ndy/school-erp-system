@@ -1,5 +1,7 @@
 from odoo import _, api, fields, models
 
+from .account_report_preview_helper import localized_currency_label
+
 
 class AccountTaxReportWizard(models.TransientModel):
     _inherit = "account.tax.report.wizard"
@@ -34,7 +36,9 @@ class AccountTaxReportWizard(models.TransientModel):
         action = super().check_report()
         form = (action.get("data") or {}).get("form") or {}
         form.update(self.read(["tax_report_type", "currency_unit"])[0])
-        currency_code = self.company_id.currency_id.name or self.company_id.currency_id.symbol
+        currency_code = localized_currency_label(
+            self.env, self.company_id.currency_id
+        )
         form["currency_unit_options"] = [
             {"value": "base_decimal", "label": _("In %s.") % currency_code},
             {"value": "base", "label": _("In %s") % currency_code},

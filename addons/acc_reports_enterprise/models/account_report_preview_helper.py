@@ -6,6 +6,13 @@ from odoo.tools.safe_eval import safe_eval
 from odoo.tools import json_default
 
 
+def localized_currency_label(env, currency):
+    if (env.lang or "").startswith("ar"):
+        label = currency.symbol or currency.name
+        return "ر.س" if label in {"SAR", "SR"} else label
+    return currency.name or currency.symbol
+
+
 class AccountReportPreviewHelper(models.TransientModel):
     _name = 'acc.report.preview.helper'
     _description = 'Accounting Report Preview Helper'

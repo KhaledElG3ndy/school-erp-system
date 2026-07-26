@@ -1,7 +1,7 @@
 {
     "name": "Accounting Reports Enterprise Simulation",
     "summary": "Open community accounting reports in an enterprise-style HTML view with PDF and XLSX export.",
-    "version": "19.0.1.0.18",
+    "version": "19.0.1.0.19",
     "category": "Accounting",
     "author": "Custom",
     "website": "https://www.odoo.com",

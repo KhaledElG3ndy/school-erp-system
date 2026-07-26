@@ -1,0 +1,545 @@
+.o_school_accounting_overview.o_action {
+    /*rtl:ignore*/
+    direction: ltr !important;
+    display: block;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    scrollbar-gutter: stable;
+    background:
+        radial-gradient(circle at 10% 0%, rgba(113, 75, 103, 0.07), transparent 26rem),
+        radial-gradient(circle at 100% 18%, rgba(0, 138, 154, 0.06), transparent 28rem),
+        var(--o-view-background-color, #f8f9fa);
+}
+
+.o_school_accounting_overview__page {
+    --school-primary: #714b67;
+    --school-teal: #008a9a;
+    --school-cyan: #159fbc;
+    --school-navy: #0b1f45;
+    --school-border: rgba(11, 31, 69, 0.1);
+    --school-muted: rgba(11, 31, 69, 0.64);
+    direction: ltr;
+    box-sizing: border-box;
+    width: 100%;
+    padding: clamp(1rem, 2vw, 2rem);
+    color: var(--school-navy);
+
+    &[dir="rtl"] {
+        direction: rtl;
+        text-align: right;
+
+        .o_school_accounting_overview__quick_link i {
+            transform: rotate(180deg);
+        }
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+}
+
+.o_school_accounting_overview__loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    min-block-size: 22rem;
+    color: var(--school-muted);
+}
+
+.o_school_accounting_overview__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-block-end: 1.25rem;
+
+    h1 {
+        margin: 0.15rem 0 0.35rem;
+        color: var(--school-navy);
+        font-size: clamp(1.65rem, 2.4vw, 2.35rem);
+        font-weight: 720;
+        letter-spacing: -0.025em;
+    }
+
+    p {
+        margin: 0;
+        color: var(--school-muted);
+        font-size: 0.95rem;
+    }
+}
+
+.o_school_accounting_overview__eyebrow,
+.o_school_accounting_overview__section_heading > div > span,
+.o_school_accounting_overview__panel header span {
+    color: var(--school-teal);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.o_school_accounting_overview__refresh {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-block-size: 2.55rem;
+    padding-inline: 1rem;
+    border-color: var(--school-primary);
+    background: var(--school-primary);
+    box-shadow: 0 0.35rem 1rem rgba(113, 75, 103, 0.16);
+
+    &:hover,
+    &:focus {
+        border-color: var(--school-primary);
+        background: var(--school-primary);
+        transform: translateY(-1px);
+    }
+}
+
+.o_school_accounting_overview__toolbar {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(9rem, 0.8fr)) minmax(12rem, 1.25fr) auto;
+    align-items: end;
+    gap: 0.85rem;
+    margin-block-end: 1.5rem;
+    padding: 1rem;
+    border: 1px solid var(--school-border);
+    border-radius: 0.9rem;
+    background: var(--o-view-background-color, #fff);
+    box-shadow: 0 0.5rem 1.5rem rgba(11, 31, 69, 0.05);
+
+    &:has(.o_school_accounting_overview__filter:nth-of-type(4)) {
+        grid-template-columns: repeat(2, minmax(9rem, 0.72fr)) minmax(10rem, 0.8fr) minmax(12rem, 1.2fr) auto;
+    }
+}
+
+.o_school_accounting_overview__filter {
+    min-width: 0;
+
+    label {
+        display: block;
+        margin-block-end: 0.38rem;
+        color: var(--school-muted);
+        font-size: 0.78rem;
+        font-weight: 650;
+    }
+
+    .form-control,
+    .form-select {
+        min-block-size: 2.45rem;
+        border-color: var(--school-border);
+        border-radius: 0.55rem;
+        color: var(--school-navy);
+        background-color: var(--o-view-background-color, #fff);
+
+        &:focus {
+            border-color: var(--school-primary);
+            box-shadow: 0 0 0 0.18rem rgba(113, 75, 103, 0.12);
+        }
+    }
+}
+
+.o_school_accounting_overview__toolbar_actions {
+    display: flex;
+    gap: 0.5rem;
+
+    .btn {
+        min-block-size: 2.45rem;
+        border-radius: 0.55rem;
+        padding-inline: 1rem;
+    }
+
+    .btn-primary {
+        border-color: var(--school-primary);
+        background: var(--school-primary);
+    }
+}
+
+.o_school_accounting_overview__progress {
+    position: relative;
+    z-index: 2;
+    block-size: 2px;
+    margin-block: -1.5rem 1.5rem;
+    overflow: hidden;
+    background: rgba(113, 75, 103, 0.1);
+
+    &::after {
+        position: absolute;
+        inset-block: 0;
+        inline-size: 38%;
+        background: var(--school-primary);
+        content: "";
+        animation: school-overview-loading 1s ease-in-out infinite;
+    }
+}
+
+@keyframes school-overview-loading {
+    from {
+        inset-inline-start: -40%;
+    }
+    to {
+        inset-inline-start: 105%;
+    }
+}
+
+.o_school_accounting_overview__section_heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 1.65rem 0 0.8rem;
+
+    h2 {
+        margin: 0.16rem 0 0;
+        color: var(--school-navy);
+        font-size: clamp(1.05rem, 1.5vw, 1.3rem);
+        font-weight: 700;
+    }
+
+    small {
+        color: var(--school-muted);
+        font-size: 0.76rem;
+    }
+}
+
+.o_school_accounting_overview__kpi_grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.9rem;
+}
+
+.o_school_accounting_overview__kpi,
+.o_school_accounting_overview__status_card,
+.o_school_accounting_overview__budget,
+.o_school_accounting_overview__quick_link {
+    appearance: none;
+    text-align: inherit;
+}
+
+.o_school_accounting_overview__kpi {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-width: 0;
+    padding: 1.15rem;
+    overflow: hidden;
+    border: 1px solid var(--school-border);
+    border-radius: 0.85rem;
+    background: var(--o-view-background-color, #fff);
+    color: var(--school-navy);
+    box-shadow: 0 0.4rem 1.25rem rgba(11, 31, 69, 0.045);
+    transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+
+    &::before {
+        position: absolute;
+        inset-block: 0;
+        inset-inline-start: 0;
+        inline-size: 3px;
+        background: var(--school-primary);
+        content: "";
+    }
+
+    &:hover,
+    &:focus-visible {
+        border-color: rgba(113, 75, 103, 0.3);
+        box-shadow: 0 0.75rem 1.8rem rgba(11, 31, 69, 0.08);
+        transform: translateY(-2px);
+    }
+
+    &--teal::before {
+        background: var(--school-teal);
+    }
+
+    &--navy::before {
+        background: var(--school-navy);
+    }
+
+    > strong {
+        margin-block: 0.45rem 0.35rem;
+        overflow-wrap: anywhere;
+        color: var(--school-navy);
+        font-size: clamp(1.35rem, 2vw, 1.85rem);
+        font-weight: 720;
+        line-height: 1.2;
+    }
+}
+
+.o_school_accounting_overview__kpi_label {
+    color: var(--school-muted);
+    font-size: 0.83rem;
+    font-weight: 650;
+}
+
+.o_school_accounting_overview__kpi_hint {
+    margin-block-start: auto;
+    color: var(--school-muted);
+    font-size: 0.74rem;
+}
+
+.o_school_accounting_overview__kpi_split {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem 0.9rem;
+    margin-block-start: auto;
+    color: var(--school-muted);
+    font-size: 0.72rem;
+
+    b {
+        color: var(--school-navy);
+        font-weight: 650;
+    }
+}
+
+.o_school_accounting_overview__status_grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.9rem;
+}
+
+.o_school_accounting_overview__status_card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.35rem 1rem;
+    align-items: center;
+    padding: 1.05rem 1.15rem;
+    border: 1px solid var(--school-border);
+    border-radius: 0.85rem;
+    background: var(--o-view-background-color, #fff);
+    color: var(--school-navy);
+    box-shadow: 0 0.4rem 1.25rem rgba(11, 31, 69, 0.04);
+    transition: border-color 160ms ease, transform 160ms ease;
+
+    &:hover,
+    &:focus-visible {
+        border-color: rgba(0, 138, 154, 0.32);
+        transform: translateY(-2px);
+    }
+
+    > span {
+        color: var(--school-muted);
+        font-size: 0.82rem;
+        font-weight: 650;
+    }
+
+    > strong {
+        grid-row: span 2;
+        color: var(--school-primary);
+        font-size: clamp(1.05rem, 1.5vw, 1.35rem);
+    }
+
+    > small {
+        color: var(--school-muted);
+        font-size: 0.72rem;
+    }
+}
+
+.o_school_accounting_overview__chart_grid {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(17rem, 0.8fr);
+    gap: 0.9rem;
+}
+
+.o_school_accounting_overview__panel {
+    min-width: 0;
+    padding: 1.1rem;
+    border: 1px solid var(--school-border);
+    border-radius: 0.9rem;
+    background: var(--o-view-background-color, #fff);
+    box-shadow: 0 0.5rem 1.5rem rgba(11, 31, 69, 0.05);
+
+    header {
+        margin-block-end: 0.8rem;
+
+        h3 {
+            margin: 0.1rem 0 0;
+            color: var(--school-navy);
+            font-size: 1rem;
+            font-weight: 680;
+        }
+    }
+
+    canvas {
+        display: block;
+        max-inline-size: 100%;
+    }
+}
+
+.o_school_accounting_overview__budget {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 1.25rem;
+    width: 100%;
+    padding: 1.15rem 1.35rem;
+    border: 1px solid var(--school-border);
+    border-radius: 0.9rem;
+    background:
+        linear-gradient(100deg, rgba(113, 75, 103, 0.055), rgba(0, 138, 154, 0.035)),
+        var(--o-view-background-color, #fff);
+    color: var(--school-navy);
+    box-shadow: 0 0.5rem 1.5rem rgba(11, 31, 69, 0.04);
+    transition: border-color 160ms ease, transform 160ms ease;
+
+    &:hover,
+    &:focus-visible {
+        border-color: rgba(113, 75, 103, 0.28);
+        transform: translateY(-1px);
+    }
+
+    > span:not(.o_school_accounting_overview__budget_divider) {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    small {
+        color: var(--school-muted);
+        font-size: 0.75rem;
+    }
+
+    strong {
+        font-size: clamp(1.15rem, 1.7vw, 1.5rem);
+    }
+}
+
+.o_school_accounting_overview__budget_divider {
+    inline-size: 1px;
+    block-size: 2.7rem;
+    background: var(--school-border);
+}
+
+.o_school_accounting_overview__budget_link {
+    color: var(--school-primary);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.o_school_accounting_overview__quick_grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.65rem;
+    padding-block-end: 0.5rem;
+}
+
+.o_school_accounting_overview__quick_link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    min-width: 0;
+    padding: 0.8rem 0.9rem;
+    border: 1px solid var(--school-border);
+    border-radius: 0.7rem;
+    background: var(--o-view-background-color, #fff);
+    color: var(--school-navy);
+    font-size: 0.82rem;
+    font-weight: 620;
+    transition: border-color 150ms ease, color 150ms ease, transform 150ms ease;
+
+    i {
+        color: var(--school-primary);
+    }
+
+    &:hover,
+    &:focus-visible {
+        border-color: rgba(113, 75, 103, 0.3);
+        color: var(--school-primary);
+        transform: translateY(-1px);
+    }
+}
+
+@media (max-width: 1500px) {
+    .o_school_accounting_overview__kpi_grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 1200px) {
+    .o_school_accounting_overview__toolbar,
+    .o_school_accounting_overview__toolbar:has(.o_school_accounting_overview__filter:nth-of-type(4)) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .o_school_accounting_overview__toolbar_actions {
+        justify-content: end;
+    }
+
+    .o_school_accounting_overview__chart_grid {
+        grid-template-columns: minmax(0, 1.55fr) minmax(15rem, 0.75fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .o_school_accounting_overview__kpi_grid,
+    .o_school_accounting_overview__status_grid,
+    .o_school_accounting_overview__quick_grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .o_school_accounting_overview__chart_grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .o_school_accounting_overview__page {
+        padding: 0.85rem;
+    }
+
+    .o_school_accounting_overview__header {
+        flex-direction: column;
+    }
+
+    .o_school_accounting_overview__refresh {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .o_school_accounting_overview__toolbar,
+    .o_school_accounting_overview__toolbar:has(.o_school_accounting_overview__filter:nth-of-type(4)),
+    .o_school_accounting_overview__kpi_grid,
+    .o_school_accounting_overview__status_grid,
+    .o_school_accounting_overview__quick_grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .o_school_accounting_overview__toolbar_actions {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .o_school_accounting_overview__section_heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .o_school_accounting_overview__status_card {
+        grid-template-columns: minmax(0, 1fr);
+
+        > strong {
+            grid-row: auto;
+        }
+    }
+
+    .o_school_accounting_overview__budget {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .o_school_accounting_overview__budget_divider {
+        inline-size: 100%;
+        block-size: 1px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .o_school_accounting_overview__kpi,
+    .o_school_accounting_overview__status_card,
+    .o_school_accounting_overview__budget,
+    .o_school_accounting_overview__quick_link {
+        transition: none;
+    }
+}

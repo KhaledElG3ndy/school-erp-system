@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <div t-name="school_finance.SchoolAccountingOverview"
+         class="o_action o_school_accounting_overview">
+        <div class="o_school_accounting_overview__page" t-att-dir="direction">
+            <div t-if="state.loading and !state.data"
+                 class="o_school_accounting_overview__loading">
+                <span class="spinner-border text-primary" role="status"/>
+                <span>Loading accounting data...</span>
+            </div>
+
+            <t t-if="state.data">
+                <header class="o_school_accounting_overview__header">
+                    <div>
+                        <span class="o_school_accounting_overview__eyebrow">Accounting intelligence</span>
+                        <h1>School Financial Overview</h1>
+                        <p>Live indicators from posted Accounting records.</p>
+                    </div>
+                    <button type="button"
+                            class="btn btn-primary o_school_accounting_overview__refresh"
+                            t-att-disabled="state.loading"
+                            t-on-click="applyFilters">
+                        <i class="fa fa-refresh" aria-hidden="true"/>
+                        <span>Refresh</span>
+                    </button>
+                </header>
+
+                <section class="o_school_accounting_overview__toolbar"
+                         aria-label="Overview filters">
+                    <div class="o_school_accounting_overview__filter">
+                        <label for="school_overview_date_from">From date</label>
+                        <input id="school_overview_date_from"
+                               type="date"
+                               class="form-control"
+                               t-att-value="state.filters.date_from"
+                               t-on-change="onDateFromChange"/>
+                    </div>
+                    <div class="o_school_accounting_overview__filter">
+                        <label for="school_overview_date_to">To date</label>
+                        <input id="school_overview_date_to"
+                               type="date"
+                               class="form-control"
+                               t-att-value="state.filters.date_to"
+                               t-on-change="onDateToChange"/>
+                    </div>
+                    <div t-if="state.data.options.companies.length &gt; 1"
+                         class="o_school_accounting_overview__filter">
+                        <label for="school_overview_company">Company</label>
+                        <select id="school_overview_company"
+                                class="form-select"
+                                t-att-value="state.filters.company_id"
+                                t-on-change="onCompanyChange">
+                            <option t-foreach="state.data.options.companies"
+                                    t-as="company"
+                                    t-key="company.id"
+                                    t-att-value="company.id"
+                                    t-att-selected="company.id === state.filters.company_id"
+                                    t-out="company.name"/>
+                        </select>
+                    </div>
+                    <div class="o_school_accounting_overview__filter o_school_accounting_overview__filter--wide">
+                        <label for="school_overview_analytic">Analytic cost center</label>
+                        <select id="school_overview_analytic"
+                                class="form-select"
+                                t-att-value="state.filters.analytic_account_id || ''"
+                                t-on-change="onAnalyticAccountChange">
+                            <option value="">All cost centers</option>
+                            <option t-foreach="state.data.options.analytic_accounts"
+                                    t-as="analytic"
+                                    t-key="analytic.id"
+                                    t-att-value="analytic.id"
+                                    t-att-selected="analytic.id === state.filters.analytic_account_id"
+                                    t-out="analytic.name"/>
+                        </select>
+                    </div>
+                    <div class="o_school_accounting_overview__toolbar_actions">
+                        <button type="button"
+                                class="btn btn-primary"
+                                t-att-disabled="state.loading"
+                                t-on-click="applyFilters">
+                            Apply
+                        </button>
+                        <button type="button"
+                                class="btn btn-light"
+                                t-att-disabled="state.loading"
+                                t-on-click="resetFilters">
+                            Reset
+                        </button>
+                    </div>
+                </section>
+
+                <div t-if="state.loading"
+                     class="o_school_accounting_overview__progress"
+                     role="progressbar"
+                     aria-label="Refreshing accounting data"/>
+
+                <section aria-labelledby="school_overview_financial_position">
+                    <div class="o_school_accounting_overview__section_heading">
+                        <div>
+                            <span>Financial position</span>
+                            <h2 id="school_overview_financial_position">Key accounting indicators</h2>
+                        </div>
+                        <small>Click any card to open its original Accounting records.</small>
+                    </div>
+                    <div class="o_school_accounting_overview__kpi_grid">
+                        <button type="button"
+                                class="o_school_accounting_overview__kpi o_school_accounting_overview__kpi--primary"
+                                t-on-click="() => this.openTarget('revenue')">
+                            <span class="o_school_accounting_overview__kpi_label">Revenue</span>
+                            <strong t-out="formatMoney(state.data.kpis.revenue)"/>
+                            <span class="o_school_accounting_overview__kpi_hint">Posted income accounts</span>
+                        </button>
+                        <button type="button"
+                                class="o_school_accounting_overview__kpi o_school_accounting_overview__kpi--teal"
+                                t-on-click="() => this.openTarget('expenses')">
+                            <span class="o_school_accounting_overview__kpi_label">Expenses</span>
+                            <strong t-out="formatMoney(state.data.kpis.expenses)"/>
+                            <span class="o_school_accounting_overview__kpi_hint">Posted expense accounts</span>
+                        </button>
+                        <button type="button"
+                                class="o_school_accounting_overview__kpi o_school_accounting_overview__kpi--navy"
+                                t-on-click="() => this.openTarget('net_result')">
+                            <span class="o_school_accounting_overview__kpi_label">Net result</span>
+                            <strong t-out="formatMoney(state.data.kpis.net_result)"/>
+                            <span class="o_school_accounting_overview__kpi_hint">Revenue less expenses</span>
+                        </button>
+                        <button type="button"
+                                class="o_school_accounting_overview__kpi o_school_accounting_overview__kpi--primary"
+                                t-on-click="() => this.openTarget('available_cash')">
+                            <span class="o_school_accounting_overview__kpi_label">Available bank and cash</span>
+                            <strong t-out="formatMoney(state.data.kpis.available_cash)"/>
+                            <span class="o_school_accounting_overview__kpi_split">
+                                <span>Bank <b t-out="formatMoney(state.data.kpis.bank_balance)"/></span>
+                                <span>Cash <b t-out="formatMoney(state.data.kpis.cash_balance)"/></span>
+                            </span>
+                        </button>
+                        <button type="button"
+                                class="o_school_accounting_overview__kpi o_school_accounting_overview__kpi--teal"
+                                t-on-click="() => this.openTarget('receivables')">
+                            <span class="o_school_accounting_overview__kpi_label">Open receivables</span>
+                            <strong t-out="formatMoney(state.data.kpis.receivables)"/>
+                            <span class="o_school_accounting_overview__kpi_hint">Posted receivable journal items</span>
+                        </button>
+                        <button type="button"
+                                class="o_school_accounting_overview__kpi o_school_accounting_overview__kpi--navy"
+                                t-on-click="() => this.openTarget('payables')">
+                            <span class="o_school_accounting_overview__kpi_label">Open payables</span>
+                            <strong t-out="formatMoney(state.data.kpis.payables)"/>
+                            <span class="o_school_accounting_overview__kpi_hint">Posted payable journal items</span>
+                        </button>
+                    </div>
+                </section>
+
+                <section aria-labelledby="school_overview_collection_status">
+                    <div class="o_school_accounting_overview__section_heading">
+                        <div>
+                            <span>Collection status</span>
+                            <h2 id="school_overview_collection_status">Open invoice indicators</h2>
+                        </div>
+                    </div>
+                    <div class="o_school_accounting_overview__status_grid">
+                        <button type="button"
+                                class="o_school_accounting_overview__status_card"
+                                t-on-click="() => this.openTarget('student_invoices')">
+                            <span>Unpaid student invoices</span>
+                            <strong t-out="formatMoney(state.data.kpis.unpaid_student_invoice_amount)"/>
+                            <small>
+                                <b t-out="formatCount(state.data.kpis.unpaid_student_invoice_count)"/>
+                                open invoices
+                            </small>
+                        </button>
+                        <button type="button"
+                                class="o_school_accounting_overview__status_card"
+                                t-on-click="() => this.openTarget('overdue_student_invoices')">
+                            <span>Overdue student invoices</span>
+                            <strong t-out="formatMoney(state.data.kpis.overdue_student_invoice_amount)"/>
+                            <small>
+                                <b t-out="formatCount(state.data.kpis.overdue_student_invoice_count)"/>
+                                overdue invoices
+                            </small>
+                        </button>
+                        <button type="button"
+                                class="o_school_accounting_overview__status_card"
+                                t-on-click="() => this.openTarget('due_vendor_bills')">
+                            <span>Due vendor bills</span>
+                            <strong t-out="formatMoney(state.data.kpis.due_vendor_bill_amount)"/>
+                            <small>
+                                <b t-out="formatCount(state.data.kpis.due_vendor_bill_count)"/>
+                                due bills
+                            </small>
+                        </button>
+                    </div>
+                </section>
+
+                <section class="o_school_accounting_overview__charts"
+                         aria-labelledby="school_overview_charts">
+                    <div class="o_school_accounting_overview__section_heading">
+                        <div>
+                            <span>Accounting trends</span>
+                            <h2 id="school_overview_charts">Financial movement and liquidity</h2>
+                        </div>
+                        <small t-if="state.data.charts.movement_truncated">
+                            The chart shows the latest 18 months in the selected period.
+                        </small>
+                    </div>
+                    <div class="o_school_accounting_overview__chart_grid">
+                        <article class="o_school_accounting_overview__panel o_school_accounting_overview__panel--wide">
+                            <header>
+                                <div>
+                                    <span>Period movement</span>
+                                    <h3>Revenue and expenses</h3>
+                                </div>
+                            </header>
+                            <canvas t-ref="movementCanvas"
+                                    aria-label="Revenue and expense chart"
+                                    role="img"/>
+                        </article>
+                        <article class="o_school_accounting_overview__panel">
+                            <header>
+                                <div>
+                                    <span>Liquidity mix</span>
+                                    <h3>Bank and cash balances</h3>
+                                </div>
+                            </header>
+                            <canvas t-ref="liquidityCanvas"
+                                    aria-label="Bank and cash chart"
+                                    role="img"/>
+                        </article>
+                    </div>
+                </section>
+
+                <section aria-labelledby="school_overview_budget">
+                    <div class="o_school_accounting_overview__section_heading">
+                        <div>
+                            <span>Budget control</span>
+                            <h2 id="school_overview_budget">Budget versus actual</h2>
+                        </div>
+                    </div>
+                    <button type="button"
+                            class="o_school_accounting_overview__budget"
+                            t-on-click="() => this.openTarget('budgets')">
+                        <span>
+                            <small>Planned</small>
+                            <strong t-out="formatMoney(state.data.kpis.budget_planned)"/>
+                        </span>
+                        <span class="o_school_accounting_overview__budget_divider"/>
+                        <span>
+                            <small>Actual</small>
+                            <strong t-out="formatMoney(state.data.kpis.budget_actual)"/>
+                        </span>
+                        <span class="o_school_accounting_overview__budget_link">Open budgets</span>
+                    </button>
+                </section>
+
+                <section aria-labelledby="school_overview_shortcuts">
+                    <div class="o_school_accounting_overview__section_heading">
+                        <div>
+                            <span>Accounting shortcuts</span>
+                            <h2 id="school_overview_shortcuts">Open the original Accounting screens</h2>
+                        </div>
+                    </div>
+                    <div class="o_school_accounting_overview__quick_grid">
+                        <button t-foreach="quickLinks"
+                                t-as="link"
+                                t-key="link.key"
+                                type="button"
+                                class="o_school_accounting_overview__quick_link"
+                                t-on-click="() => this.openTarget(link.key)">
+                            <span t-out="link.label"/>
+                            <i class="fa fa-angle-right" aria-hidden="true"/>
+                        </button>
+                    </div>
+                </section>
+            </t>
+        </div>
+    </div>
+</templates>

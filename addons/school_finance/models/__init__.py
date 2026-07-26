@@ -8,5 +8,4 @@ from . import account_payment
 from . import account_journal
 from . import budget
 from . import asset
-from . import dashboard
-
+from . import accounting_overview

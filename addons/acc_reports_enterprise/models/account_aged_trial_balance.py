@@ -1,5 +1,7 @@
 from odoo import _, fields, models
 
+from .account_report_preview_helper import localized_currency_label
+
 
 class AccountAgedTrialBalance(models.TransientModel):
     _inherit = "account.aged.trial.balance"
@@ -49,7 +51,9 @@ class AccountAgedTrialBalance(models.TransientModel):
             data["form"]["partner_ids"] = self.env["res.partner"].search(partner_domain).ids or [0]
         data["form"].update(extra)
 
-        currency_code = self.company_id.currency_id.name or self.company_id.currency_id.symbol
+        currency_code = localized_currency_label(
+            self.env, self.company_id.currency_id
+        )
         data["form"]["currency_unit_options"] = [
             {"value": "base_decimal", "label": _("In %s.") % currency_code},
             {"value": "base", "label": _("In %s") % currency_code},

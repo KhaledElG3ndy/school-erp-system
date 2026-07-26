@@ -2,6 +2,8 @@ from datetime import timedelta
 
 from odoo import _, api, fields, models
 
+from .account_report_preview_helper import localized_currency_label
+
 
 class AccountCashFlowReport(models.TransientModel):
     _name = "account.cash.flow.report"
@@ -74,7 +76,9 @@ class AccountCashFlowReport(models.TransientModel):
             "form": self.read(["date_from", "date_to", "journal_ids", "target_move", "currency_unit", "company_id"])[0],
         }
         data["form"]["used_context"] = self._build_contexts(data)
-        currency_code = self.company_id.currency_id.name or self.company_id.currency_id.symbol
+        currency_code = localized_currency_label(
+            self.env, self.company_id.currency_id
+        )
         data["form"]["currency_unit_options"] = [
             {"value": "base_decimal", "label": _("In %s.") % currency_code},
             {"value": "base", "label": _("In %s") % currency_code},

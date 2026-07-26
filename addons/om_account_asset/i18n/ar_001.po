@@ -1359,7 +1359,7 @@ msgstr "حساب التوزيع التحليلي"
 #: model:ir.model.fields,help:om_account_asset.field_account_asset_category__activity_type_icon
 #: model:ir.model.fields,help:school_finance.field_school_fee_batch__activity_type_icon
 msgid "Font awesome icon e.g. fa-tasks"
-msgstr "أيقونة من Font awesome مثال: fa-tasks"
+msgstr "أيقونة فونت أوسم، مثل الرمز: fa-tasks"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__activity_exception_icon

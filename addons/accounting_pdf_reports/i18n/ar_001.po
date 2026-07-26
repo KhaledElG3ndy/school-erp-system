@@ -582,7 +582,7 @@ msgstr "تقارير مالية"
 #. module: accounting_pdf_reports
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.res_config_settings_view_form
 msgid "Financial Reports in Excel"
-msgstr "التقارير المالية في Excel"
+msgstr "التقارير المالية في إكسل"
 
 #. module: accounting_pdf_reports
 #: model:ir.model.fields,help:accounting_pdf_reports.field_account_financial_report__sign
