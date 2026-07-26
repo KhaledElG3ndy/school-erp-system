@@ -18,18 +18,36 @@
     --school-navy: #0b1f45;
     --school-border: rgba(11, 31, 69, 0.1);
     --school-muted: rgba(11, 31, 69, 0.64);
+    /*rtl:ignore*/
     direction: ltr;
+    text-align: start;
     box-sizing: border-box;
     width: 100%;
     padding: clamp(1rem, 2vw, 2rem);
     color: var(--school-navy);
 
     &[dir="rtl"] {
+        /*rtl:ignore*/
         direction: rtl;
-        text-align: right;
+        text-align: start;
 
         .o_school_accounting_overview__quick_link i {
             transform: rotate(180deg);
+        }
+
+        .o_school_accounting_overview__eyebrow,
+        .o_school_accounting_overview__section_heading > div > span,
+        .o_school_accounting_overview__panel header span {
+            letter-spacing: 0;
+            text-transform: none;
+        }
+
+        .o_school_accounting_overview__kpi > strong,
+        .o_school_accounting_overview__kpi_split b,
+        .o_school_accounting_overview__status_card > strong,
+        .o_school_accounting_overview__budget strong {
+            unicode-bidi: isolate;
+            font-variant-numeric: tabular-nums;
         }
     }
 
