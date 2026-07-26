@@ -6,7 +6,7 @@
         <field name="arch" type="xml">
             <form string="Generate Synthetic School Demo Data">
                 <div class="alert alert-danger" role="alert">
-                    This tool is blocked unless the database name indicates TEST/DEMO/STAGING/CLONE/CODEX,
+                    This tool is blocked unless the database name indicates TEST/DEMO/STAGING/CLONE,
                     or the selected company is explicitly marked as a TEST / DEMO company.
                 </div>
                 <group>
@@ -30,4 +30,3 @@
         <field name="target">new</field>
     </record>
 </odoo>
-

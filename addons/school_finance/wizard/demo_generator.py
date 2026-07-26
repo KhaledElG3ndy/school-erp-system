@@ -21,7 +21,7 @@ class SchoolFinanceDemoGenerator(models.TransientModel):
         self.ensure_one()
         safe_name = bool(
             re.search(
-                r"(test|demo|staging|stage|clone|codex)",
+                r"(test|demo|staging|stage|clone)",
                 self.env.cr.dbname,
                 flags=re.IGNORECASE,
             )

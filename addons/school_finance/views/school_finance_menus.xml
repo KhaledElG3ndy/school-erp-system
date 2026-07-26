@@ -7,9 +7,17 @@
         <field name="active" eval="False"/>
     </record>
 
-    <menuitem id="menu_school_finance_dashboard" name="School Financial Overview"
+    <record id="account.menu_finance_receivables" model="ir.ui.menu">
+        <field name="sequence">3</field>
+    </record>
+
+    <menuitem id="menu_school_finance_dashboard" name="Financial Overview"
               parent="account.menu_finance" action="action_school_accounting_overview"
               sequence="2" groups="school_finance.group_school_finance_entry"/>
+    <record id="menu_school_finance_dashboard" model="ir.ui.menu"
+            context="{'lang': 'ar_001'}">
+        <field name="name">الملخص المالي</field>
+    </record>
 
     <menuitem id="menu_school_finance_students_root" name="Students &amp; Guardians"
               parent="account.menu_finance_receivables" sequence="120"

@@ -1965,10 +1965,14 @@ msgid "School Finance Validation Policies"
 msgstr "سياسات التحقق المالي المدرسية"
 
 #. module: school_finance
+#: model:ir.ui.menu,name:school_finance.menu_school_finance_dashboard
+msgid "Financial Overview"
+msgstr "الملخص المالي"
+
+#. module: school_finance
 #. odoo-javascript
 #: code:addons/school_finance/static/src/accounting_overview/accounting_overview.xml:0
 #: model:ir.actions.client,name:school_finance.action_school_accounting_overview
-#: model:ir.ui.menu,name:school_finance.menu_school_finance_dashboard
 msgid "School Financial Overview"
 msgstr "الملخص المالي للمدرسة"
 
@@ -2361,7 +2365,7 @@ msgstr "سبق استخدام مرجع دفعة المدرسة هذا في ال�
 #. module: school_finance
 #: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_demo_generator_form
 msgid ""
-"This tool is blocked unless the database name indicates TEST/DEMO/STAGING/CLONE/CODEX,\n"
+"This tool is blocked unless the database name indicates TEST/DEMO/STAGING/CLONE,\n"
 "                    or the selected company is explicitly marked as a TEST / DEMO company."
 msgstr ""
 "هذه الأداة محظورة ما لم يدل اسم قاعدة البيانات على اختبار/تجريب/تجهيز/نسخة،\n"

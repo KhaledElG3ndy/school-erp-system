@@ -576,10 +576,34 @@ class TestSchoolFinance(TransactionCase):
         )
         self.assertEqual(
             english_env.ref("school_finance.menu_school_finance_dashboard").name,
-            "School Financial Overview",
+            "Financial Overview",
         )
         self.assertEqual(
             arabic_env.ref("school_finance.menu_school_finance_dashboard").name,
+            "الملخص المالي",
+        )
+        self.assertEqual(
+            self.env.ref("school_finance.menu_school_finance_dashboard").sequence,
+            2,
+        )
+        self.assertEqual(
+            self.env.ref("account.menu_finance_receivables").sequence,
+            3,
+        )
+        self.assertLess(
+            self.env.ref("school_finance.menu_school_finance_dashboard").sequence,
+            self.env.ref("account.menu_finance_receivables").sequence,
+        )
+        self.assertEqual(
+            english_env.ref(
+                "school_finance.action_school_accounting_overview"
+            ).name,
+            "School Financial Overview",
+        )
+        self.assertEqual(
+            arabic_env.ref(
+                "school_finance.action_school_accounting_overview"
+            ).name,
             "الملخص المالي للمدرسة",
         )
         self.assertEqual(

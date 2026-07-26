@@ -43,5 +43,5 @@ http://127.0.0.1:8169
 
 ## التوثيق
 
-ملف `odoo_school_system_codex_prompt.md` يضم نطاق ومتطلبات النظام التي تم
+ملف `odoo_school_system_requirements.md` يضم نطاق ومتطلبات النظام التي تم
 العمل وفقها.
