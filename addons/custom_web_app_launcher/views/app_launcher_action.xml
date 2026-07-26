@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_app_launcher" model="ir.actions.client">
+        <field name="name">Apps</field>
+        <field name="tag">custom_web_app_launcher.app_launcher</field>
+        <field name="path" eval="False"/>
+    </record>
+</odoo>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_account_journal_form_school_finance" model="ir.ui.view">
+        <field name="name">account.journal.form.school.finance</field>
+        <field name="model">account.journal</field>
+        <field name="inherit_id" ref="account.view_account_journal_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="School Controls">
+                    <group>
+                        <field name="school_cashier_id"/>
+                        <field name="school_authorized_user_ids" widget="many2many_tags"/>
+                        <field name="school_disbursement_approval_limit"/>
+                    </group>
+                    <div class="alert alert-info" role="alert">
+                        Authorized Users is optional. When empty, standard Odoo accounting access rules apply.
+                    </div>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
+

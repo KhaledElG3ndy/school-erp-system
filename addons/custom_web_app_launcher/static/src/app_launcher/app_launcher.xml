@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="custom_web_app_launcher.AppLauncher">
+        <div class="o_custom_app_launcher o_home_menu o_home_menu_background">
+            <button
+                type="button"
+                class="o_custom_app_launcher_back"
+                title="Back"
+                aria-label="Back"
+                t-on-click="goBack"
+            >
+                &gt;
+            </button>
+            <div class="o_custom_app_launcher_grid" role="list">
+                <a
+                    t-foreach="apps"
+                    t-as="app"
+                    t-key="app.id"
+                    role="listitem"
+                    class="o_custom_app_launcher_item"
+                    t-att-href="app.href"
+                    t-att-data-menu-xmlid="app.xmlid"
+                    t-on-click.prevent="() => this.openApp(app)"
+                >
+                    <span class="o_custom_app_launcher_icon">
+                        <img
+                            t-if="app.webIconData"
+                            class="o_app_icon"
+                            t-att-src="app.webIconData"
+                            t-att-alt="app.label"
+                        />
+                        <i
+                            t-elif="app.webIcon"
+                            t-att-class="app.webIcon.iconClass"
+                            t-att-style="`color: ${app.webIcon.color}; background-color: ${app.webIcon.backgroundColor};`"
+                        />
+                    </span>
+                    <span class="o_custom_app_launcher_label" t-esc="app.label"/>
+                </a>
+            </div>
+        </div>
+    </t>
+</templates>

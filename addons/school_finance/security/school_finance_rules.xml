@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="school_academic_year_company_rule" model="ir.rule">
+            <field name="name">School academic year multi-company</field>
+            <field name="model_id" ref="model_school_academic_year"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        </record>
+        <record id="school_department_company_rule" model="ir.rule">
+            <field name="name">School department multi-company</field>
+            <field name="model_id" ref="model_school_department"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        </record>
+        <record id="school_fee_type_company_rule" model="ir.rule">
+            <field name="name">School fee type multi-company</field>
+            <field name="model_id" ref="model_school_fee_type"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        </record>
+        <record id="school_installment_plan_company_rule" model="ir.rule">
+            <field name="name">School installment plan multi-company</field>
+            <field name="model_id" ref="model_school_installment_plan"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        </record>
+        <record id="school_fee_batch_company_rule" model="ir.rule">
+            <field name="name">School fee batch multi-company</field>
+            <field name="model_id" ref="model_school_fee_batch"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        </record>
+        <record id="school_fee_batch_line_company_rule" model="ir.rule">
+            <field name="name">School fee batch line multi-company</field>
+            <field name="model_id" ref="model_school_fee_batch_line"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        </record>
+    </data>
+</odoo>
+

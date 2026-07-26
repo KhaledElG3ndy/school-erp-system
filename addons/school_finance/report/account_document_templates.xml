@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- The school operates its reports from the accounting back office.
+         Keep the invoice and receipt language aligned with the current user's
+         language instead of silently switching to the guardian's language. -->
+    <template id="report_invoice_user_language" inherit_id="account.report_invoice">
+        <xpath expr="//t[@t-set='lang']" position="attributes">
+            <attribute name="t-value">env.lang</attribute>
+        </xpath>
+    </template>
+
+    <template id="report_payment_receipt_user_language"
+              inherit_id="account.report_payment_receipt">
+        <xpath expr="//t[@t-set='lang']" position="attributes">
+            <attribute name="t-value">env.lang</attribute>
+        </xpath>
+    </template>
+
+    <template id="report_invoice_document_school_finance" inherit_id="account.report_invoice_document">
+        <xpath expr="//div[@id='informations']" position="after">
+            <div class="row mb-4" t-if="o.school_student_id">
+                <div class="col">
+                    <strong>Student</strong>
+                    <div t-field="o.school_student_id"/>
+                </div>
+                <div class="col" t-if="o.school_guardian_id">
+                    <strong>Guardian</strong>
+                    <div t-field="o.school_guardian_id"/>
+                </div>
+                <div class="col" t-if="o.school_academic_year_id">
+                    <strong>Academic Year</strong>
+                    <div t-field="o.school_academic_year_id"/>
+                </div>
+                <div class="col" t-if="o.school_term">
+                    <strong>Academic Period</strong>
+                    <div t-field="o.school_term"/>
+                </div>
+            </div>
+            <div class="alert alert-info" t-if="o.move_type == 'out_refund' and o.school_refund_reason">
+                <strong>Refund Reason:</strong>
+                <span t-field="o.school_refund_reason"/>
+            </div>
+        </xpath>
+    </template>
+
+    <template id="report_payment_receipt_document_school_finance"
+              inherit_id="account.report_payment_receipt_document">
+        <xpath expr="//div[@name='date']" position="after">
+            <div class="row" t-if="o.school_student_id">
+                <div class="col-6">
+                    <strong>Student:</strong> <span t-field="o.school_student_id"/>
+                </div>
+                <div class="col-6" t-if="o.school_guardian_id">
+                    <strong>Guardian:</strong> <span t-field="o.school_guardian_id"/>
+                </div>
+            </div>
+            <div class="row" t-if="o.school_payment_reference">
+                <div class="col-6">
+                    <strong>School Reference:</strong> <span t-field="o.school_payment_reference"/>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_school_finance_demo_generator_form" model="ir.ui.view">
+        <field name="name">school.finance.demo.generator.form</field>
+        <field name="model">school.finance.demo.generator</field>
+        <field name="arch" type="xml">
+            <form string="Generate Synthetic School Demo Data">
+                <div class="alert alert-danger" role="alert">
+                    This tool is blocked unless the database name indicates TEST/DEMO/STAGING/CLONE/CODEX,
+                    or the selected company is explicitly marked as a TEST / DEMO company.
+                </div>
+                <group>
+                    <field name="company_id"/>
+                    <field name="confirm_demo"/>
+                    <field name="result_message" readonly="1" invisible="not result_message"/>
+                </group>
+                <footer>
+                    <button name="action_generate" string="Generate Demo Data" type="object"
+                            class="btn-primary" invisible="result_message"/>
+                    <button string="Close" special="cancel" class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="action_school_finance_demo_generator" model="ir.actions.act_window">
+        <field name="name">Generate TEST / DEMO Data</field>
+        <field name="res_model">school.finance.demo.generator</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_school_finance_demo_generator_form"/>
+        <field name="target">new</field>
+    </record>
+</odoo>
+

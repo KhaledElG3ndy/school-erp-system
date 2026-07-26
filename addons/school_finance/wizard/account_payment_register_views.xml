@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_account_payment_register_school_finance" model="ir.ui.view">
+        <field name="name">account.payment.register.school.finance</field>
+        <field name="model">account.payment.register</field>
+        <field name="inherit_id" ref="account.view_account_payment_register_form"/>
+        <field name="arch" type="xml">
+            <field name="communication" position="after">
+                <field name="school_student_id" invisible="not school_student_id"/>
+                <field name="school_guardian_id" invisible="not school_student_id"/>
+                <field name="school_payment_reference" invisible="not school_student_id"/>
+            </field>
+        </field>
+    </record>
+</odoo>

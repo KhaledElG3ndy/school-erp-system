@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_school_fee_batch_list" model="ir.ui.view">
+        <field name="name">school.fee.batch.list</field>
+        <field name="model">school.fee.batch</field>
+        <field name="arch" type="xml">
+            <list decoration-info="state == 'draft'" decoration-success="state == 'done'" decoration-muted="state == 'cancel'">
+                <field name="name"/>
+                <field name="date"/>
+                <field name="due_date"/>
+                <field name="academic_year_id"/>
+                <field name="term"/>
+                <field name="student_ids" widget="many2many_tags"/>
+                <field name="invoice_count"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+                <field name="state"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_school_fee_batch_form" model="ir.ui.view">
+        <field name="name">school.fee.batch.form</field>
+        <field name="model">school.fee.batch</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_submit" string="Submit" type="object" class="oe_highlight" invisible="state != 'draft'"/>
+                    <button name="action_review" string="Review" type="object" class="oe_highlight"
+                            groups="school_finance.group_school_finance_reviewer" invisible="state != 'submitted'"/>
+                    <button name="action_approve" string="Approve" type="object" class="oe_highlight"
+                            groups="school_finance.group_school_finance_approver" invisible="state != 'reviewed'"/>
+                    <button name="action_generate_invoices" string="Generate Invoices" type="object" class="oe_highlight"
+                            invisible="state != 'approved'"/>
+                    <button name="action_return" string="Return for Correction" type="object"
+                            groups="school_finance.group_school_finance_reviewer"
+                            invisible="state not in ('submitted', 'reviewed')"/>
+                    <button name="action_cancel" string="Cancel" type="object" invisible="state in ('done', 'cancel')"/>
+                    <field name="state" widget="statusbar"
+                           statusbar_visible="draft,submitted,reviewed,approved,done"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_open_invoices" type="object" class="oe_stat_button"
+                                icon="fa-file-text-o" invisible="invoice_count == 0">
+                            <field name="invoice_count" string="Invoices" widget="statinfo"/>
+                        </button>
+                    </div>
+                    <div class="oe_title"><h1><field name="name"/></h1></div>
+                    <group>
+                        <group>
+                            <field name="date" readonly="state != 'draft'"/>
+                            <field name="due_date" readonly="state != 'draft'"/>
+                            <field name="academic_year_id" readonly="state != 'draft'"/>
+                            <field name="term" readonly="state != 'draft'"/>
+                            <field name="installment_plan_id" readonly="state != 'draft'"/>
+                        </group>
+                        <group>
+                            <field name="company_id" groups="base.group_multi_company" readonly="state != 'draft'"/>
+                            <field name="currency_id" invisible="1"/>
+                            <field name="submitted_by_id" readonly="1"/>
+                            <field name="reviewed_by_id" readonly="1"/>
+                            <field name="approved_by_id" readonly="1"/>
+                            <field name="school_demo_data" readonly="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Students">
+                            <field name="student_ids" widget="many2many_tags" readonly="state != 'draft'"/>
+                        </page>
+                        <page string="Fees">
+                            <field name="line_ids" readonly="state != 'draft'">
+                                <list editable="bottom">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="fee_type_id"/>
+                                    <field name="department_id"/>
+                                    <field name="quantity"/>
+                                    <field name="unit_price"/>
+                                    <field name="discount"/>
+                                    <field name="is_grant"/>
+                                    <field name="discount_reason"/>
+                                    <field name="tax_ids" widget="many2many_tags"/>
+                                    <field name="subtotal"/>
+                                    <field name="currency_id" column_invisible="True"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Approval Notes">
+                            <field name="rejection_reason" placeholder="Required when returning the batch for correction."/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+    <record id="view_school_fee_batch_search" model="ir.ui.view">
+        <field name="name">school.fee.batch.search</field>
+        <field name="model">school.fee.batch</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="academic_year_id"/>
+                <field name="student_ids"/>
+                <filter name="pending_review" string="Pending Review" domain="[('state', '=', 'submitted')]"/>
+                <filter name="pending_approval" string="Pending Approval" domain="[('state', '=', 'reviewed')]"/>
+                <filter name="ready_to_generate" string="Ready to Generate" domain="[('state', '=', 'approved')]"/>
+                <separator/>
+                <filter name="group_year" string="Academic Year" context="{'group_by': 'academic_year_id'}"/>
+                <filter name="group_state" string="Status" context="{'group_by': 'state'}"/>
+            </search>
+        </field>
+    </record>
+    <record id="action_school_fee_batch" model="ir.actions.act_window">
+        <field name="name">Fee Batches</field>
+        <field name="res_model">school.fee.batch</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_school_fee_batch_search"/>
+    </record>
+</odoo>

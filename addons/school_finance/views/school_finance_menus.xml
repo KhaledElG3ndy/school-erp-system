@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Retain the old external ID for safe upgrades, but remove the former
+         standalone application from the app switcher. -->
+    <record id="menu_school_finance_root" model="ir.ui.menu">
+        <field name="name">School Finance</field>
+        <field name="active" eval="False"/>
+    </record>
+
+    <menuitem id="menu_school_finance_dashboard" name="School Dashboard"
+              parent="account.menu_finance" action="action_school_finance_dashboard"
+              sequence="2" groups="school_finance.group_school_finance_entry"/>
+
+    <menuitem id="menu_school_finance_students_root" name="Students &amp; Guardians"
+              parent="account.menu_finance_receivables" sequence="120"
+              groups="school_finance.group_school_finance_entry"/>
+    <menuitem id="menu_school_students" name="Students"
+              parent="menu_school_finance_students_root" action="action_school_students"
+              sequence="10"/>
+    <menuitem id="menu_school_guardians" name="Guardians"
+              parent="menu_school_finance_students_root" action="action_school_guardians"
+              sequence="20"/>
+
+    <menuitem id="menu_school_finance_fees_root" name="Student Fees"
+              parent="account.menu_finance_receivables" sequence="30"
+              groups="school_finance.group_school_finance_entry"/>
+    <menuitem id="menu_school_fee_batches" name="Fee Batches"
+              parent="menu_school_finance_fees_root" action="action_school_fee_batch"
+              sequence="10"/>
+    <menuitem id="menu_school_invoices" name="Student Invoices"
+              parent="menu_school_finance_fees_root" action="action_school_invoices"
+              sequence="20"/>
+    <menuitem id="menu_school_payments" name="Student Payments"
+              parent="menu_school_finance_fees_root" action="action_school_payments"
+              sequence="30"/>
+
+    <menuitem id="menu_school_finance_configuration" name="School Configuration"
+              parent="account.menu_finance_configuration" sequence="50"
+              groups="school_finance.group_school_finance_manager"/>
+    <menuitem id="menu_school_academic_years" name="Academic Years"
+              parent="menu_school_finance_configuration" action="action_school_academic_year"
+              sequence="10"/>
+    <menuitem id="menu_school_departments" name="Departments / Cost Centers"
+              parent="menu_school_finance_configuration" action="action_school_department"
+              sequence="20"/>
+    <menuitem id="menu_school_fee_types" name="Fee Types"
+              parent="menu_school_finance_configuration" action="action_school_fee_type"
+              sequence="30"/>
+    <menuitem id="menu_school_installment_plans" name="Installment Plans"
+              parent="menu_school_finance_configuration" action="action_school_installment_plan"
+              sequence="40"/>
+    <menuitem id="menu_school_demo_generator" name="Generate TEST / DEMO Data"
+              parent="menu_school_finance_configuration" action="action_school_finance_demo_generator"
+              sequence="90"/>
+</odoo>

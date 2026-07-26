@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_school_finance" model="ir.ui.view">
+        <field name="name">res.config.settings.form.school.finance</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="account.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//app[@name='account']" position="inside">
+                <block title="School Finance Approval Policies" name="school_finance_approval_settings">
+                    <setting string="Prevent Self Approval"
+                             help="A document creator cannot approve the same document.">
+                        <field name="school_prevent_self_approval"/>
+                    </setting>
+                    <setting string="Journal Entry Approval">
+                        <field name="school_require_entry_approval"/>
+                    </setting>
+                    <setting string="Vendor Bill Approval">
+                        <field name="school_require_vendor_bill_approval"/>
+                    </setting>
+                    <setting string="Vendor Payment Approval">
+                        <field name="school_require_vendor_payment_approval"/>
+                    </setting>
+                    <setting string="Student Receipt Approval">
+                        <field name="school_require_student_receipt_approval"/>
+                    </setting>
+                    <setting string="Student Refund Approval">
+                        <field name="school_require_student_refund_approval"/>
+                    </setting>
+                    <setting string="Budget Approval">
+                        <field name="school_require_budget_approval"/>
+                    </setting>
+                    <setting string="Asset Disposal Approval">
+                        <field name="school_require_asset_disposal_approval"/>
+                    </setting>
+                </block>
+                <block title="School Finance Validation Policies" name="school_finance_validation_settings">
+                    <setting string="Block Duplicate Student Fees"
+                             help="Prevents the same fee type from being invoiced twice to one student in the same academic year and period.">
+                        <field name="school_prevent_duplicate_student_fees"/>
+                    </setting>
+                    <setting string="Block Duplicate Payment References">
+                        <field name="school_prevent_duplicate_payment_reference"/>
+                    </setting>
+                    <setting string="Negative Cash Balance Policy">
+                        <field name="school_cash_negative_policy"/>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+</odoo>
+

@@ -1,0 +1,1972 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* acc_reports_enterprise
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-26 00:39+0000\n"
+"PO-Revision-Date: 2026-07-26 03:41+0300\n"
+"Last-Translator: School System\n"
+"Language-Team: Arabic\n"
+"Language: ar_001\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#. module: acc_reports_enterprise
+#: model:ir.ui.menu,name:account.menu_finance
+msgid "Accounting"
+msgstr "المحاسبة"
+
+#. module: acc_reports_enterprise
+#: model:ir.ui.menu,name:om_account_accountant.menu_action_account_moves_journal_bank_cash
+msgid "Bank and Cash"
+msgstr "البنك والنقد"
+
+#. module: acc_reports_enterprise
+#: model:ir.ui.menu,name:om_account_asset.menu_asset_depreciation_confirmation_wizard
+msgid "Generate Assets Entries"
+msgstr "إنشاء قيود الأصول"
+
+#. module: acc_reports_enterprise
+#: model:ir.ui.menu,name:om_account_asset.menu_finance_entries_generate_entries
+msgid "Generate Entries"
+msgstr "إنشاء القيود"
+
+#. module: acc_reports_enterprise
+#: model:ir.ui.menu,name:om_account_accountant.menu_action_account_moves_journal_misc
+msgid "Miscellaneous"
+msgstr "متفرقات"
+
+#. module: acc_reports_enterprise
+#: model:ir.ui.menu,name:om_account_accountant.menu_action_account_moves_journal_purchase
+msgid "Purchases"
+msgstr "المشتريات"
+
+#. module: acc_reports_enterprise
+#: model:ir.ui.menu,name:om_account_accountant.menu_action_account_moves_journal_sales
+msgid "Sales"
+msgstr "المبيعات"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_tax.py:0
+msgid "%(label)s - Base: %(amount)s"
+msgstr "%(label)s - الأساس: %(amount)s"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "%s Days"
+msgstr "%s أيام"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_tax.py:0
+msgid "(Base)"
+msgstr "(الأساس)"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_tax.py:0
+msgid "(Tax)"
+msgstr "(الضريبة)"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_trial_balance.py:0
+msgid "(Ungrouped)"
+msgstr "(بدون مجموعة)"
+
+#. module: acc_reports_enterprise
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_agedpartnerbalance_enterprise_style
+msgid "<span class=\"o_aged_sort_icon\">↕</span>"
+msgstr "<span class=\"o_aged_sort_icon\">↕</span>"
+
+#. module: acc_reports_enterprise
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_analytic_selection
+msgid ""
+"<span class=\"o_report_analytic_label\">Filtered by analytic account:</span>"
+msgstr ""
+"<span class=\"o_report_analytic_label\">تمت التصفية حسب الحساب "
+"التحليلي:</span>"
+
+#. module: acc_reports_enterprise
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_general_ledger_enterprise_style
+msgid "<strong>Total General Ledger</strong>"
+msgstr "<strong>إجمالي دفتر الأستاذ العام</strong>"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#. odoo-python
+#: code:addons/acc_reports_enterprise/controllers/report_preview.py:0
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_partnerledger_enterprise_style
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_trialbalance_enterprise_style
+msgid "Account"
+msgstr "الحساب"
+
+#. module: acc_reports_enterprise
+#: model:ir.model,name:acc_reports_enterprise.model_account_aged_trial_balance
+msgid "Account Aged Trial balance Report"
+msgstr "تقرير أعمار أرصدة الحسابات"
+
+#. module: acc_reports_enterprise
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_trialbalance_enterprise_style
+msgid "Account Links"
+msgstr "روابط الحساب"
+
+#. module: acc_reports_enterprise
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_aged_trial_balance__account_scope
+msgid "Account Scope"
+msgstr "نطاق الحساب"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Account: Receivable"
+msgstr "الحساب: مدين"
+
+#. module: acc_reports_enterprise
+#: model:ir.model,name:acc_reports_enterprise.model_accounting_report
+msgid "Accounting Report"
+msgstr "تقرير محاسبي"
+
+#. module: acc_reports_enterprise
+#: model:ir.model,name:acc_reports_enterprise.model_acc_report_preview_helper
+msgid "Accounting Report Preview Helper"
+msgstr "مساعد معاينة التقارير المحاسبية"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Accounts with Movement"
+msgstr "الحسابات ذات الحركة"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Accounts with a Non-zero Balance"
+msgstr "الحسابات ذات الرصيد غير الصفري"
+
+#. module: acc_reports_enterprise
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_partnerledger_enterprise_style
+msgid "Actions"
+msgstr "الإجراءات"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_cash_flow.py:0
+msgid "Advance Payments from Customers"
+msgstr "الدفعات المقدمة من العملاء"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_cash_flow.py:0
+msgid "Advance Payments to Suppliers"
+msgstr "الدفعات المقدمة للموردين"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#. odoo-python
+#: code:addons/acc_reports_enterprise/controllers/report_preview.py:0
+#: code:addons/acc_reports_enterprise/models/account_report_preview_helper.py:0
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Aged Partner Balance"
+msgstr "أعمار أرصدة الشركاء"
+
+#. module: acc_reports_enterprise
+#: model:ir.actions.server,name:acc_reports_enterprise.action_menu_aged_partner_balance_preview
+msgid "Aged Partner Balance Preview"
+msgstr "معاينة أعمار أرصدة الشركاء"
+
+#. module: acc_reports_enterprise
+#: model:ir.model,name:acc_reports_enterprise.model_report_accounting_pdf_reports_report_agedpartnerbalance
+msgid "Aged Partner Balance Report"
+msgstr "تقرير أعمار أرصدة الشركاء"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#. odoo-python
+#: code:addons/acc_reports_enterprise/models/account_report_preview_helper.py:0
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+#: model:ir.ui.menu,name:accounting_pdf_reports.menu_aged_payable
+msgid "Aged Payable"
+msgstr "أعمار الدائنين"
+
+#. module: acc_reports_enterprise
+#: model:ir.actions.server,name:acc_reports_enterprise.action_menu_aged_payable_preview
+msgid "Aged Payable Preview"
+msgstr "معاينة أعمار الدائنين"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#. odoo-python
+#: code:addons/acc_reports_enterprise/models/account_report_preview_helper.py:0
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+#: model:ir.ui.menu,name:accounting_pdf_reports.menu_aged_receivable
+msgid "Aged Receivable"
+msgstr "أعمار المدينين"
+
+#. module: acc_reports_enterprise
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_agedpartnerbalance_enterprise_style
+msgid "Aged Receivable <span class=\"o_aged_sort_icon\">↕</span>"
+msgstr "أعمار المدينين <span class=\"o_aged_sort_icon\">↕</span>"
+
+#. module: acc_reports_enterprise
+#: model:ir.actions.server,name:acc_reports_enterprise.action_menu_aged_receivable_preview
+msgid "Aged Receivable Preview"
+msgstr "معاينة أعمار المدينين"
+
+#. module: acc_reports_enterprise
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_aged_trial_balance__aging_based_on
+msgid "Aging Based On"
+msgstr "أساس احتساب الأعمار"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Aging Basis"
+msgstr "أساس التقادم"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#. odoo-python
+#: code:addons/acc_reports_enterprise/models/account_report_preview_helper.py:0
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+#: code:addons/acc_reports_enterprise/static/src/xml/report_client_action.xml:0
+msgid "All"
+msgstr "الكل"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "All Accounts"
+msgstr "كل الحسابات"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "All Analytic Accounts"
+msgstr "كل الحسابات التحليلية"
+
+#. module: acc_reports_enterprise
+#: model:ir.model.fields.selection,name:acc_reports_enterprise.selection__account_cash_flow_report__target_move__all
+#: model:ir.model.fields.selection,name:acc_reports_enterprise.selection__account_executive_summary_report__target_move__all
+msgid "All Entries"
+msgstr "جميع القيود"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "All Journals"
+msgstr "كل اليوميات"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "All Partners"
+msgstr "كل الشركاء"
+
+#. module: acc_reports_enterprise
+#: model:ir.model.fields.selection,name:acc_reports_enterprise.selection__account_cash_flow_report__target_move__posted
+#: model:ir.model.fields.selection,name:acc_reports_enterprise.selection__account_executive_summary_report__target_move__posted
+msgid "All Posted Entries"
+msgstr "جميع القيود المرحلة"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/controllers/report_preview.py:0
+msgid "Analytic Account"
+msgstr "الحساب التحليلي"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Analytic Accounts"
+msgstr "الحسابات التحليلية"
+
+#: model:ir.actions.act_window,name:account.action_analytic_reporting
+#: model:ir.ui.menu,name:account.menu_action_analytic_reporting
+msgid "Analytic Reporting"
+msgstr "التقارير التحليلية"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+#: code:addons/acc_reports_enterprise/static/src/xml/report_client_action.xml:0
+msgid "Apply"
+msgstr "تطبيق"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_cash_flow.py:0
+#: code:addons/acc_reports_enterprise/report/report_general_ledger.py:0
+#: code:addons/acc_reports_enterprise/report/report_tax.py:0
+#: code:addons/acc_reports_enterprise/report/report_trial_balance.py:0
+msgid "April"
+msgstr "أبريل"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_aged_partner.py:0
+#: code:addons/acc_reports_enterprise/report/report_financial.py:0
+msgid "As of %s"
+msgstr "اعتباراً من %s"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/xml/report_client_action.xml:0
+msgid "Ascending"
+msgstr "تصاعدي"
+
+#: model:account.financial.report,name:accounting_pdf_reports.account_financial_report_assets0
+msgid "Assets"
+msgstr "الأصول"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_cash_flow.py:0
+#: code:addons/acc_reports_enterprise/report/report_general_ledger.py:0
+#: code:addons/acc_reports_enterprise/report/report_tax.py:0
+#: code:addons/acc_reports_enterprise/report/report_trial_balance.py:0
+msgid "August"
+msgstr "أغسطس"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_executive_summary.py:0
+msgid "Average Creditor Days"
+msgstr "متوسط أيام الدائنين"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_executive_summary.py:0
+msgid "Average Debtor Days"
+msgstr "متوسط أيام المدينين"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/controllers/report_preview.py:0
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.cash_flow
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.executive_summary
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_financial_enterprise_style
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_general_ledger_enterprise_style
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_partnerledger_enterprise_style
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_tax_enterprise_style
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_trialbalance_enterprise_style
+msgid "Balance"
+msgstr "الرصيد"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#. odoo-python
+#: code:addons/acc_reports_enterprise/models/account_report_preview_helper.py:0
+#: code:addons/acc_reports_enterprise/report/report_executive_summary.py:0
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+#: model:ir.ui.menu,name:accounting_pdf_reports.menu_account_report_bs
+msgid "Balance Sheet"
+msgstr "الميزانية العمومية"
+
+#. module: acc_reports_enterprise
+#: model:ir.actions.server,name:acc_reports_enterprise.action_menu_account_report_bs_preview
+msgid "Balance Sheet Preview"
+msgstr "معاينة الميزانية العمومية"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#. odoo-python
+#: code:addons/acc_reports_enterprise/controllers/report_preview.py:0
+#: code:addons/acc_reports_enterprise/models/account_report_preview_helper.py:0
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+#: model:ir.model,name:acc_reports_enterprise.model_report_om_account_daily_reports_report_bankbook
+msgid "Bank Book"
+msgstr "دفتر البنك"
+
+#. module: acc_reports_enterprise
+#: model:ir.actions.server,name:acc_reports_enterprise.action_menu_bankbook_preview
+msgid "Bank Book Preview"
+msgstr "معاينة دفتر البنك"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_executive_summary.py:0
+msgid "Bank Closing Balance"
+msgstr "رصيد الإقفال البنكي"
+
+#. module: acc_reports_enterprise
+#: model:account.financial.report,name:acc_reports_enterprise.account_financial_report_bank_cash
+msgid "Bank and Cash Accounts"
+msgstr "الحسابات البنكية والنقدية"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Base Currency"
+msgstr "العملة الأساسية"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Based on Due Date"
+msgstr "بناءً على تاريخ الاستحقاق"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_executive_summary.py:0
+msgid "Cash"
+msgstr "النقدية"
+
+#. module: acc_reports_enterprise
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_balance_report__cash_basis
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_accounting_report__cash_basis
+msgid "Cash Basis"
+msgstr "الأساس النقدي"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/xml/report_client_action.xml:0
+msgid "Cash Basis Method"
+msgstr "طريقة الأساس النقدي"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#. odoo-python
+#: code:addons/acc_reports_enterprise/controllers/report_preview.py:0
+#: code:addons/acc_reports_enterprise/models/account_report_preview_helper.py:0
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+#: model:ir.model,name:acc_reports_enterprise.model_report_om_account_daily_reports_report_cashbook
+msgid "Cash Book"
+msgstr "دفتر النقدية"
+
+#. module: acc_reports_enterprise
+#: model:ir.actions.server,name:acc_reports_enterprise.action_menu_cashbook_preview
+msgid "Cash Book Preview"
+msgstr "معاينة دفتر النقدية"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_executive_summary.py:0
+msgid "Cash Flow"
+msgstr "التدفق النقدي"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#. odoo-python
+#: code:addons/acc_reports_enterprise/models/account_report_preview_helper.py:0
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+#: model:ir.actions.report,name:acc_reports_enterprise.action_report_cash_flow_statement
+#: model:ir.model,name:acc_reports_enterprise.model_account_cash_flow_report
+#: model:ir.model,name:acc_reports_enterprise.model_report_acc_reports_enterprise_cash_flow
+#: model:ir.ui.menu,name:acc_reports_enterprise.menu_cash_flow_statement
+msgid "Cash Flow Statement"
+msgstr "قائمة التدفقات النقدية"
+
+#. module: acc_reports_enterprise
+#: model:ir.actions.server,name:acc_reports_enterprise.action_menu_cash_flow_statement_preview
+msgid "Cash Flow Statement Preview"
+msgstr "معاينة قائمة التدفقات النقدية"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_cash_flow.py:0
+msgid "Cash Flows from Financing Activities"
+msgstr "التدفقات النقدية من الأنشطة التمويلية"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_cash_flow.py:0
+msgid "Cash Flows from Investing and Extraordinary Activities"
+msgstr "التدفقات النقدية من الأنشطة الاستثمارية وغير العادية"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_cash_flow.py:0
+msgid "Cash Flows from Operating Activities"
+msgstr "التدفقات النقدية من الأنشطة التشغيلية"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_cash_flow.py:0
+msgid "Cash Flows from Unclassified Activities"
+msgstr "التدفقات النقدية من الأنشطة غير المصنفة"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_executive_summary.py:0
+msgid "Cash Profit"
+msgstr "الربح النقدي"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_cash_flow.py:0
+msgid "Cash and Cash Equivalents, Beginning of Period"
+msgstr "النقد وما في حكمه، بداية الفترة"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_cash_flow.py:0
+msgid "Cash and Cash Equivalents, Closing Balance"
+msgstr "النقد وما في حكمه، رصيد الإقفال"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/xml/report_client_action.xml:0
+msgid "Clear"
+msgstr "مسح"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Clear All"
+msgstr "مسح الكل"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/xml/report_client_action.xml:0
+msgid "Clear Search"
+msgstr "مسح البحث"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/controllers/report_preview.py:0
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_trialbalance_enterprise_style
+msgid "Closing Balance"
+msgstr "الرصيد الختامي"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/controllers/report_preview.py:0
+msgid "Code"
+msgstr "الرمز"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Companies"
+msgstr "الشركات"
+
+#. module: acc_reports_enterprise
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_cash_flow_report__company_id
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_executive_summary_report__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#. odoo-python
+#: code:addons/acc_reports_enterprise/controllers/report_preview.py:0
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Comparison"
+msgstr "المقارنة"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Comparison From"
+msgstr "المقارنة من"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Comparison To"
+msgstr "المقارنة إلى"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_executive_summary.py:0
+msgid "Cost of Revenue"
+msgstr "تكلفة الإيرادات"
+
+#. module: acc_reports_enterprise
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_acc_report_preview_helper__create_uid
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_cash_flow_report__create_uid
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_executive_summary_report__create_uid
+msgid "Created by"
+msgstr "أنشأه"
+
+#. module: acc_reports_enterprise
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_acc_report_preview_helper__create_date
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_cash_flow_report__create_date
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_executive_summary_report__create_date
+msgid "Created on"
+msgstr "تاريخ الإنشاء"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/controllers/report_preview.py:0
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_financial_enterprise_style
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_general_ledger_enterprise_style
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_partnerledger_enterprise_style
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_trialbalance_enterprise_style
+msgid "Credit"
+msgstr "الدائن"
+
+#. module: acc_reports_enterprise
+#: model:account.financial.report,name:acc_reports_enterprise.account_financial_report_credit_cards
+msgid "Credit Cards"
+msgstr "بطاقات الائتمان"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_executive_summary.py:0
+msgid "Creditors"
+msgstr "الدائنون"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+#: model:ir.model.fields.selection,name:acc_reports_enterprise.selection__account_aged_trial_balance__currency_unit__base
+#: model:ir.model.fields.selection,name:acc_reports_enterprise.selection__account_cash_flow_report__currency_unit__base
+#: model:ir.model.fields.selection,name:acc_reports_enterprise.selection__account_executive_summary_report__currency_unit__base
+#: model:ir.model.fields.selection,name:acc_reports_enterprise.selection__account_tax_report_wizard__currency_unit__base
+msgid "Currency"
+msgstr "العملة"
+
+#. module: acc_reports_enterprise
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_aged_trial_balance__currency_unit
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_cash_flow_report__currency_unit
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_executive_summary_report__currency_unit
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_tax_report_wizard__currency_unit
+msgid "Currency Unit"
+msgstr "وحدة العملة"
+
+#. module: acc_reports_enterprise
+#: model:ir.model.fields.selection,name:acc_reports_enterprise.selection__account_aged_trial_balance__currency_unit__base_decimal
+#: model:ir.model.fields.selection,name:acc_reports_enterprise.selection__account_cash_flow_report__currency_unit__base_decimal
+#: model:ir.model.fields.selection,name:acc_reports_enterprise.selection__account_executive_summary_report__currency_unit__base_decimal
+#: model:ir.model.fields.selection,name:acc_reports_enterprise.selection__account_tax_report_wizard__currency_unit__base_decimal
+msgid "Currency with decimals"
+msgstr "العملة مع الكسور العشرية"
+
+#. module: acc_reports_enterprise
+#: model:account.financial.report,name:acc_reports_enterprise.account_financial_report_current_assets
+#: model:account.financial.report,name:acc_reports_enterprise.account_financial_report_current_assets_group
+msgid "Current Assets"
+msgstr "الأصول المتداولة"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_executive_summary.py:0
+msgid "Current Assets to Liabilities Ratio"
+msgstr "نسبة الأصول المتداولة إلى الالتزامات"
+
+#. module: acc_reports_enterprise
+#: model:account.financial.report,name:acc_reports_enterprise.account_financial_report_current_liabilities
+#: model:account.financial.report,name:acc_reports_enterprise.account_financial_report_current_liabilities_group
+msgid "Current Liabilities"
+msgstr "الالتزامات المتداولة"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_trial_balance.py:0
+msgid "Current Period"
+msgstr "الفترة الحالية"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/xml/report_client_action.xml:0
+msgid "Custom Dates"
+msgstr "تواريخ مخصصة"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/models/account_report_preview_helper.py:0
+msgid "Customer Statement"
+msgstr "كشف حساب العميل"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Customers"
+msgstr "العملاء"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#. odoo-python
+#: code:addons/acc_reports_enterprise/controllers/report_preview.py:0
+#: code:addons/acc_reports_enterprise/report/report_aged_partner.py:0
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_general_ledger_enterprise_style
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#. odoo-python
+#: code:addons/acc_reports_enterprise/controllers/report_preview.py:0
+#: code:addons/acc_reports_enterprise/models/account_report_preview_helper.py:0
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Day Book"
+msgstr "دفتر اليومية"
+
+#. module: acc_reports_enterprise
+#: model:ir.actions.server,name:acc_reports_enterprise.action_menu_daybook_preview
+msgid "Day Book Preview"
+msgstr "معاينة دفتر اليومية"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/xml/report_client_action.xml:0
+msgid "Days"
+msgstr "أيام"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/controllers/report_preview.py:0
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_financial_enterprise_style
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_general_ledger_enterprise_style
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_partnerledger_enterprise_style
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_trialbalance_enterprise_style
+msgid "Debit"
+msgstr "المدين"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_executive_summary.py:0
+msgid "Debtors"
+msgstr "المدينون"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_cash_flow.py:0
+#: code:addons/acc_reports_enterprise/report/report_general_ledger.py:0
+#: code:addons/acc_reports_enterprise/report/report_tax.py:0
+#: code:addons/acc_reports_enterprise/report/report_trial_balance.py:0
+msgid "December"
+msgstr "ديسمبر"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/xml/report_client_action.xml:0
+msgid "Descending"
+msgstr "تنازلي"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Display Accounts"
+msgstr "عرض الحسابات"
+
+#. module: acc_reports_enterprise
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_acc_report_preview_helper__display_name
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_aged_trial_balance__display_name
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_balance_report__display_name
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_cash_flow_report__display_name
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_executive_summary_report__display_name
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_tax_report_wizard__display_name
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_accounting_report__display_name
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_ir_actions_report__display_name
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_report_acc_reports_enterprise_cash_flow__display_name
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_report_acc_reports_enterprise_executive_summary__display_name
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_report_accounting_pdf_reports_report_agedpartnerbalance__display_name
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_report_accounting_pdf_reports_report_financial__display_name
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_report_accounting_pdf_reports_report_general_ledger__display_name
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_report_accounting_pdf_reports_report_partnerledger__display_name
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_report_accounting_pdf_reports_report_tax__display_name
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_report_accounting_pdf_reports_report_trialbalance__display_name
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_report_om_account_daily_reports_report_bankbook__display_name
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_report_om_account_daily_reports_report_cashbook__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Draft Entries"
+msgstr "القيود في حالة المسودة"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+#: model:ir.model.fields.selection,name:acc_reports_enterprise.selection__account_aged_trial_balance__aging_based_on__due_date
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_partnerledger_enterprise_style
+msgid "Due Date"
+msgstr "تاريخ الاستحقاق"
+
+#: model:ir.actions.act_window,help:account.action_account_invoice_report_all
+msgid "Dynamic invoice analysis based on actual system data."
+msgstr "تحليل ديناميكي للفواتير استناداً إلى بيانات النظام الفعلية."
+
+#. module: acc_reports_enterprise
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_cash_flow_report__date_to
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_executive_summary_report__date_to
+msgid "End Date"
+msgstr "تاريخ الانتهاء"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Entries"
+msgstr "القيود"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/controllers/report_preview.py:0
+msgid "Entry Label"
+msgstr "بيان القيد"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Entry Order"
+msgstr "ترتيب القيود"
+
+#. module: acc_reports_enterprise
+#: model:account.financial.report,name:acc_reports_enterprise.account_financial_report_equity
+msgid "Equity"
+msgstr "حقوق الملكية"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#. odoo-python
+#: code:addons/acc_reports_enterprise/models/account_report_preview_helper.py:0
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+#: model:ir.actions.report,name:acc_reports_enterprise.action_report_executive_summary
+#: model:ir.actions.server,name:acc_reports_enterprise.action_menu_executive_summary
+#: model:ir.model,name:acc_reports_enterprise.model_account_executive_summary_report
+#: model:ir.model,name:acc_reports_enterprise.model_report_acc_reports_enterprise_executive_summary
+#: model:ir.ui.menu,name:acc_reports_enterprise.menu_executive_summary
+msgid "Executive Summary"
+msgstr "الملخص التنفيذي"
+
+#. module: acc_reports_enterprise
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_agedpartnerbalance_enterprise_style
+msgid "Expand Entries"
+msgstr "كشف القيود"
+
+#. module: acc_reports_enterprise
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_financial_enterprise_style
+msgid "Expand/Collapse Accounts"
+msgstr "كشف/طي الحسابات"
+
+#. module: acc_reports_enterprise
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_partnerledger_enterprise_style
+msgid "Expand/Collapse Entries"
+msgstr "كشف/طي القيود"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_cash_flow.py:0
+#: code:addons/acc_reports_enterprise/report/report_executive_summary.py:0
+msgid "Expenses"
+msgstr "المصروفات"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_cash_flow.py:0
+#: code:addons/acc_reports_enterprise/report/report_general_ledger.py:0
+#: code:addons/acc_reports_enterprise/report/report_tax.py:0
+#: code:addons/acc_reports_enterprise/report/report_trial_balance.py:0
+msgid "February"
+msgstr "فبراير"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/controllers/report_preview.py:0
+#: code:addons/acc_reports_enterprise/models/account_report_preview_helper.py:0
+#: model:ir.actions.server,name:acc_reports_enterprise.action_menu_financial_report
+#: model:ir.ui.menu,name:acc_reports_enterprise.menu_financial_report
+msgid "Financial Report"
+msgstr "التقرير المالي"
+
+#. module: acc_reports_enterprise
+#: model:ir.model,name:acc_reports_enterprise.model_report_accounting_pdf_reports_report_financial
+msgid "Financial Reports"
+msgstr "التقارير المالية"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Fold All"
+msgstr "طي الكل"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_aged_partner.py:0
+#: code:addons/acc_reports_enterprise/report/report_cash_flow.py:0
+#: code:addons/acc_reports_enterprise/report/report_executive_summary.py:0
+#: code:addons/acc_reports_enterprise/report/report_tax.py:0
+#: code:addons/acc_reports_enterprise/report/report_trial_balance.py:0
+msgid "Form content is missing, this report cannot be printed."
+msgstr "محتوى النموذج مفقود، ولا يمكن طباعة هذا التقرير."
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_financial.py:0
+msgid "From %(date_from)s to %(date_to)s"
+msgstr "من %(date_from)s إلى %(date_to)s"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "From Date"
+msgstr "من تاريخ"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#. odoo-python
+#: code:addons/acc_reports_enterprise/controllers/report_preview.py:0
+#: code:addons/acc_reports_enterprise/models/account_report_preview_helper.py:0
+#: code:addons/acc_reports_enterprise/report/report_general_ledger.py:0
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_financial_enterprise_style
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_trialbalance_enterprise_style
+#: model:ir.ui.menu,name:accounting_pdf_reports.menu_general_ledger
+msgid "General Ledger"
+msgstr "دفتر الأستاذ العام"
+
+#. module: acc_reports_enterprise
+#: model:ir.actions.server,name:acc_reports_enterprise.action_menu_general_ledger_preview
+msgid "General Ledger Preview"
+msgstr "معاينة دفتر الأستاذ العام"
+
+#. module: acc_reports_enterprise
+#: model:ir.model,name:acc_reports_enterprise.model_report_accounting_pdf_reports_report_general_ledger
+msgid "General Ledger Report"
+msgstr "تقرير دفتر الأستاذ العام"
+
+#. module: acc_reports_enterprise
+#: model:ir.model.fields.selection,name:acc_reports_enterprise.selection__account_tax_report_wizard__tax_report_type__general
+msgid "General Tax Report"
+msgstr "التقرير الضريبي العام"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_executive_summary.py:0
+#: code:addons/acc_reports_enterprise/report/report_financial.py:0
+msgid "Gross Profit"
+msgstr "إجمالي الربح"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_executive_summary.py:0
+msgid "Gross Profit Margin (Gross Profit / Operating Income)"
+msgstr "هامش إجمالي الربح (إجمالي الربح / الدخل التشغيلي)"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/controllers/report_preview.py:0
+msgid "Group"
+msgstr "المجموعة"
+
+#. module: acc_reports_enterprise
+#: model:ir.model.fields.selection,name:acc_reports_enterprise.selection__account_tax_report_wizard__tax_report_type__by_account_tax
+msgid "Group by: Account > Tax"
+msgstr "تجميع حسب: الحساب > الضريبة"
+
+#. module: acc_reports_enterprise
+#: model:ir.model.fields.selection,name:acc_reports_enterprise.selection__account_tax_report_wizard__tax_report_type__by_tax_account
+msgid "Group by: Tax > Account"
+msgstr "تجميع حسب: الضريبة > الحساب"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/xml/report_client_action.xml:0
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_aged_trial_balance__hide_zero_lines
+msgid "Hide Zero Lines"
+msgstr "إخفاء البنود الصفرية"
+
+#. module: acc_reports_enterprise
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_balance_report__hierarchy_subtotals
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_accounting_report__hierarchy_subtotals
+msgid "Hierarchy Subtotals"
+msgstr "الإجماليات الفرعية الهرمية"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/xml/report_client_action.xml:0
+msgid "Hierarchy and Subtotals"
+msgstr "التسلسل الهرمي والإجماليات الفرعية"
+
+#. module: acc_reports_enterprise
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_acc_report_preview_helper__id
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_aged_trial_balance__id
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_balance_report__id
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_cash_flow_report__id
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_executive_summary_report__id
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_move_line__id
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_tax_report_wizard__id
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_accounting_report__id
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_ir_actions_report__id
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_report_acc_reports_enterprise_cash_flow__id
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_report_acc_reports_enterprise_executive_summary__id
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_report_accounting_pdf_reports_report_agedpartnerbalance__id
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_report_accounting_pdf_reports_report_financial__id
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_report_accounting_pdf_reports_report_general_ledger__id
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_report_accounting_pdf_reports_report_partnerledger__id
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_report_accounting_pdf_reports_report_tax__id
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_report_accounting_pdf_reports_report_trialbalance__id
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_report_om_account_daily_reports_report_bankbook__id
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_report_om_account_daily_reports_report_cashbook__id
+msgid "ID"
+msgstr "المعرّف"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/models/account_aged_trial_balance.py:0
+#: code:addons/acc_reports_enterprise/models/account_cash_flow_report.py:0
+#: code:addons/acc_reports_enterprise/models/account_executive_summary_report.py:0
+#: code:addons/acc_reports_enterprise/models/account_tax_report.py:0
+msgid "In %s"
+msgstr "بـ %s"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/models/account_aged_trial_balance.py:0
+#: code:addons/acc_reports_enterprise/models/account_cash_flow_report.py:0
+#: code:addons/acc_reports_enterprise/models/account_executive_summary_report.py:0
+#: code:addons/acc_reports_enterprise/models/account_tax_report.py:0
+msgid "In %s."
+msgstr "بـ %s."
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "In Currency"
+msgstr "بالعملة"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/models/account_aged_trial_balance.py:0
+#: code:addons/acc_reports_enterprise/models/account_cash_flow_report.py:0
+#: code:addons/acc_reports_enterprise/models/account_executive_summary_report.py:0
+#: code:addons/acc_reports_enterprise/models/account_tax_report.py:0
+msgid "In K%s"
+msgstr "بالآلاف (K%s)"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/models/account_aged_trial_balance.py:0
+#: code:addons/acc_reports_enterprise/models/account_cash_flow_report.py:0
+#: code:addons/acc_reports_enterprise/models/account_executive_summary_report.py:0
+#: code:addons/acc_reports_enterprise/models/account_tax_report.py:0
+msgid "In M%s"
+msgstr "بالملايين (M%s)"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_cash_flow.py:0
+msgid "Income"
+msgstr "الإيرادات"
+
+#. module: acc_reports_enterprise
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_financial_enterprise_style
+msgid "Internal Links"
+msgstr "الروابط الداخلية"
+
+#: model:ir.actions.act_window,name:account.action_account_invoice_report_all
+#: model:ir.ui.menu,name:account.menu_action_account_invoice_report_all
+#: model_terms:ir.ui.view,arch_db:account.view_account_invoice_report_graph
+#: model_terms:ir.ui.view,arch_db:account.view_account_invoice_report_pivot
+msgid "Invoice Analysis"
+msgstr "تحليل الفواتير"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+#: model:ir.model.fields.selection,name:acc_reports_enterprise.selection__account_aged_trial_balance__aging_based_on__invoice_date
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_partnerledger_enterprise_style
+msgid "Invoice Date"
+msgstr "تاريخ الفاتورة"
+
+#. module: acc_reports_enterprise
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_agedpartnerbalance_enterprise_style
+msgid "Invoice Date <span class=\"o_aged_sort_icon\">↕</span>"
+msgstr "تاريخ الفاتورة <span class=\"o_aged_sort_icon\">↕</span>"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_cash_flow.py:0
+#: code:addons/acc_reports_enterprise/report/report_general_ledger.py:0
+#: code:addons/acc_reports_enterprise/report/report_tax.py:0
+#: code:addons/acc_reports_enterprise/report/report_trial_balance.py:0
+msgid "January"
+msgstr "يناير"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/controllers/report_preview.py:0
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_partnerledger_enterprise_style
+msgid "Journal"
+msgstr "دفتر اليومية"
+
+#. module: acc_reports_enterprise
+#: model:ir.actions.server,name:acc_reports_enterprise.action_menu_journal_audit_preview
+msgid "Journal Audit Preview"
+msgstr "معاينة تدقيق اليوميات"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/controllers/report_preview.py:0
+msgid "Journal Entries"
+msgstr "قيود اليومية"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/controllers/report_preview.py:0
+msgid "Journal Entry"
+msgstr "قيد اليومية"
+
+#. module: acc_reports_enterprise
+#: model:ir.model,name:acc_reports_enterprise.model_account_move_line
+msgid "Journal Item"
+msgstr "بند اليومية"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/models/account_report_preview_helper.py:0
+#: code:addons/acc_reports_enterprise/report/report_general_ledger.py:0
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_financial_enterprise_style
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_general_ledger_enterprise_style
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_partnerledger_enterprise_style
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_trialbalance_enterprise_style
+msgid "Journal Items"
+msgstr "بنود اليومية"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_cash_flow_report__journal_ids
+#: model:ir.ui.menu,name:om_account_accountant.menu_finance_entries_accounting_journals
+msgid "Journals"
+msgstr "دفاتر اليومية"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#. odoo-python
+#: code:addons/acc_reports_enterprise/controllers/report_preview.py:0
+#: code:addons/acc_reports_enterprise/models/account_report_preview_helper.py:0
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Journals Audit"
+msgstr "تدقيق اليوميات"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_cash_flow.py:0
+#: code:addons/acc_reports_enterprise/report/report_general_ledger.py:0
+#: code:addons/acc_reports_enterprise/report/report_tax.py:0
+#: code:addons/acc_reports_enterprise/report/report_trial_balance.py:0
+msgid "July"
+msgstr "يوليو"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_cash_flow.py:0
+#: code:addons/acc_reports_enterprise/report/report_general_ledger.py:0
+#: code:addons/acc_reports_enterprise/report/report_tax.py:0
+#: code:addons/acc_reports_enterprise/report/report_trial_balance.py:0
+msgid "June"
+msgstr "يونيو"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/controllers/report_preview.py:0
+msgid "Label"
+msgstr "البيان"
+
+#. module: acc_reports_enterprise
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_acc_report_preview_helper__write_uid
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_cash_flow_report__write_uid
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_executive_summary_report__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: acc_reports_enterprise
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_acc_report_preview_helper__write_date
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_cash_flow_report__write_date
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_executive_summary_report__write_date
+msgid "Last Updated on"
+msgstr "تاريخ آخر تحديث"
+
+#: model:ir.ui.menu,name:accounting_pdf_reports.menu_finance_entries_accounting_ledgers
+msgid "Ledgers"
+msgstr "دفاتر الأستاذ"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_financial.py:0
+msgid "Less Allocations, Plus Withdrawals"
+msgstr "ناقص المخصصات ومضافاً إليها المسحوبات"
+
+#: model:account.financial.report,name:accounting_pdf_reports.account_financial_report_liabilitysum0
+msgid "Liabilities"
+msgstr "الالتزامات"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_financial.py:0
+msgid "Liabilities + Equity"
+msgstr "الالتزامات + حقوق الملكية"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/controllers/report_preview.py:0
+msgid "Line Date"
+msgstr "تاريخ البند"
+
+#: model:ir.ui.menu,name:account.account_reports_management_menu
+msgid "Management"
+msgstr "الإدارة"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_cash_flow.py:0
+#: code:addons/acc_reports_enterprise/report/report_general_ledger.py:0
+#: code:addons/acc_reports_enterprise/report/report_tax.py:0
+#: code:addons/acc_reports_enterprise/report/report_trial_balance.py:0
+msgid "March"
+msgstr "مارس"
+
+#. module: acc_reports_enterprise
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_partnerledger_enterprise_style
+msgid "Matching"
+msgstr "المطابقة"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_cash_flow.py:0
+#: code:addons/acc_reports_enterprise/report/report_general_ledger.py:0
+#: code:addons/acc_reports_enterprise/report/report_tax.py:0
+#: code:addons/acc_reports_enterprise/report/report_trial_balance.py:0
+msgid "May"
+msgstr "مايو"
+
+#. module: acc_reports_enterprise
+#: model:ir.model.fields.selection,name:acc_reports_enterprise.selection__account_aged_trial_balance__currency_unit__million
+#: model:ir.model.fields.selection,name:acc_reports_enterprise.selection__account_cash_flow_report__currency_unit__million
+#: model:ir.model.fields.selection,name:acc_reports_enterprise.selection__account_executive_summary_report__currency_unit__million
+#: model:ir.model.fields.selection,name:acc_reports_enterprise.selection__account_tax_report_wizard__currency_unit__million
+msgid "Millions"
+msgstr "الملايين"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Month"
+msgstr "الشهر"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/controllers/report_preview.py:0
+msgid "Move"
+msgstr "القيد"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Multiple Companies"
+msgstr "عدة شركات"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/controllers/report_preview.py:0
+msgid "Name"
+msgstr "الاسم"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/controllers/report_preview.py:0
+msgid "Net Amount"
+msgstr "المبلغ الصافي"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_executive_summary.py:0
+msgid "Net Assets"
+msgstr "صافي الأصول"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_cash_flow.py:0
+msgid "Net Increase in Cash and Cash Equivalents"
+msgstr "صافي الزيادة في النقد وما في حكمه"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_executive_summary.py:0
+#: code:addons/acc_reports_enterprise/report/report_financial.py:0
+msgid "Net Profit"
+msgstr "صافي الربح"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_financial.py:0
+msgid "Net Profit After Allocations and Withdrawals"
+msgstr "صافي الربح بعد المخصصات والمسحوبات"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_executive_summary.py:0
+msgid "Net Profit Margin (Net Profit / Revenue)"
+msgstr "هامش صافي الربح (صافي الربح / الإيرادات)"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_tax.py:0
+msgid "Net Tax Due"
+msgstr "صافي الضريبة المستحقة"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_tax.py:0
+msgid "Net VAT Payable (Refundable)"
+msgstr "صافي ضريبة القيمة المضافة واجبة السداد (القابلة للاسترداد)"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/xml/report_client_action.xml:0
+msgid "Next Period"
+msgstr "الفترة التالية"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/xml/report_client_action.xml:0
+msgid "No Comparison"
+msgstr "بلا مقارنة"
+
+#: model_terms:ir.actions.act_window,help:account.action_analytic_reporting
+msgid "No analytic items yet"
+msgstr "لا توجد بنود تحليلية بعد"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Non-trade Receivable Account"
+msgstr "حساب المدينين غير التجاري"
+
+#. module: acc_reports_enterprise
+#: model:ir.model.fields.selection,name:acc_reports_enterprise.selection__account_aged_trial_balance__account_scope__non_trade
+msgid "Non-trade Receivables"
+msgstr "المدينون غير التجاريين"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Non-zero Balance"
+msgstr "رصيد غير صفري"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/controllers/report_preview.py:0
+msgid "Not Due"
+msgstr "غير مستحق"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_cash_flow.py:0
+#: code:addons/acc_reports_enterprise/report/report_general_ledger.py:0
+#: code:addons/acc_reports_enterprise/report/report_tax.py:0
+#: code:addons/acc_reports_enterprise/report/report_trial_balance.py:0
+msgid "November"
+msgstr "نوفمبر"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_cash_flow.py:0
+#: code:addons/acc_reports_enterprise/report/report_general_ledger.py:0
+#: code:addons/acc_reports_enterprise/report/report_tax.py:0
+#: code:addons/acc_reports_enterprise/report/report_trial_balance.py:0
+msgid "October"
+msgstr "أكتوبر"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_aged_partner.py:0
+msgid "Older"
+msgstr "أقدم"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/controllers/report_preview.py:0
+#: code:addons/acc_reports_enterprise/report/report_general_ledger.py:0
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_trialbalance_enterprise_style
+msgid "Opening Balance"
+msgstr "الرصيد الافتتاحي"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_cash_flow.py:0
+msgid "Operating Activities Expenses"
+msgstr "مصروفات الأنشطة التشغيلية"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_cash_flow.py:0
+msgid "Operating Activities Profit"
+msgstr "أرباح الأنشطة التشغيلية"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_financial.py:0
+msgid "Operating Income (or Loss)"
+msgstr "الدخل التشغيلي (أو الخسارة التشغيلية)"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Order By"
+msgstr "ترتيب حسب"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Order by Date"
+msgstr "ترتيب حسب التاريخ"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Order by Journal Entry Number"
+msgstr "ترتيب حسب رقم القيد"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Order by Journal and Partner"
+msgstr "ترتيب حسب اليومية والشريك"
+
+#. module: acc_reports_enterprise
+#: model:ir.model.fields.selection,name:acc_reports_enterprise.selection__account_tax_report_wizard__tax_report_type__eg_other
+msgid "Other Taxes (EG)"
+msgstr "ضرائب أخرى (مصر)"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/xml/report_client_action.xml:0
+msgid "PDF"
+msgstr "PDF"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/controllers/report_preview.py:0
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_agedpartnerbalance_enterprise_style
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_general_ledger_enterprise_style
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_partnerledger_enterprise_style
+msgid "Partner"
+msgstr "الشريك"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#. odoo-python
+#: code:addons/acc_reports_enterprise/controllers/report_preview.py:0
+#: code:addons/acc_reports_enterprise/models/account_report_preview_helper.py:0
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+#: model:ir.ui.menu,name:accounting_pdf_reports.menu_partner_ledger
+msgid "Partner Ledger"
+msgstr "دفتر الأستاذ للشركاء"
+
+#. module: acc_reports_enterprise
+#: model:ir.actions.server,name:acc_reports_enterprise.action_menu_partner_ledger_preview
+msgid "Partner Ledger Preview"
+msgstr "معاينة دفتر الأستاذ للشركاء"
+
+#. module: acc_reports_enterprise
+#: model:ir.model,name:acc_reports_enterprise.model_report_accounting_pdf_reports_report_partnerledger
+msgid "Partner Ledger Report"
+msgstr "تقرير دفتر الأستاذ للشركاء"
+
+#: model:ir.ui.menu,name:account.account_reports_partners_reports_menu
+msgid "Partner Reports"
+msgstr "تقارير الشركاء"
+
+#. module: acc_reports_enterprise
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_aged_trial_balance__partner_category_ids
+msgid "Partner Tags"
+msgstr "وسوم الشركاء"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+#: code:addons/acc_reports_enterprise/static/src/xml/report_client_action.xml:0
+msgid "Partners"
+msgstr "الشركاء"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Payable"
+msgstr "دائن"
+
+#: model:account.financial.report,name:accounting_pdf_reports.account_financial_report_liability0
+msgid "Payables"
+msgstr "الدائنون"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_executive_summary.py:0
+msgid "Performance"
+msgstr "الأداء"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Period Length"
+msgstr "طول الفترة"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/xml/report_client_action.xml:0
+msgid "Period Order"
+msgstr "ترتيب الفترات"
+
+#. module: acc_reports_enterprise
+#: model:account.financial.report,name:acc_reports_enterprise.account_financial_report_fixed_assets
+msgid "Plus Fixed Assets"
+msgstr "بالإضافة إلى الأصول الثابتة"
+
+#. module: acc_reports_enterprise
+#: model:account.financial.report,name:acc_reports_enterprise.account_financial_report_non_current_assets
+msgid "Plus Non-current Assets"
+msgstr "بالإضافة إلى الأصول غير المتداولة"
+
+#. module: acc_reports_enterprise
+#: model:account.financial.report,name:acc_reports_enterprise.account_financial_report_non_current_liabilities
+msgid "Plus Non-current Liabilities"
+msgstr "بالإضافة إلى الالتزامات غير المتداولة"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_executive_summary.py:0
+msgid "Position"
+msgstr "الوضع"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Posted Entries"
+msgstr "القيود المرحلة"
+
+#. module: acc_reports_enterprise
+#: model:account.financial.report,name:acc_reports_enterprise.account_financial_report_prepayments
+msgid "Prepayments"
+msgstr "المدفوعات المقدمة"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+#: code:addons/acc_reports_enterprise/static/src/xml/report_client_action.xml:0
+msgid "Previous Period"
+msgstr "الفترة السابقة"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#. odoo-python
+#: code:addons/acc_reports_enterprise/models/account_report_preview_helper.py:0
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+#: model:ir.ui.menu,name:accounting_pdf_reports.menu_account_report_pl
+msgid "Profit and Loss"
+msgstr "الأرباح والخسائر"
+
+#. module: acc_reports_enterprise
+#: model:ir.actions.server,name:acc_reports_enterprise.action_menu_account_report_pl_preview
+msgid "Profit and Loss Preview"
+msgstr "معاينة الأرباح والخسائر"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_executive_summary.py:0
+msgid "Profitability"
+msgstr "الربحية"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_tax.py:0
+msgid "Purchase Taxes"
+msgstr "ضرائب المشتريات"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_tax.py:0
+msgid "Purchase VAT (Base)"
+msgstr "ضريبة القيمة المضافة على المشتريات (الأساس)"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_tax.py:0
+msgid "Purchase VAT (Tax)"
+msgstr "ضريبة القيمة المضافة على المشتريات (الضريبة)"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Quarter"
+msgstr "ربع السنة"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_executive_summary.py:0
+msgid "Realized Amount"
+msgstr "المبلغ المحقق"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Receivable"
+msgstr "مدين"
+
+#. module: acc_reports_enterprise
+#: model:account.financial.report,name:acc_reports_enterprise.account_financial_report_receivables
+msgid "Receivables"
+msgstr "المدينون"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Reconciled Entries"
+msgstr "القيود المسواة"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/controllers/report_preview.py:0
+msgid "Reference"
+msgstr "المرجع"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#. odoo-python
+#: code:addons/acc_reports_enterprise/controllers/report_preview.py:0
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Report"
+msgstr "التقرير"
+
+#. module: acc_reports_enterprise
+#: model:ir.model,name:acc_reports_enterprise.model_ir_actions_report
+msgid "Report Action"
+msgstr "إجراء التقرير"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Report: %s"
+msgstr "التقرير: %s"
+
+#: model:account.financial.report,name:accounting_pdf_reports.account_financial_report_profitloss_toreport0
+msgid "Retained Earnings"
+msgstr "الأرباح المحتجزة"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_executive_summary.py:0
+msgid "Return on Investment (Net Profit / Assets)"
+msgstr "العائد على الاستثمار (صافي الربح / الأصول)"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_executive_summary.py:0
+msgid "Revenue"
+msgstr "الإيرادات"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_tax.py:0
+msgid "Sales Taxes"
+msgstr "ضرائب المبيعات"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_tax.py:0
+msgid "Sales VAT (Base)"
+msgstr "ضريبة القيمة المضافة على المبيعات (الأساس)"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_tax.py:0
+msgid "Sales VAT (Tax)"
+msgstr "ضريبة القيمة المضافة على المبيعات (الضريبة)"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+#: code:addons/acc_reports_enterprise/static/src/xml/report_client_action.xml:0
+msgid "Same Period Last Year"
+msgstr "الفترة نفسها من العام الماضي"
+
+#. module: acc_reports_enterprise
+#: model:ir.model.fields.selection,name:acc_reports_enterprise.selection__account_tax_report_wizard__tax_report_type__eg_schedule
+msgid "Schedule Taxes (EG)"
+msgstr "ضرائب الجدول (مصر)"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/xml/report_client_action.xml:0
+msgid "Search this report..."
+msgstr "بحث في هذا التقرير..."
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+#: code:addons/acc_reports_enterprise/static/src/xml/report_client_action.xml:0
+msgid "Select All"
+msgstr "تحديد الكل"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Selected Partners"
+msgstr "الشركاء المحددون"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_cash_flow.py:0
+#: code:addons/acc_reports_enterprise/report/report_general_ledger.py:0
+#: code:addons/acc_reports_enterprise/report/report_tax.py:0
+#: code:addons/acc_reports_enterprise/report/report_trial_balance.py:0
+msgid "September"
+msgstr "سبتمبر"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_executive_summary.py:0
+msgid "Short-Term Cash Forecast"
+msgstr "توقعات النقد قصيرة الأجل"
+
+#. module: acc_reports_enterprise
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_general_ledger_enterprise_style
+msgid "Show Details"
+msgstr "عرض التفاصيل"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Specific Date"
+msgstr "تاريخ محدد"
+
+#. module: acc_reports_enterprise
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_cash_flow_report__date_from
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_executive_summary_report__date_from
+msgid "Start Date"
+msgstr "تاريخ البدء"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_financial.py:0
+msgid "Starting from %s"
+msgstr "ابتداءً من %s"
+
+#. module: acc_reports_enterprise
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_agedpartnerbalance_enterprise_style
+msgid "Statement"
+msgstr "كشف الحساب"
+
+#: model:ir.ui.menu,name:account.account_reports_legal_statements_menu
+msgid "Statements"
+msgstr "القوائم المالية"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/xml/report_client_action.xml:0
+msgid "Tags"
+msgstr "الوسوم"
+
+#. module: acc_reports_enterprise
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_cash_flow_report__target_move
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_executive_summary_report__target_move
+msgid "Target Moves"
+msgstr "القيود المستهدفة"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/controllers/report_preview.py:0
+msgid "Tax"
+msgstr "الضريبة"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/controllers/report_preview.py:0
+msgid "Tax Amount"
+msgstr "مبلغ الضريبة"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#. odoo-python
+#: code:addons/acc_reports_enterprise/controllers/report_preview.py:0
+#: code:addons/acc_reports_enterprise/models/account_report_preview_helper.py:0
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+#: model:ir.model,name:acc_reports_enterprise.model_account_tax_report_wizard
+#: model:ir.model,name:acc_reports_enterprise.model_report_accounting_pdf_reports_report_tax
+#: model:ir.ui.menu,name:accounting_pdf_reports.menu_account_report
+msgid "Tax Report"
+msgstr "التقرير الضريبي"
+
+#. module: acc_reports_enterprise
+#: model:ir.actions.server,name:acc_reports_enterprise.action_menu_tax_report_preview
+msgid "Tax Report Preview"
+msgstr "معاينة التقرير الضريبي"
+
+#. module: acc_reports_enterprise
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_tax_report_wizard__tax_report_type
+msgid "Tax Report Type"
+msgstr "نوع التقرير الضريبي"
+
+#: model:ir.ui.menu,name:account.account_reports_taxes_and_fiscal_menu
+msgid "Taxes and Fiscal"
+msgstr "الضرائب والشؤون المالية"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/xml/report_client_action.xml:0
+msgid "There are unposted journal entries before or during this period."
+msgstr "توجد قيود يومية غير مرحلة قبل هذه الفترة أو خلالها."
+
+#. module: acc_reports_enterprise
+#: model:ir.model.fields.selection,name:acc_reports_enterprise.selection__account_aged_trial_balance__currency_unit__thousand
+#: model:ir.model.fields.selection,name:acc_reports_enterprise.selection__account_cash_flow_report__currency_unit__thousand
+#: model:ir.model.fields.selection,name:acc_reports_enterprise.selection__account_executive_summary_report__currency_unit__thousand
+#: model:ir.model.fields.selection,name:acc_reports_enterprise.selection__account_tax_report_wizard__currency_unit__thousand
+msgid "Thousands"
+msgstr "الآلاف"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "To Date"
+msgstr "إلى تاريخ"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/controllers/report_preview.py:0
+#: code:addons/acc_reports_enterprise/report/report_aged_partner.py:0
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_partnerledger_enterprise_style
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_trialbalance_enterprise_style
+msgid "Total"
+msgstr "الإجمالي"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_tax.py:0
+msgid "Total VAT Due for the Current Period"
+msgstr "إجمالي ضريبة القيمة المضافة المستحقة للفترة الحالية"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_tax.py:0
+msgid "Total VAT Paid in Advance"
+msgstr "إجمالي ضريبة القيمة المضافة المدفوعة مقدماً"
+
+#. module: acc_reports_enterprise
+#: model:ir.model.fields.selection,name:acc_reports_enterprise.selection__account_aged_trial_balance__account_scope__trade
+msgid "Trade Receivables"
+msgstr "المدينون التجاريون"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#. odoo-python
+#: code:addons/acc_reports_enterprise/controllers/report_preview.py:0
+#: code:addons/acc_reports_enterprise/models/account_report_preview_helper.py:0
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+#: model:ir.ui.menu,name:accounting_pdf_reports.menu_general_balance_report
+msgid "Trial Balance"
+msgstr "ميزان المراجعة"
+
+#. module: acc_reports_enterprise
+#: model:ir.actions.server,name:acc_reports_enterprise.action_menu_trial_balance_preview
+msgid "Trial Balance Preview"
+msgstr "معاينة ميزان المراجعة"
+
+#. module: acc_reports_enterprise
+#: model:ir.model,name:acc_reports_enterprise.model_account_balance_report
+#: model:ir.model,name:acc_reports_enterprise.model_report_accounting_pdf_reports_report_trialbalance
+msgid "Trial Balance Report"
+msgstr "تقرير ميزان المراجعة"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/controllers/report_preview.py:0
+msgid "Type"
+msgstr "النوع"
+
+#. module: acc_reports_enterprise
+#: model:account.financial.report,name:acc_reports_enterprise.account_financial_report_current_year_earnings
+msgid "Unallocated Current Year Earnings"
+msgstr "أرباح السنة الحالية غير المخصصة"
+
+#. module: acc_reports_enterprise
+#: model:account.financial.report,name:acc_reports_enterprise.account_financial_report_unallocated_profit
+msgid "Unallocated Earnings"
+msgstr "أرباح غير مخصصة"
+
+#. module: acc_reports_enterprise
+#: model:account.financial.report,name:acc_reports_enterprise.account_financial_report_equity_accounts
+msgid "Unallocated Prior Years Earnings"
+msgstr "أرباح السنوات السابقة غير المخصصة"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_aged_trial_balance__unfold_all
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_account_balance_report__unfold_all
+#: model:ir.model.fields,field_description:acc_reports_enterprise.field_accounting_report__unfold_all
+msgid "Unfold All"
+msgstr "كشف الكل"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_aged_partner.py:0
+msgid "Unknown Partner"
+msgstr "شريك غير معروف"
+
+#. module: acc_reports_enterprise
+#: model:ir.model.fields.selection,name:acc_reports_enterprise.selection__account_tax_report_wizard__tax_report_type__eg_vat_return
+msgid "VAT Return (EG)"
+msgstr "إقرار ضريبة القيمة المضافة (مصر)"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Vendors"
+msgstr "الموردون"
+
+#. module: acc_reports_enterprise
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_partnerledger_enterprise_style
+msgid "View Journal Entry"
+msgstr "عرض قيد اليومية"
+
+#. module: acc_reports_enterprise
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_tax_enterprise_style
+msgid "View Journal Items"
+msgstr "عرض بنود اليومية"
+
+#. module: acc_reports_enterprise
+#: model_terms:ir.ui.view,arch_db:acc_reports_enterprise.report_tax_enterprise_style
+msgid "View Journal Items Related to This Amount"
+msgstr "عرض بنود اليومية المرتبطة بهذا المبلغ"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "With Movement"
+msgstr "بحركة"
+
+#. module: acc_reports_enterprise
+#: model:ir.model.fields.selection,name:acc_reports_enterprise.selection__account_tax_report_wizard__tax_report_type__eg_withholding
+msgid "Withholding Taxes (EG)"
+msgstr "ضرائب الخصم من المنبع (مصر)"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/xml/report_client_action.xml:0
+msgid "XLSX"
+msgstr "XLSX"
+
+#. module: acc_reports_enterprise
+#. odoo-javascript
+#: code:addons/acc_reports_enterprise/static/src/js/report_client_action.js:0
+msgid "Year"
+msgstr "السنة"
+
+#. module: acc_reports_enterprise
+#. odoo-python
+#: code:addons/acc_reports_enterprise/report/report_financial.py:0
+msgid "label"
+msgstr "التسمية"

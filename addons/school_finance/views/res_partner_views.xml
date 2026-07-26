@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_partner_form_school_finance" model="ir.ui.view">
+        <field name="name">res.partner.form.school.finance</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="action_open_school_invoices" type="object" class="oe_stat_button"
+                        icon="fa-file-text-o" invisible="not is_school_student and not is_school_guardian">
+                    <field name="school_invoice_count" string="School Invoices" widget="statinfo"/>
+                </button>
+                <button name="action_open_school_payments" type="object" class="oe_stat_button"
+                        icon="fa-money" invisible="not is_school_student and not is_school_guardian">
+                    <field name="school_payment_count" string="School Payments" widget="statinfo"/>
+                </button>
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page string="School Finance" name="school_finance">
+                    <group>
+                        <group>
+                            <field name="is_school_student"/>
+                            <field name="school_student_code" invisible="not is_school_student" required="is_school_student"/>
+                            <field name="school_student_status" invisible="not is_school_student"/>
+                            <field name="school_academic_year_id" invisible="not is_school_student"/>
+                            <field name="school_department_id" invisible="not is_school_student"/>
+                        </group>
+                        <group>
+                            <field name="is_school_guardian"/>
+                            <field name="school_guardian_code" invisible="not is_school_guardian" required="is_school_guardian"/>
+                            <field name="school_invoice_recipient" invisible="not is_school_student"/>
+                            <field name="school_financial_guardian_id"
+                                   invisible="not is_school_student or school_invoice_recipient != 'guardian'"
+                                   required="is_school_student and school_invoice_recipient == 'guardian'"/>
+                            <field name="school_demo_data" readonly="1"/>
+                        </group>
+                    </group>
+                    <group string="Family Links" invisible="not is_school_student and not is_school_guardian">
+                        <field name="school_guardian_ids" widget="many2many_tags" invisible="not is_school_student"/>
+                        <field name="school_student_ids" widget="many2many_tags" invisible="not is_school_guardian"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_partner_search_school_finance" model="ir.ui.view">
+        <field name="name">res.partner.search.school.finance</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search" position="inside">
+                <field name="school_student_code"/>
+                <field name="school_guardian_code"/>
+                <filter name="school_students" string="Students" domain="[('is_school_student', '=', True)]"/>
+                <filter name="school_guardians" string="Guardians" domain="[('is_school_guardian', '=', True)]"/>
+                <filter name="school_active_students" string="Active Students"
+                        domain="[('is_school_student', '=', True), ('school_student_status', '=', 'active')]"/>
+                <separator/>
+                <filter name="group_school_guardian" string="Financial Guardian"
+                        context="{'group_by': 'school_financial_guardian_id'}"/>
+                <filter name="group_school_status" string="Student Status"
+                        context="{'group_by': 'school_student_status'}"/>
+                <filter name="group_school_year" string="Academic Year"
+                        context="{'group_by': 'school_academic_year_id'}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_school_students" model="ir.actions.act_window">
+        <field name="name">Students</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">list,kanban,form</field>
+        <field name="domain">[('is_school_student', '=', True)]</field>
+        <field name="context">{
+            'default_is_school_student': True,
+            'default_school_student_status': 'active',
+            'search_default_school_students': 1
+        }</field>
+    </record>
+    <record id="action_school_guardians" model="ir.actions.act_window">
+        <field name="name">Guardians</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">list,kanban,form</field>
+        <field name="domain">[('is_school_guardian', '=', True)]</field>
+        <field name="context">{
+            'default_is_school_guardian': True,
+            'search_default_school_guardians': 1
+        }</field>
+    </record>
+</odoo>

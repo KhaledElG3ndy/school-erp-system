@@ -1,0 +1,16 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_school_academic_year_user,school.academic.year user,model_school_academic_year,group_school_finance_entry,1,0,0,0
+access_school_academic_year_manager,school.academic.year manager,model_school_academic_year,group_school_finance_manager,1,1,1,1
+access_school_department_user,school.department user,model_school_department,group_school_finance_entry,1,0,0,0
+access_school_department_manager,school.department manager,model_school_department,group_school_finance_manager,1,1,1,1
+access_school_fee_type_user,school.fee.type user,model_school_fee_type,group_school_finance_entry,1,0,0,0
+access_school_fee_type_manager,school.fee.type manager,model_school_fee_type,group_school_finance_manager,1,1,1,1
+access_school_installment_plan_user,school.installment.plan user,model_school_installment_plan,group_school_finance_entry,1,0,0,0
+access_school_installment_plan_manager,school.installment.plan manager,model_school_installment_plan,group_school_finance_manager,1,1,1,1
+access_school_fee_batch_entry,school.fee.batch entry,model_school_fee_batch,group_school_finance_entry,1,1,1,0
+access_school_fee_batch_manager,school.fee.batch manager,model_school_fee_batch,group_school_finance_manager,1,1,1,1
+access_school_fee_batch_line_entry,school.fee.batch.line entry,model_school_fee_batch_line,group_school_finance_entry,1,1,1,1
+access_school_dashboard_user,school.finance.dashboard user,model_school_finance_dashboard,group_school_finance_entry,1,1,1,1
+access_school_dashboard_period_user,school.finance.dashboard.period user,model_school_finance_dashboard_period,group_school_finance_entry,1,1,1,1
+access_school_demo_generator_manager,school.finance.demo.generator manager,model_school_finance_demo_generator,group_school_finance_manager,1,1,1,1
+

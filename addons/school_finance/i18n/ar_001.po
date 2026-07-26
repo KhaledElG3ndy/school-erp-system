@@ -1,0 +1,2347 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* school_finance
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0-20260630\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-26 01:57+0000\n"
+"PO-Revision-Date: 2026-07-26 01:57+0000\n"
+"Last-Translator: KhaledElG3ndy\n"
+"Language-Team: Arabic\n"
+"Language: ar_001\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_move_form_school_finance
+msgid "<span class=\"o_stat_text\">Installments</span>"
+msgstr "<span class=\"o_stat_text\">الأقساط</span>"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.report_invoice_document_school_finance
+msgid "<strong>Academic Period</strong>"
+msgstr "<strong>الفترة الدراسية</strong>"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.report_invoice_document_school_finance
+msgid "<strong>Academic Year</strong>"
+msgstr "<strong>السنة الدراسية</strong>"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.report_payment_receipt_document_school_finance
+msgid "<strong>Guardian:</strong>"
+msgstr "<strong>ولي الأمر:</strong>"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.report_invoice_document_school_finance
+msgid "<strong>Guardian</strong>"
+msgstr "<strong>ولي الأمر</strong>"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.report_invoice_document_school_finance
+msgid "<strong>Refund Reason:</strong>"
+msgstr "<strong>سبب الاسترداد:</strong>"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.report_payment_receipt_document_school_finance
+msgid "<strong>School Reference:</strong>"
+msgstr "<strong>مرجع المدرسة:</strong>"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.report_payment_receipt_document_school_finance
+msgid "<strong>Student:</strong>"
+msgstr "<strong>الطالب:</strong>"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.report_invoice_document_school_finance
+msgid "<strong>Student</strong>"
+msgstr "<strong>الطالب</strong>"
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/fee_batch.py:0
+msgid "A batch with generated invoices cannot be cancelled."
+msgstr "لا يمكن إلغاء دفعة تم إنشاء فواتير منها."
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.res_config_settings_view_form_school_finance
+msgid "A document creator cannot approve the same document."
+msgstr "لا يجوز لمنشئ المستند اعتماد المستند نفسه."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/res_partner.py:0
+msgid "A guardian code is required for every guardian."
+msgstr "رمز ولي الأمر مطلوب لكل ولي أمر."
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_account_move_reversal_school_finance
+msgid ""
+"A reason is mandatory when creating a credit note for a school fee invoice."
+msgstr "يجب إدخال سبب عند إنشاء إشعار دائن لفاتورة رسوم مدرسية."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/fee_batch.py:0
+msgid "A reason is required for every discount or grant."
+msgstr "يجب إدخال سبب لكل خصم أو منحة."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/account_move.py:0
+msgid "A reason is required for every school fee discount or grant."
+msgstr "يجب إدخال سبب لكل خصم أو منحة على الرسوم المدرسية."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/account_move.py:0
+msgid "A refund reason is required for every student credit note."
+msgstr "يجب إدخال سبب الاسترداد لكل إشعار دائن لطالب."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/wizard/account_move_reversal.py:0
+msgid "A refund reason is required for school fee credit notes."
+msgstr "سبب الاسترداد مطلوب لإشعارات دائن الرسوم المدرسية."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/res_partner.py:0
+msgid "A student code is required for every student."
+msgstr "رمز الطالب مطلوب لكل طالب."
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_account_bank_statement_line__school_term
+#: model:ir.model.fields,field_description:school_finance.field_account_move__school_term
+#: model_terms:ir.ui.view,arch_db:school_finance.view_account_move_filter_school_finance
+msgid "Academic Period"
+msgstr "الفترة الدراسية"
+
+#. module: school_finance
+#: model:ir.model.fields.selection,name:school_finance.selection__school_fee_type__frequency__term
+msgid "Academic Term"
+msgstr "الفصل الدراسي"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_account_bank_statement_line__school_academic_year_id
+#: model:ir.model.fields,field_description:school_finance.field_account_move__school_academic_year_id
+#: model:ir.model.fields,field_description:school_finance.field_res_partner__school_academic_year_id
+#: model:ir.model.fields,field_description:school_finance.field_res_users__school_academic_year_id
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__academic_year_id
+#: model_terms:ir.ui.view,arch_db:school_finance.view_account_move_filter_school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_partner_search_school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_fee_batch_search
+msgid "Academic Year"
+msgstr "السنة الدراسية"
+
+#. module: school_finance
+#: model:ir.actions.act_window,name:school_finance.action_school_academic_year
+#: model:ir.ui.menu,name:school_finance.menu_school_academic_years
+msgid "Academic Years"
+msgstr "السنوات الدراسية"
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/account_move.py:0
+msgid "Academic year and academic period are required on school fee invoices."
+msgstr "السنة الدراسية والفترة الدراسية مطلوبتان في فواتير الرسوم المدرسية."
+
+#. module: school_finance
+#: model:ir.model,name:school_finance.model_account_move_reversal
+msgid "Account Move Reversal"
+msgstr "عكس حركة الحساب"
+
+#. module: school_finance
+#: model:ir.model.fields,help:school_finance.field_account_bank_statement_line__school_collection_residual
+#: model:ir.model.fields,help:school_finance.field_account_move__school_collection_residual
+msgid ""
+"Accounting residual less linked payments that are still awaiting bank/cash "
+"matching in Odoo 19."
+msgstr ""
+"الرصيد المحاسبي المتبقي بعد خصم الدفعات المرتبطة التي ما زالت بانتظار "
+"المطابقة البنكية/النقدية في أودو 19."
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_academic_year__active
+#: model:ir.model.fields,field_description:school_finance.field_school_department__active
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_type__active
+#: model:ir.model.fields,field_description:school_finance.field_school_installment_plan__active
+#: model:ir.model.fields.selection,name:school_finance.selection__res_partner__school_student_status__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_partner_search_school_finance
+msgid "Active Students"
+msgstr "الطلاب النشطون"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "زخرفة استثناء النشاط"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "أيقونة نوع النشاط"
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/fee_batch.py:0
+msgid "Add at least one fee line."
+msgstr "أضف بند رسوم واحدًا على الأقل."
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_account_payment_form_school_finance
+msgid ""
+"Add payment proof using the standard attachment control in the chatter."
+msgstr "أرفق إثبات الدفع باستخدام أداة المرفقات القياسية في سجل المحادثات."
+
+#. module: school_finance
+#: model:ir.model.fields.selection,name:school_finance.selection__res_company__school_cash_negative_policy__allow
+msgid "Allow"
+msgstr "سماح"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_department__analytic_account_id
+msgid "Analytic Cost Center"
+msgstr "مركز التكلفة التحليلي"
+
+#. module: school_finance
+#: model:ir.model.fields.selection,name:school_finance.selection__account_move__school_term__annual
+#: model:ir.model.fields.selection,name:school_finance.selection__school_fee_batch__term__annual
+#: model:ir.model.fields.selection,name:school_finance.selection__school_fee_type__frequency__annual
+msgid "Annual"
+msgstr "سنوي"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_account_asset_asset__school_approved_date
+#: model:ir.model.fields,field_description:school_finance.field_account_bank_statement_line__school_approved_date
+#: model:ir.model.fields,field_description:school_finance.field_account_move__school_approved_date
+#: model:ir.model.fields,field_description:school_finance.field_account_payment__school_approved_date
+#: model:ir.model.fields,field_description:school_finance.field_crossovered_budget__school_approved_date
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_approval_mixin__school_approved_date
+msgid "Approval Date"
+msgstr "تاريخ الاعتماد"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_fee_batch_form
+msgid "Approval Notes"
+msgstr "ملاحظات الاعتماد"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_account_asset_asset__school_approval_required
+#: model:ir.model.fields,field_description:school_finance.field_account_bank_statement_line__school_approval_required
+#: model:ir.model.fields,field_description:school_finance.field_account_move__school_approval_required
+#: model:ir.model.fields,field_description:school_finance.field_account_payment__school_approval_required
+#: model:ir.model.fields,field_description:school_finance.field_crossovered_budget__school_approval_required
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_approval_mixin__school_approval_required
+msgid "Approval Required"
+msgstr "يتطلب اعتمادًا"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_fee_batch_form
+msgid "Approve"
+msgstr "موافقة"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_asset_form_school_finance
+msgid "Approve Disposal"
+msgstr "اعتماد الاستبعاد"
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/fee_batch.py:0
+msgid "Approve the fee batch before generating invoices."
+msgstr "اعتمد دفعة الرسوم قبل إنشاء الفواتير."
+
+#. module: school_finance
+#: model:ir.model.fields.selection,name:school_finance.selection__account_asset_asset__school_approval_state__approved
+#: model:ir.model.fields.selection,name:school_finance.selection__account_move__school_approval_state__approved
+#: model:ir.model.fields.selection,name:school_finance.selection__account_payment__school_approval_state__approved
+#: model:ir.model.fields.selection,name:school_finance.selection__crossovered_budget__school_approval_state__approved
+#: model:ir.model.fields.selection,name:school_finance.selection__school_fee_batch__state__approved
+#: model:ir.model.fields.selection,name:school_finance.selection__school_finance_approval_mixin__school_approval_state__approved
+msgid "Approved"
+msgstr "معتمد"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_account_asset_asset__school_approved_by_id
+#: model:ir.model.fields,field_description:school_finance.field_account_bank_statement_line__school_approved_by_id
+#: model:ir.model.fields,field_description:school_finance.field_account_move__school_approved_by_id
+#: model:ir.model.fields,field_description:school_finance.field_account_payment__school_approved_by_id
+#: model:ir.model.fields,field_description:school_finance.field_crossovered_budget__school_approved_by_id
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__approved_by_id
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_approval_mixin__school_approved_by_id
+msgid "Approved By"
+msgstr "اعتمده"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_account_asset_asset__school_custodian_id
+msgid "Asset Custodian"
+msgstr "عهدة الأصل"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.res_config_settings_view_form_school_finance
+msgid "Asset Disposal Approval"
+msgstr "اعتماد التخلص من الأصول"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_account_asset_asset__school_asset_location
+msgid "Asset Location"
+msgstr "موقع الأصل"
+
+#. module: school_finance
+#: model:ir.model,name:school_finance.model_account_asset_asset
+msgid "Asset/Revenue Recognition"
+msgstr "إثبات الأصل/الإيراد"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_account_journal__school_authorized_user_ids
+msgid "Authorized Users"
+msgstr "المستخدمون المصرح لهم"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_account_journal_form_school_finance
+msgid ""
+"Authorized Users is optional. When empty, standard Odoo accounting access "
+"rules apply."
+msgstr ""
+"المستخدمون المصرح لهم خيار اختياري. عند تركه فارغًا تُطبق قواعد صلاحيات "
+"المحاسبة القياسية في أودو."
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__available_cash
+msgid "Available Cash"
+msgstr "النقدية المتاحة"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
+msgid "Available Cash / Bank"
+msgstr "النقدية / البنك المتاح"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch_line__batch_id
+msgid "Batch"
+msgstr "الدفعة"
+
+#. module: school_finance
+#: model:ir.model.fields.selection,name:school_finance.selection__res_company__school_cash_negative_policy__block
+msgid "Block"
+msgstr "منع"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_res_company__school_prevent_duplicate_payment_reference
+#: model:ir.model.fields,field_description:school_finance.field_res_config_settings__school_prevent_duplicate_payment_reference
+#: model_terms:ir.ui.view,arch_db:school_finance.res_config_settings_view_form_school_finance
+msgid "Block Duplicate Payment References"
+msgstr "منع تكرار مراجع الدفعات"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_res_company__school_prevent_duplicate_student_fees
+#: model:ir.model.fields,field_description:school_finance.field_res_config_settings__school_prevent_duplicate_student_fees
+#: model_terms:ir.ui.view,arch_db:school_finance.res_config_settings_view_form_school_finance
+msgid "Block Duplicate Student Fees"
+msgstr "منع تكرار رسوم الطالب"
+
+#. module: school_finance
+#: model:ir.model,name:school_finance.model_crossovered_budget
+msgid "Budget"
+msgstr "الدخل"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__budget_actual
+msgid "Budget Actual"
+msgstr "الميزانية الفعلية"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__bank_balance
+msgid "Bank Balance"
+msgstr "رصيد الحسابات البنكية"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
+msgid "Bank accounts:"
+msgstr "الحسابات البنكية:"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__cash_box_balance
+msgid "Cash Box Balance"
+msgstr "رصيد الصناديق"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
+msgid "Cash boxes:"
+msgstr "الصناديق:"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.res_config_settings_view_form_school_finance
+msgid "Budget Approval"
+msgstr "اعتماد الميزانيات"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__budget_planned
+msgid "Budget Planned"
+msgstr "الميزانية المخططة"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
+msgid "Budget vs Actual"
+msgstr "الموازنة مقابل الفعلي"
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/dashboard.py:0
+msgid "Budgets"
+msgstr "الميزانيات"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_fee_batch_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: school_finance
+#: model:ir.model.fields.selection,name:school_finance.selection__school_fee_batch__state__cancel
+msgid "Cancelled"
+msgstr "تم الإلغاء"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_academic_year_form
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_demo_generator_form
+msgid "Close"
+msgstr "إغلاق"
+
+#. module: school_finance
+#: model:ir.model.fields.selection,name:school_finance.selection__school_academic_year__state__closed
+msgid "Closed"
+msgstr "مغلق"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_academic_year__code
+#: model:ir.model.fields,field_description:school_finance.field_school_department__code
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_type__code
+#: model:ir.model.fields,field_description:school_finance.field_school_installment_plan__code
+msgid "Code"
+msgstr "رمز"
+
+#. module: school_finance
+#: model:ir.model,name:school_finance.model_res_company
+msgid "Companies"
+msgstr "الشركات"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_academic_year__company_id
+#: model:ir.model.fields,field_description:school_finance.field_school_department__company_id
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__company_id
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch_line__company_id
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_type__company_id
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__company_id
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_demo_generator__company_id
+#: model:ir.model.fields,field_description:school_finance.field_school_installment_plan__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: school_finance
+#: model:ir.model,name:school_finance.model_res_config_settings
+msgid "Config Settings"
+msgstr "تهيئة الإعدادات"
+
+#. module: school_finance
+#: model:ir.ui.menu,name:school_finance.menu_school_finance_configuration
+msgid "Configuration"
+msgstr "الإعدادات"
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/wizard/demo_generator.py:0
+msgid "Configure a chart of accounts before generating school demo data."
+msgstr "هيئ دليل الحسابات قبل إنشاء البيانات التجريبية للمدرسة."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/wizard/demo_generator.py:0
+msgid "Configure an analytic plan before generating school demo data."
+msgstr "هيئ خطة تحليلية قبل إنشاء البيانات التجريبية للمدرسة."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/wizard/demo_generator.py:0
+msgid "Confirm that this is a TEST / DEMO database."
+msgstr "أكد أن هذه قاعدة بيانات اختبار / تجريب."
+
+#. module: school_finance
+#: model:ir.model,name:school_finance.model_res_partner
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_academic_year__create_uid
+#: model:ir.model.fields,field_description:school_finance.field_school_department__create_uid
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__create_uid
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch_line__create_uid
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_type__create_uid
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__create_uid
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard_period__create_uid
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_demo_generator__create_uid
+#: model:ir.model.fields,field_description:school_finance.field_school_installment_plan__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_academic_year__create_date
+#: model:ir.model.fields,field_description:school_finance.field_school_department__create_date
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__create_date
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch_line__create_date
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_type__create_date
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__create_date
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard_period__create_date
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_demo_generator__create_date
+#: model:ir.model.fields,field_description:school_finance.field_school_installment_plan__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/wizard/demo_generator.py:0
+msgid ""
+"Created synthetic master data and %(count)s draft invoices. All names are "
+"prefixed [TEST] and records are tagged as TEST / DEMO."
+msgstr ""
+"تم إنشاء بيانات رئيسية اصطناعية و%(count)s فاتورة مسودة. تبدأ جميع الأسماء "
+"بالبادئة [اختبار] والسجلات موسومة كاختبار / تجريب."
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__currency_id
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch_line__currency_id
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_type__currency_id
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__currency_id
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard_period__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard_period__dashboard_id
+#: model:ir.ui.menu,name:school_finance.menu_school_finance_dashboard
+msgid "Dashboard"
+msgstr "لوحة المعلومات"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__date_from
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard_period__date_from
+msgid "Date From"
+msgstr "من تاريخ"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__date_to
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard_period__date_to
+msgid "Date To"
+msgstr "إلى تاريخ"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_type__default_amount
+msgid "Default Amount"
+msgstr "المبلغ الافتراضي"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_type__department_id
+msgid "Default Department"
+msgstr "القسم الافتراضي"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_type__tax_ids
+msgid "Default Taxes"
+msgstr "ضرائب افتراضية"
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/wizard/demo_generator.py:0
+msgid ""
+"Demo generation is blocked on this database. Use a clone/test database or "
+"mark a dedicated company as TEST / DEMO."
+msgstr ""
+"إنشاء البيانات التجريبية محظور في قاعدة البيانات هذه. استخدم قاعدة "
+"مستنسخة/اختبارية أو علّم شركة مخصصة بأنها اختبار / تجريب."
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch_line__department_id
+msgid "Department"
+msgstr "القسم"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_account_asset_asset__school_department_id
+#: model:ir.model.fields,field_description:school_finance.field_account_move_line__school_department_id
+#: model:ir.model.fields,field_description:school_finance.field_res_partner__school_department_id
+#: model:ir.model.fields,field_description:school_finance.field_res_users__school_department_id
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__department_id
+msgid "Department / Cost Center"
+msgstr "القسم / مركز التكلفة"
+
+#. module: school_finance
+#: model:ir.actions.act_window,name:school_finance.action_school_department
+#: model:ir.ui.menu,name:school_finance.menu_school_departments
+msgid "Departments / Cost Centers"
+msgstr "الأقسام / مراكز التكلفة"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_account_journal__school_disbursement_approval_limit
+msgid "Disbursement Approval Threshold"
+msgstr "حد اعتماد الصرف"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch_line__discount
+msgid "Discount %"
+msgstr "نسبة الخصم %"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_account_move_line__school_discount_reason
+msgid "Discount / Grant Reason"
+msgstr "سبب الخصم / المنحة"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch_line__discount_reason
+msgid "Discount Reason"
+msgstr "سبب الخصم"
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/fee_batch.py:0
+msgid "Discount must be between 0 and 100 percent."
+msgstr "يجب أن تكون نسبة الخصم بين 0 و100 بالمائة."
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_account_asset_asset__display_name
+#: model:ir.model.fields,field_description:school_finance.field_account_journal__display_name
+#: model:ir.model.fields,field_description:school_finance.field_account_move__display_name
+#: model:ir.model.fields,field_description:school_finance.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:school_finance.field_account_move_reversal__display_name
+#: model:ir.model.fields,field_description:school_finance.field_account_payment__display_name
+#: model:ir.model.fields,field_description:school_finance.field_account_payment_register__display_name
+#: model:ir.model.fields,field_description:school_finance.field_crossovered_budget__display_name
+#: model:ir.model.fields,field_description:school_finance.field_res_company__display_name
+#: model:ir.model.fields,field_description:school_finance.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:school_finance.field_res_partner__display_name
+#: model:ir.model.fields,field_description:school_finance.field_school_academic_year__display_name
+#: model:ir.model.fields,field_description:school_finance.field_school_department__display_name
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__display_name
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch_line__display_name
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_type__display_name
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_approval_mixin__display_name
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__display_name
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard_period__display_name
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_demo_generator__display_name
+#: model:ir.model.fields,field_description:school_finance.field_school_installment_plan__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_asset_form_school_finance
+msgid "Disposal Approval"
+msgstr "اعتماد الاستبعاد"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_account_asset_asset__school_disposal_proceeds
+msgid "Disposal Proceeds"
+msgstr "عائد التخلص"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_account_asset_asset__school_disposal_reason
+msgid "Disposal Reason"
+msgstr "سبب التخلص"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_account_asset_asset__school_disposal_type
+msgid "Disposal Type"
+msgstr "نوع التخلص"
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/approval_mixin.py:0
+msgid "Document approved for posting or validation."
+msgstr "تم اعتماد المستند للترحيل أو التصديق."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/approval_mixin.py:0
+msgid "Document rejected: %s"
+msgstr "تم رفض المستند: %s"
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/approval_mixin.py:0
+msgid "Document returned for correction: %s"
+msgstr "أُعيد المستند للتصحيح: %s"
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/approval_mixin.py:0
+msgid "Document reviewed and sent for approval."
+msgstr "تمت مراجعة المستند وإرساله للاعتماد."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/approval_mixin.py:0
+msgid "Document submitted for finance review."
+msgstr "تم إرسال المستند للمراجعة المالية."
+
+#. module: school_finance
+#: model:ir.model.fields.selection,name:school_finance.selection__account_asset_asset__school_disposal_type__donation
+msgid "Donation"
+msgstr "تبرع"
+
+#. module: school_finance
+#: model:ir.model.fields.selection,name:school_finance.selection__account_asset_asset__school_approval_state__draft
+#: model:ir.model.fields.selection,name:school_finance.selection__account_move__school_approval_state__draft
+#: model:ir.model.fields.selection,name:school_finance.selection__account_payment__school_approval_state__draft
+#: model:ir.model.fields.selection,name:school_finance.selection__crossovered_budget__school_approval_state__draft
+#: model:ir.model.fields.selection,name:school_finance.selection__school_academic_year__state__draft
+#: model:ir.model.fields.selection,name:school_finance.selection__school_fee_batch__state__draft
+#: model:ir.model.fields.selection,name:school_finance.selection__school_finance_approval_mixin__school_approval_state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
+msgid "Drill Down"
+msgstr "عرض التفاصيل"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__due_date
+msgid "Due Date"
+msgstr "موعد إجراء المكالمة"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__due_vendor_bill_amount
+msgid "Due Vendor Bill Amount"
+msgstr "مبلغ فواتير الموردين المستحقة"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__due_vendor_bill_count
+msgid "Due Vendor Bill Count"
+msgstr "عدد فواتير الموردين المستحقة"
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/dashboard.py:0
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
+msgid "Due Vendor Bills"
+msgstr "فواتير الموردين المستحقة"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_academic_year__date_to
+msgid "End Date"
+msgstr "تاريخ الانتهاء"
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/fee_batch.py:0
+msgid "Enter a reason before returning the batch."
+msgstr "أدخل سببًا قبل إعادة الدفعة."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/approval_mixin.py:0
+msgid "Enter a rejection reason before rejecting the document."
+msgstr "أدخل سبب الرفض قبل رفض المستند."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/approval_mixin.py:0
+msgid "Enter a return reason before returning the document."
+msgstr "أدخل سبب الإعادة قبل إعادة المستند."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/asset.py:0
+msgid ""
+"Enter the disposal type and reason before selling or disposing an asset."
+msgstr "أدخل نوع وسبب الاستبعاد قبل بيع الأصل أو استبعاده."
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard_period__expense
+msgid "Expense"
+msgstr "النفقة"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
+msgid "Expenses"
+msgstr "النفقات"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_partner_form_school_finance
+msgid "Family Links"
+msgstr "الروابط العائلية"
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/account_move.py:0
+msgid ""
+"Fee %(fee)s is already invoiced to student %(student)s for the same academic"
+" period."
+msgstr ""
+"تمت فوترة الرسم %(fee)s بالفعل للطالب %(student)s عن الفترة الدراسية نفسها."
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_account_bank_statement_line__school_fee_batch_id
+#: model:ir.model.fields,field_description:school_finance.field_account_move__school_fee_batch_id
+msgid "Fee Batch"
+msgstr "دفعة الرسوم"
+
+#. module: school_finance
+#: model:ir.actions.act_window,name:school_finance.action_school_fee_batch
+#: model:ir.ui.menu,name:school_finance.menu_school_fee_batches
+msgid "Fee Batches"
+msgstr "دفعات الفوترة"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_account_move_line__school_fee_type_id
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch_line__fee_type_id
+msgid "Fee Type"
+msgstr "نوع الرسم"
+
+#. module: school_finance
+#: model:ir.actions.act_window,name:school_finance.action_school_fee_type
+#: model:ir.ui.menu,name:school_finance.menu_school_fee_types
+msgid "Fee Types"
+msgstr "أنواع الرسوم"
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/fee_batch.py:0
+msgid "Fee quantity must be greater than zero."
+msgstr "يجب أن تكون كمية الرسم أكبر من صفر."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/fee_batch.py:0
+msgid "Fee unit price cannot be negative."
+msgstr "لا يمكن أن يكون سعر وحدة الرسم سالبًا."
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__line_ids
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_fee_batch_form
+msgid "Fees"
+msgstr "الرسوم"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_account_asset_asset__school_approval_state
+#: model:ir.model.fields,field_description:school_finance.field_account_bank_statement_line__school_approval_state
+#: model:ir.model.fields,field_description:school_finance.field_account_move__school_approval_state
+#: model:ir.model.fields,field_description:school_finance.field_account_payment__school_approval_state
+#: model:ir.model.fields,field_description:school_finance.field_crossovered_budget__school_approval_state
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_approval_mixin__school_approval_state
+#: model_terms:ir.ui.view,arch_db:school_finance.view_budget_form_school_approval
+#: model_terms:ir.ui.view,arch_db:school_finance.view_move_form_school_finance
+msgid "Finance Approval"
+msgstr "الاعتماد المالي"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_account_payment_form_school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_budget_form_school_approval
+#: model_terms:ir.ui.view,arch_db:school_finance.view_move_form_school_finance
+msgid "Finance Approve"
+msgstr "اعتماد مالي"
+
+#. module: school_finance
+#: model:res.groups,name:school_finance.group_school_finance_approver
+msgid "Finance Approver"
+msgstr "معتمد مالي"
+
+#. module: school_finance
+#: model:ir.actions.act_window,name:school_finance.action_school_finance_dashboard
+msgid "Finance Dashboard"
+msgstr "لوحة المالية"
+
+#. module: school_finance
+#: model:res.groups,name:school_finance.group_school_finance_entry
+msgid "Finance Entry User"
+msgstr "مدخل بيانات مالية"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_account_payment_form_school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_budget_form_school_approval
+#: model_terms:ir.ui.view,arch_db:school_finance.view_move_form_school_finance
+msgid "Finance Review"
+msgstr "مراجعة مالية"
+
+#. module: school_finance
+#: model:res.groups,name:school_finance.group_school_finance_reviewer
+msgid "Finance Reviewer"
+msgstr "مراجع مالي"
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/approval_mixin.py:0
+msgid ""
+"Finance approval must be completed before this document can be posted or "
+"validated."
+msgstr "يجب إكمال الاعتماد المالي قبل ترحيل هذا المستند أو اعتماده."
+
+#. module: school_finance
+#: model:ir.model.fields.selection,name:school_finance.selection__res_partner__school_invoice_recipient__guardian
+#: model_terms:ir.ui.view,arch_db:school_finance.view_partner_search_school_finance
+msgid "Financial Guardian"
+msgstr "ولي الأمر المسؤول ماليًا"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_res_partner__school_financial_guardian_id
+#: model:ir.model.fields,field_description:school_finance.field_res_users__school_financial_guardian_id
+msgid "Financially Responsible Guardian"
+msgstr "ولي الأمر المسؤول ماليًا"
+
+#. module: school_finance
+#: model:ir.model.fields.selection,name:school_finance.selection__account_move__school_term__term_1
+#: model:ir.model.fields.selection,name:school_finance.selection__school_fee_batch__term__term_1
+msgid "First Term"
+msgstr "الفصل الأول"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__message_follower_ids
+msgid "Followers"
+msgstr "المتابعين"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعين (الشركاء)"
+
+#. module: school_finance
+#: model:ir.model.fields,help:school_finance.field_school_fee_batch__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "أيقونة من Font awesome مثال: fa-tasks"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_type__frequency
+msgid "Frequency"
+msgstr "معدل الحدوث"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_demo_generator_form
+msgid "Generate Demo Data"
+msgstr "إنشاء بيانات تجريبية"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_fee_batch_form
+msgid "Generate Invoices"
+msgstr "إنشاء الفواتير"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_demo_generator_form
+msgid "Generate Synthetic School Demo Data"
+msgstr "إنشاء بيانات مدرسية تجريبية اصطناعية"
+
+#. module: school_finance
+#: model:ir.model,name:school_finance.model_school_finance_demo_generator
+msgid "Generate Synthetic School Finance Demo Data"
+msgstr "إنشاء بيانات تجريبية اصطناعية لمالية المدرسة"
+
+#. module: school_finance
+#: model:ir.actions.act_window,name:school_finance.action_school_finance_demo_generator
+#: model:ir.ui.menu,name:school_finance.menu_school_demo_generator
+msgid "Generate TEST / DEMO Data"
+msgstr "إنشاء بيانات TEST / DEMO"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__invoice_ids
+msgid "Generated Invoices"
+msgstr "الفواتير المنشأة"
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/fee_batch.py:0
+msgid "Generated School Invoices"
+msgstr "فواتير المدرسة المنشأة"
+
+#. module: school_finance
+#: model:ir.model.fields.selection,name:school_finance.selection__res_partner__school_student_status__graduated
+msgid "Graduated"
+msgstr "متخرج"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_account_move_line__school_is_grant
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch_line__is_grant
+msgid "Grant / Scholarship"
+msgstr "منحة / إعفاء"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_account_bank_statement_line__school_guardian_id
+#: model:ir.model.fields,field_description:school_finance.field_account_move__school_guardian_id
+#: model:ir.model.fields,field_description:school_finance.field_account_payment__school_guardian_id
+#: model:ir.model.fields,field_description:school_finance.field_account_payment_register__school_guardian_id
+#: model:ir.model.fields,field_description:school_finance.field_res_partner__is_school_guardian
+#: model:ir.model.fields,field_description:school_finance.field_res_users__is_school_guardian
+#: model_terms:ir.ui.view,arch_db:school_finance.view_account_move_filter_school_finance
+msgid "Guardian"
+msgstr "ولي الأمر"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_res_partner__school_guardian_code
+#: model:ir.model.fields,field_description:school_finance.field_res_users__school_guardian_code
+msgid "Guardian Code"
+msgstr "رقم ولي الأمر"
+
+#. module: school_finance
+#: model:ir.actions.act_window,name:school_finance.action_school_guardians
+#: model:ir.model.fields,field_description:school_finance.field_res_partner__school_guardian_ids
+#: model:ir.model.fields,field_description:school_finance.field_res_users__school_guardian_ids
+#: model:ir.ui.menu,name:school_finance.menu_school_guardians
+#: model_terms:ir.ui.view,arch_db:school_finance.view_partner_search_school_finance
+msgid "Guardians"
+msgstr "أولياء الأمور"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__has_message
+msgid "Has Message"
+msgstr "يحتوي على رسالة"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_demo_generator__confirm_demo
+msgid "I confirm this is a TEST / DEMO database"
+msgstr "أؤكد أن هذه قاعدة TEST / DEMO"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_account_asset_asset__id
+#: model:ir.model.fields,field_description:school_finance.field_account_journal__id
+#: model:ir.model.fields,field_description:school_finance.field_account_move__id
+#: model:ir.model.fields,field_description:school_finance.field_account_move_line__id
+#: model:ir.model.fields,field_description:school_finance.field_account_move_reversal__id
+#: model:ir.model.fields,field_description:school_finance.field_account_payment__id
+#: model:ir.model.fields,field_description:school_finance.field_account_payment_register__id
+#: model:ir.model.fields,field_description:school_finance.field_crossovered_budget__id
+#: model:ir.model.fields,field_description:school_finance.field_res_company__id
+#: model:ir.model.fields,field_description:school_finance.field_res_config_settings__id
+#: model:ir.model.fields,field_description:school_finance.field_res_partner__id
+#: model:ir.model.fields,field_description:school_finance.field_school_academic_year__id
+#: model:ir.model.fields,field_description:school_finance.field_school_department__id
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__id
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch_line__id
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_type__id
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_approval_mixin__id
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__id
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard_period__id
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_demo_generator__id
+#: model:ir.model.fields,field_description:school_finance.field_school_installment_plan__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__activity_exception_icon
+msgid "Icon"
+msgstr "الأيقونة"
+
+#. module: school_finance
+#: model:ir.model.fields,help:school_finance.field_school_fee_batch__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "الأيقونة للإشارة إلى النشاط المستثنى."
+
+#. module: school_finance
+#: model:ir.model.fields,help:school_finance.field_school_fee_batch__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة عليك رؤيتها."
+
+#. module: school_finance
+#: model:ir.model.fields,help:school_finance.field_school_fee_batch__message_has_error
+#: model:ir.model.fields,help:school_finance.field_school_fee_batch__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل."
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_type__income_account_id
+msgid "Income Account"
+msgstr "حساب الدخل"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_account_bank_statement_line__school_installment_plan_id
+#: model:ir.model.fields,field_description:school_finance.field_account_move__school_installment_plan_id
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__installment_plan_id
+msgid "Installment Plan"
+msgstr "خطة الأقساط"
+
+#. module: school_finance
+#: model:ir.actions.act_window,name:school_finance.action_school_installment_plan
+#: model:ir.ui.menu,name:school_finance.menu_school_installment_plans
+msgid "Installment Plans"
+msgstr "خطط الأقساط"
+
+#. module: school_finance
+#: model:ir.model.fields,help:school_finance.field_school_installment_plan__payment_term_id
+msgid ""
+"Installment due dates and percentages are maintained in the standard Odoo "
+"payment term."
+msgstr "تُدار تواريخ استحقاق الأقساط ونسبها في شروط الدفع القياسية في أودو."
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_installment_plan_form
+msgid ""
+"Installment percentages and due-date rules are maintained in the linked "
+"standard Odoo payment term."
+msgstr ""
+"تُدار نسب الأقساط وقواعد تواريخ الاستحقاق في شروط الدفع القياسية المرتبطة في"
+" أودو."
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_account_bank_statement_line__school_installment_line_ids
+#: model:ir.model.fields,field_description:school_finance.field_account_move__school_installment_line_ids
+msgid "Installments"
+msgstr "الأقساط"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__invoice_count
+msgid "Invoice Count"
+msgstr "عدد الفواتير"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__date
+msgid "Invoice Date"
+msgstr "تاريخ الفاتورة"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_res_partner__school_invoice_recipient
+#: model:ir.model.fields,field_description:school_finance.field_res_users__school_invoice_recipient
+msgid "Invoice Recipient"
+msgstr "الجهة الصادر باسمها الفاتورة"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_fee_batch_form
+msgid "Invoices"
+msgstr "فواتير العملاء"
+
+#. module: school_finance
+#: model:ir.model.fields.selection,name:school_finance.selection__school_fee_batch__state__done
+msgid "Invoices Generated"
+msgstr "تم إنشاء الفواتير"
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/fee_batch.py:0
+msgid "Invoices have already been generated for this batch."
+msgstr "تم إنشاء فواتير لهذه الدفعة بالفعل."
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: school_finance
+#: model:ir.model,name:school_finance.model_account_journal
+msgid "Journal"
+msgstr "دفتر اليومية"
+
+#. module: school_finance
+#: model:ir.model,name:school_finance.model_account_move
+msgid "Journal Entry"
+msgstr "قيد اليومية"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.res_config_settings_view_form_school_finance
+msgid "Journal Entry Approval"
+msgstr "اعتماد القيود اليومية"
+
+#. module: school_finance
+#: model:ir.model,name:school_finance.model_account_move_line
+msgid "Journal Item"
+msgstr "عنصر اليومية"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_academic_year__write_uid
+#: model:ir.model.fields,field_description:school_finance.field_school_department__write_uid
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__write_uid
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch_line__write_uid
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_type__write_uid
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__write_uid
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard_period__write_uid
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_demo_generator__write_uid
+#: model:ir.model.fields,field_description:school_finance.field_school_installment_plan__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_academic_year__write_date
+#: model:ir.model.fields,field_description:school_finance.field_school_department__write_date
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__write_date
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch_line__write_date
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_type__write_date
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__write_date
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard_period__write_date
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_demo_generator__write_date
+#: model:ir.model.fields,field_description:school_finance.field_school_installment_plan__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: school_finance
+#: model:ir.model.fields,help:school_finance.field_account_journal__school_authorized_user_ids
+msgid "Leave empty to use the standard Odoo accounting access rules."
+msgstr "اتركه فارغًا لاستخدام قواعد صلاحيات المحاسبة القياسية في أودو."
+
+#. module: school_finance
+#: model:ir.model.fields,help:school_finance.field_res_company__school_is_demo_company
+msgid "Marks a company that contains only synthetic test data."
+msgstr "يحدد شركة لا تحتوي إلا على بيانات اختبار اصطناعية."
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: school_finance
+#: model:ir.model.fields.selection,name:school_finance.selection__account_move__school_term__monthly
+#: model:ir.model.fields.selection,name:school_finance.selection__school_fee_batch__term__monthly
+#: model:ir.model.fields.selection,name:school_finance.selection__school_fee_type__frequency__monthly
+msgid "Monthly"
+msgstr "شهري"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "الموعد النهائي لنشاطاتي"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_academic_year__name
+#: model:ir.model.fields,field_description:school_finance.field_school_department__name
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__name
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_type__name
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard_period__name
+#: model:ir.model.fields,field_description:school_finance.field_school_installment_plan__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_res_company__school_cash_negative_policy
+#: model:ir.model.fields,field_description:school_finance.field_res_config_settings__school_cash_negative_policy
+#: model_terms:ir.ui.view,arch_db:school_finance.res_config_settings_view_form_school_finance
+msgid "Negative Cash Balance Policy"
+msgstr "سياسة الرصيد النقدي السالب"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__net_result
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard_period__net_result
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
+msgid "Net Result"
+msgstr "صافي النتيجة"
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/fee_batch.py:0
+msgid "New"
+msgstr "جديد"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: school_finance
+#: model:ir.model.fields,help:school_finance.field_school_fee_batch__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "عدد الرسائل التي تتطلب اتخاذ إجراء"
+
+#. module: school_finance
+#: model:ir.model.fields,help:school_finance.field_school_fee_batch__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل الحادث بها خطأ في التسليم"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_installment_plan__payment_term_id
+msgid "Odoo Payment Term"
+msgstr "شروط دفع أودو"
+
+#. module: school_finance
+#: model:ir.model.fields.selection,name:school_finance.selection__school_fee_type__frequency__one_time
+msgid "One Time"
+msgstr "مرة واحدة"
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/approval_mixin.py:0
+msgid "Only a draft document requiring approval can be submitted."
+msgstr "لا يمكن الإرسال إلا لمستند مسودة يتطلب اعتمادًا."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/fee_batch.py:0
+msgid "Only a finance approver can approve fee batches."
+msgstr "لا يمكن اعتماد دفعات الرسوم إلا بواسطة معتمد مالي."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/approval_mixin.py:0
+msgid "Only a finance approver can approve this document."
+msgstr "لا يمكن اعتماد هذا المستند إلا بواسطة معتمد مالي."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/approval_mixin.py:0
+msgid "Only a finance reviewer can reject this document."
+msgstr "لا يمكن رفض هذا المستند إلا بواسطة مراجع مالي."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/fee_batch.py:0
+msgid "Only a finance reviewer can return fee batches."
+msgstr "لا يمكن إعادة دفعات الرسوم إلا بواسطة مراجع مالي."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/approval_mixin.py:0
+msgid "Only a finance reviewer can return this document."
+msgstr "لا يمكن إعادة هذا المستند إلا بواسطة مراجع مالي."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/fee_batch.py:0
+msgid "Only a finance reviewer can review fee batches."
+msgstr "لا يمكن مراجعة دفعات الرسوم إلا بواسطة مراجع مالي."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/approval_mixin.py:0
+msgid "Only a finance reviewer can review this document."
+msgstr "لا يمكن مراجعة هذا المستند إلا بواسطة مراجع مالي."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/fee_batch.py:0
+msgid "Only draft batches can be submitted."
+msgstr "لا يمكن إرسال سوى الدفعات المسودة."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/fee_batch.py:0
+msgid "Only reviewed batches can be approved."
+msgstr "لا يمكن اعتماد سوى الدفعات التي تمت مراجعتها."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/approval_mixin.py:0
+msgid "Only reviewed documents can be approved."
+msgstr "لا يمكن اعتماد سوى المستندات التي تمت مراجعتها."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/fee_batch.py:0
+msgid "Only submitted batches can be reviewed."
+msgstr "لا يمكن مراجعة سوى الدفعات المرسلة."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/approval_mixin.py:0
+msgid "Only submitted documents can be reviewed."
+msgstr "لا يمكن مراجعة سوى المستندات المرسلة."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/approval_mixin.py:0
+msgid "Only submitted or reviewed documents can be rejected."
+msgstr "لا يمكن رفض سوى المستندات المرسلة أو التي تمت مراجعتها."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/approval_mixin.py:0
+msgid "Only submitted, reviewed or approved documents can be returned."
+msgstr "لا يمكن إعادة سوى المستندات المرسلة أو المراجعة أو المعتمدة."
+
+#. module: school_finance
+#: model:ir.model.fields.selection,name:school_finance.selection__school_academic_year__state__open
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_academic_year_form
+msgid "Open"
+msgstr "فتح"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
+msgid "Open Bills"
+msgstr "فتح الفواتير"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
+msgid "Open Budgets"
+msgstr "فتح الموازنات"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
+msgid "Open Invoices"
+msgstr "فتح الفواتير"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
+msgid "Open Overdue"
+msgstr "فتح المتأخرات"
+
+#. module: school_finance
+#: model:ir.model.fields.selection,name:school_finance.selection__account_asset_asset__school_disposal_type__other
+#: model:ir.model.fields.selection,name:school_finance.selection__account_move__school_term__other
+#: model:ir.model.fields.selection,name:school_finance.selection__school_fee_batch__term__other
+msgid "Other"
+msgstr "أخرى"
+
+#. module: school_finance
+#: model:ir.model.fields,help:school_finance.field_account_journal__school_disbursement_approval_limit
+msgid ""
+"Outbound payments at or above this amount require the school finance "
+"workflow."
+msgstr ""
+"الدفعات الصادرة التي تبلغ هذا المبلغ أو تتجاوزه تتطلب مسار عمل مالية "
+"المدرسة."
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__overdue_student_invoice_amount
+msgid "Overdue Student Invoice Amount"
+msgstr "مبلغ فواتير الطلاب المتأخرة"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__overdue_student_invoice_count
+msgid "Overdue Student Invoice Count"
+msgstr "عدد فواتير الطلاب المتأخرة"
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/dashboard.py:0
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
+msgid "Overdue Student Invoices"
+msgstr "فواتير الطلاب المتأخرة"
+
+#. module: school_finance
+#: model:ir.model,name:school_finance.model_account_payment_register
+msgid "Pay"
+msgstr "الدفع"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
+msgid "Payables"
+msgstr "الدائنون"
+
+#. module: school_finance
+#: model:ir.model,name:school_finance.model_account_payment
+msgid "Payments"
+msgstr "الدفعات"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_fee_batch_search
+msgid "Pending Approval"
+msgstr "بانتظار الاعتماد"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_account_move_filter_school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_account_payment_search_school_finance
+msgid "Pending Finance Approval"
+msgstr "بانتظار الاعتماد المالي"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_account_move_filter_school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_account_payment_search_school_finance
+msgid "Pending Finance Review"
+msgstr "بانتظار المراجعة المالية"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_fee_batch_search
+msgid "Pending Review"
+msgstr "بانتظار المراجعة"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__period_line_ids
+msgid "Period Movement"
+msgstr "حركة الفترات"
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/dashboard.py:0
+msgid "Posted Journal Items"
+msgstr "عناصر اليومية المُرحّلة"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_res_company__school_prevent_self_approval
+#: model:ir.model.fields,field_description:school_finance.field_res_config_settings__school_prevent_self_approval
+#: model_terms:ir.ui.view,arch_db:school_finance.res_config_settings_view_form_school_finance
+msgid "Prevent Self Approval"
+msgstr "منع الاعتماد الذاتي"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.res_config_settings_view_form_school_finance
+msgid ""
+"Prevents the same fee type from being invoiced twice to one student in the "
+"same academic year and period."
+msgstr ""
+"يمنع فوترة نوع الرسم نفسه مرتين لطالب واحد في السنة والفترة الدراسية "
+"نفسيهما."
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_type__product_id
+msgid "Product"
+msgstr "المنتج"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch_line__quantity
+msgid "Quantity"
+msgstr "الكمية"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__rating_ids
+msgid "Ratings"
+msgstr "التقييمات"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_fee_batch_search
+msgid "Ready to Generate"
+msgstr "جاهز للإنشاء"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_account_bank_statement_line__school_amount_in_process
+#: model:ir.model.fields,field_description:school_finance.field_account_move__school_amount_in_process
+msgid "Receipts Awaiting Bank Matching"
+msgstr "مقبوضات بانتظار المطابقة البنكية"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
+msgid "Receivables"
+msgstr "المدينون"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
+msgid "Refresh"
+msgstr "تحديث"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_account_bank_statement_line__school_refund_reason
+#: model:ir.model.fields,field_description:school_finance.field_account_move__school_refund_reason
+msgid "Refund Reason"
+msgstr "سبب الاسترداد"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_account_payment_form_school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_move_form_school_finance
+msgid "Reject"
+msgstr "رفض"
+
+#. module: school_finance
+#: model:ir.model.fields.selection,name:school_finance.selection__account_asset_asset__school_approval_state__rejected
+#: model:ir.model.fields.selection,name:school_finance.selection__account_move__school_approval_state__rejected
+#: model:ir.model.fields.selection,name:school_finance.selection__account_payment__school_approval_state__rejected
+#: model:ir.model.fields.selection,name:school_finance.selection__crossovered_budget__school_approval_state__rejected
+#: model:ir.model.fields.selection,name:school_finance.selection__school_finance_approval_mixin__school_approval_state__rejected
+msgid "Rejected"
+msgstr "مرفوض"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_account_asset_asset__school_approval_reason
+#: model:ir.model.fields,field_description:school_finance.field_account_bank_statement_line__school_approval_reason
+#: model:ir.model.fields,field_description:school_finance.field_account_move__school_approval_reason
+#: model:ir.model.fields,field_description:school_finance.field_account_payment__school_approval_reason
+#: model:ir.model.fields,field_description:school_finance.field_crossovered_budget__school_approval_reason
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_approval_mixin__school_approval_reason
+msgid "Rejection / Return Reason"
+msgstr "سبب الرفض / الإعادة"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__rejection_reason
+msgid "Rejection Reason"
+msgstr "سبب الرفض"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_res_company__school_require_asset_disposal_approval
+#: model:ir.model.fields,field_description:school_finance.field_res_config_settings__school_require_asset_disposal_approval
+msgid "Require Asset Disposal Approval"
+msgstr "اشتراط اعتماد استبعاد الأصل"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_res_company__school_require_budget_approval
+#: model:ir.model.fields,field_description:school_finance.field_res_config_settings__school_require_budget_approval
+msgid "Require Budget Approval"
+msgstr "اشتراط اعتماد الموازنة"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_res_company__school_require_entry_approval
+#: model:ir.model.fields,field_description:school_finance.field_res_config_settings__school_require_entry_approval
+msgid "Require Journal Entry Approval"
+msgstr "اشتراط اعتماد قيد اليومية"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_res_company__school_require_student_receipt_approval
+#: model:ir.model.fields,field_description:school_finance.field_res_config_settings__school_require_student_receipt_approval
+msgid "Require Student Receipt Approval"
+msgstr "اشتراط اعتماد تحصيل الطالب"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_res_company__school_require_student_refund_approval
+#: model:ir.model.fields,field_description:school_finance.field_res_config_settings__school_require_student_refund_approval
+msgid "Require Student Refund Approval"
+msgstr "اشتراط اعتماد استرداد الطالب"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_res_company__school_require_vendor_bill_approval
+#: model:ir.model.fields,field_description:school_finance.field_res_config_settings__school_require_vendor_bill_approval
+msgid "Require Vendor Bill Approval"
+msgstr "اشتراط اعتماد فاتورة المورد"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_res_company__school_require_vendor_payment_approval
+#: model:ir.model.fields,field_description:school_finance.field_res_config_settings__school_require_vendor_payment_approval
+msgid "Require Vendor Payment Approval"
+msgstr "اشتراط اعتماد دفعة المورد"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_account_payment_form_school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_move_form_school_finance
+msgid "Required before Reject or Return for Correction."
+msgstr "مطلوب قبل الرفض أو الإعادة للتصحيح."
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_fee_batch_form
+msgid "Required when returning the batch for correction."
+msgstr "مطلوب عند إعادة الدفعة للتصحيح."
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_academic_year_form
+msgid "Reset to Draft"
+msgstr "إعادة التعيين كمسودة"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_account_journal__school_cashier_id
+msgid "Responsible Cashier"
+msgstr "أمين الصندوق المسؤول"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_demo_generator__result_message
+msgid "Result Message"
+msgstr "رسالة النتيجة"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_account_payment_form_school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_move_form_school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_fee_batch_form
+msgid "Return for Correction"
+msgstr "إعادة للتصحيح"
+
+#. module: school_finance
+#: model:ir.model.fields.selection,name:school_finance.selection__account_asset_asset__school_approval_state__returned
+#: model:ir.model.fields.selection,name:school_finance.selection__account_move__school_approval_state__returned
+#: model:ir.model.fields.selection,name:school_finance.selection__account_payment__school_approval_state__returned
+#: model:ir.model.fields.selection,name:school_finance.selection__crossovered_budget__school_approval_state__returned
+#: model:ir.model.fields.selection,name:school_finance.selection__school_finance_approval_mixin__school_approval_state__returned
+msgid "Returned for Correction"
+msgstr "معاد للتصحيح"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard_period__revenue
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
+msgid "Revenue"
+msgstr "الإيرادات"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
+msgid "Revenue and Expense Movement"
+msgstr "حركة الإيرادات والمصروفات"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_fee_batch_form
+msgid "Review"
+msgstr "مراجعة"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_account_asset_asset__school_reviewed_date
+#: model:ir.model.fields,field_description:school_finance.field_account_bank_statement_line__school_reviewed_date
+#: model:ir.model.fields,field_description:school_finance.field_account_move__school_reviewed_date
+#: model:ir.model.fields,field_description:school_finance.field_account_payment__school_reviewed_date
+#: model:ir.model.fields,field_description:school_finance.field_crossovered_budget__school_reviewed_date
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_approval_mixin__school_reviewed_date
+msgid "Review Date"
+msgstr "تاريخ المراجعة"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_asset_form_school_finance
+msgid "Review Disposal"
+msgstr "مراجعة الاستبعاد"
+
+#. module: school_finance
+#: model:ir.model.fields.selection,name:school_finance.selection__account_asset_asset__school_approval_state__reviewed
+#: model:ir.model.fields.selection,name:school_finance.selection__account_move__school_approval_state__reviewed
+#: model:ir.model.fields.selection,name:school_finance.selection__account_payment__school_approval_state__reviewed
+#: model:ir.model.fields.selection,name:school_finance.selection__crossovered_budget__school_approval_state__reviewed
+#: model:ir.model.fields.selection,name:school_finance.selection__school_fee_batch__state__reviewed
+#: model:ir.model.fields.selection,name:school_finance.selection__school_finance_approval_mixin__school_approval_state__reviewed
+msgid "Reviewed"
+msgstr "تمت المراجعة"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_account_asset_asset__school_reviewed_by_id
+#: model:ir.model.fields,field_description:school_finance.field_account_bank_statement_line__school_reviewed_by_id
+#: model:ir.model.fields,field_description:school_finance.field_account_move__school_reviewed_by_id
+#: model:ir.model.fields,field_description:school_finance.field_account_payment__school_reviewed_by_id
+#: model:ir.model.fields,field_description:school_finance.field_crossovered_budget__school_reviewed_by_id
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__reviewed_by_id
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_approval_mixin__school_reviewed_by_id
+msgid "Reviewed By"
+msgstr "راجعه"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل النصية القصيرة"
+
+#. module: school_finance
+#: model:ir.model.fields.selection,name:school_finance.selection__account_asset_asset__school_disposal_type__sale
+msgid "Sale"
+msgstr "بيع"
+
+#. module: school_finance
+#: model:ir.model,name:school_finance.model_school_academic_year
+msgid "School Academic Year"
+msgstr "السنة الدراسية للمدرسة"
+
+#. module: school_finance
+#: model:res.groups,name:school_finance.group_school_finance_accountant
+msgid "School Accountant"
+msgstr "محاسب المدرسة"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_asset_form_school_finance
+msgid "School Asset Control"
+msgstr "ضبط أصول المدرسة"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_account_bank_statement_line__school_collection_residual
+#: model:ir.model.fields,field_description:school_finance.field_account_move__school_collection_residual
+msgid "School Collection Balance"
+msgstr "الرصيد المتبقي للتحصيل"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_account_journal_form_school_finance
+msgid "School Controls"
+msgstr "ضوابط المدرسة"
+
+#. module: school_finance
+#: model:ir.model,name:school_finance.model_school_department
+msgid "School Department / Cost Center"
+msgstr "قسم المدرسة / مركز التكلفة"
+
+#. module: school_finance
+#: model:ir.model,name:school_finance.model_school_fee_batch
+msgid "School Fee Batch"
+msgstr "دفعة الرسوم المدرسية"
+
+#. module: school_finance
+#: model:ir.model,name:school_finance.model_school_fee_batch_line
+msgid "School Fee Batch Line"
+msgstr "بند دفعة الرسوم المدرسية"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_account_bank_statement_line__school_is_fee_invoice
+#: model:ir.model.fields,field_description:school_finance.field_account_move__school_is_fee_invoice
+msgid "School Fee Invoice"
+msgstr "فاتورة الرسوم المدرسية"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_account_move_filter_school_finance
+msgid "School Fee Invoices"
+msgstr "فواتير الرسوم المدرسية"
+
+#. module: school_finance
+#: model:ir.model,name:school_finance.model_school_fee_type
+msgid "School Fee Type"
+msgstr "نوع الرسوم المدرسية"
+
+#. module: school_finance
+#: model:ir.ui.menu,name:school_finance.menu_school_finance_root
+#: model_terms:ir.ui.view,arch_db:school_finance.view_account_payment_form_school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_move_form_school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_partner_form_school_finance
+msgid "School Finance"
+msgstr "مالية المدرسة"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.res_config_settings_view_form_school_finance
+msgid "School Finance Approval Policies"
+msgstr "سياسات الموافقات المالية المدرسية"
+
+#. module: school_finance
+#: model:ir.model,name:school_finance.model_school_finance_approval_mixin
+msgid "School Finance Approval Workflow"
+msgstr "مسار اعتماد مالية المدرسة"
+
+#. module: school_finance
+#: model:res.groups.privilege,name:school_finance.privilege_school_finance
+msgid "School Finance Control"
+msgstr "الرقابة المالية المدرسية"
+
+#. module: school_finance
+#: model:ir.model,name:school_finance.model_school_finance_dashboard
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
+msgid "School Finance Dashboard"
+msgstr "لوحة مالية المدرسة"
+
+#. module: school_finance
+#: model:ir.model,name:school_finance.model_school_finance_dashboard_period
+msgid "School Finance Dashboard Period"
+msgstr "فترة لوحة مالية المدرسة"
+
+#. module: school_finance
+#: model:res.groups,name:school_finance.group_school_finance_manager
+msgid "School Finance Manager"
+msgstr "مدير مالية المدرسة"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.res_config_settings_view_form_school_finance
+msgid "School Finance Validation Policies"
+msgstr "سياسات التحقق المالي المدرسية"
+
+#. module: school_finance
+#: model:ir.model,name:school_finance.model_school_installment_plan
+msgid "School Installment Plan"
+msgstr "خطة الأقساط المدرسية"
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/res_partner.py:0
+#: model:ir.model.fields,field_description:school_finance.field_res_partner__school_invoice_count
+#: model:ir.model.fields,field_description:school_finance.field_res_users__school_invoice_count
+#: model_terms:ir.ui.view,arch_db:school_finance.view_partner_form_school_finance
+msgid "School Invoices"
+msgstr "فواتير المدرسة"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_account_payment__school_payment_reference
+#: model:ir.model.fields,field_description:school_finance.field_account_payment_register__school_payment_reference
+msgid "School Payment Reference"
+msgstr "مرجع دفعة المدرسة"
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/res_partner.py:0
+#: model:ir.model.fields,field_description:school_finance.field_res_partner__school_payment_count
+#: model:ir.model.fields,field_description:school_finance.field_res_users__school_payment_count
+#: model_terms:ir.ui.view,arch_db:school_finance.view_partner_form_school_finance
+msgid "School Payments"
+msgstr "دفعات المدرسة"
+
+#. module: school_finance
+#: model:ir.model.fields.selection,name:school_finance.selection__account_asset_asset__school_disposal_type__scrap
+msgid "Scrap"
+msgstr "إتلاف"
+
+#. module: school_finance
+#: model:ir.model.fields.selection,name:school_finance.selection__account_move__school_term__term_2
+#: model:ir.model.fields.selection,name:school_finance.selection__school_fee_batch__term__term_2
+msgid "Second Term"
+msgstr "الفصل الثاني"
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/res_partner.py:0
+msgid "Select a financial guardian when invoices are issued to a guardian."
+msgstr "حدد ولي الأمر المسؤول ماليًا عندما تُصدر الفواتير باسم ولي الأمر."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/fee_batch.py:0
+msgid "Select at least one student."
+msgstr "حدد طالبًا واحدًا على الأقل."
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch_line__sequence
+msgid "Sequence"
+msgstr "تسلسل"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_academic_year__date_from
+msgid "Start Date"
+msgstr "تاريخ البدء"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_academic_year__state
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_fee_batch_search
+msgid "Status"
+msgstr "الحالة"
+
+#. module: school_finance
+#: model:ir.model.fields,help:school_finance.field_school_fee_batch__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الأنشطة المعتمدة على الحالة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_account_bank_statement_line__school_student_id
+#: model:ir.model.fields,field_description:school_finance.field_account_move__school_student_id
+#: model:ir.model.fields,field_description:school_finance.field_account_payment__school_student_id
+#: model:ir.model.fields,field_description:school_finance.field_account_payment_register__school_student_id
+#: model:ir.model.fields,field_description:school_finance.field_res_partner__is_school_student
+#: model:ir.model.fields,field_description:school_finance.field_res_users__is_school_student
+#: model:ir.model.fields.selection,name:school_finance.selection__res_partner__school_invoice_recipient__student
+#: model_terms:ir.ui.view,arch_db:school_finance.view_account_move_filter_school_finance
+msgid "Student"
+msgstr "الطالب"
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/fee_batch.py:0
+msgid "Student %s has no financially responsible guardian."
+msgstr "لا يوجد ولي أمر مسؤول ماليًا للطالب %s."
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_res_partner__school_student_code
+#: model:ir.model.fields,field_description:school_finance.field_res_users__school_student_code
+msgid "Student Code"
+msgstr "رقم الطالب"
+
+#. module: school_finance
+#: model:ir.ui.menu,name:school_finance.menu_school_finance_fees_root
+msgid "Student Fees"
+msgstr "رسوم الطلاب"
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/account_move.py:0
+msgid "Student Installments"
+msgstr "أقساط الطالب"
+
+#. module: school_finance
+#: model:ir.actions.act_window,name:school_finance.action_school_invoices
+#: model:ir.ui.menu,name:school_finance.menu_school_invoices
+msgid "Student Invoices"
+msgstr "فواتير الطلاب"
+
+#. module: school_finance
+#: model:ir.actions.act_window,name:school_finance.action_school_payments
+#: model:ir.ui.menu,name:school_finance.menu_school_payments
+#: model_terms:ir.ui.view,arch_db:school_finance.view_account_payment_search_school_finance
+msgid "Student Payments"
+msgstr "دفعات الطلاب"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.res_config_settings_view_form_school_finance
+msgid "Student Receipt Approval"
+msgstr "اعتماد سندات قبض الطلاب"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.res_config_settings_view_form_school_finance
+msgid "Student Refund Approval"
+msgstr "اعتماد مستردات الطلاب"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_res_partner__school_student_status
+#: model:ir.model.fields,field_description:school_finance.field_res_users__school_student_status
+#: model_terms:ir.ui.view,arch_db:school_finance.view_partner_search_school_finance
+msgid "Student Status"
+msgstr "حالة الطالب"
+
+#. module: school_finance
+#: model:ir.actions.act_window,name:school_finance.action_school_students
+#: model:ir.model.fields,field_description:school_finance.field_res_partner__school_student_ids
+#: model:ir.model.fields,field_description:school_finance.field_res_users__school_student_ids
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__student_ids
+#: model:ir.ui.menu,name:school_finance.menu_school_students
+#: model_terms:ir.ui.view,arch_db:school_finance.view_partner_search_school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_fee_batch_form
+msgid "Students"
+msgstr "الطلاب"
+
+#. module: school_finance
+#: model:ir.ui.menu,name:school_finance.menu_school_finance_students_root
+msgid "Students & Guardians"
+msgstr "الطلاب وأولياء الأمور"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_account_asset_asset__school_submitted_date
+#: model:ir.model.fields,field_description:school_finance.field_account_bank_statement_line__school_submitted_date
+#: model:ir.model.fields,field_description:school_finance.field_account_move__school_submitted_date
+#: model:ir.model.fields,field_description:school_finance.field_account_payment__school_submitted_date
+#: model:ir.model.fields,field_description:school_finance.field_crossovered_budget__school_submitted_date
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_approval_mixin__school_submitted_date
+msgid "Submission Date"
+msgstr "تاريخ الإرسال"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_fee_batch_form
+msgid "Submit"
+msgstr "إرسال"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_asset_form_school_finance
+msgid "Submit Disposal"
+msgstr "إرسال الاستبعاد"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_account_payment_form_school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_budget_form_school_approval
+#: model_terms:ir.ui.view,arch_db:school_finance.view_move_form_school_finance
+msgid "Submit for Review"
+msgstr "إرسال للمراجعة"
+
+#. module: school_finance
+#: model:ir.model.fields.selection,name:school_finance.selection__account_asset_asset__school_approval_state__submitted
+#: model:ir.model.fields.selection,name:school_finance.selection__account_move__school_approval_state__submitted
+#: model:ir.model.fields.selection,name:school_finance.selection__account_payment__school_approval_state__submitted
+#: model:ir.model.fields.selection,name:school_finance.selection__crossovered_budget__school_approval_state__submitted
+#: model:ir.model.fields.selection,name:school_finance.selection__school_fee_batch__state__submitted
+#: model:ir.model.fields.selection,name:school_finance.selection__school_finance_approval_mixin__school_approval_state__submitted
+msgid "Submitted"
+msgstr "مرسل للمراجعة"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_account_asset_asset__school_submitted_by_id
+#: model:ir.model.fields,field_description:school_finance.field_account_bank_statement_line__school_submitted_by_id
+#: model:ir.model.fields,field_description:school_finance.field_account_move__school_submitted_by_id
+#: model:ir.model.fields,field_description:school_finance.field_account_payment__school_submitted_by_id
+#: model:ir.model.fields,field_description:school_finance.field_crossovered_budget__school_submitted_by_id
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__submitted_by_id
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_approval_mixin__school_submitted_by_id
+msgid "Submitted By"
+msgstr "أرسله"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch_line__subtotal
+msgid "Subtotal"
+msgstr "الناتج الفرعي"
+
+#. module: school_finance
+#: model:ir.model.fields.selection,name:school_finance.selection__res_partner__school_student_status__suspended
+msgid "Suspended"
+msgstr "موقوف"
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/wizard/demo_generator.py:0
+msgid "Synthetic school demo data already exists."
+msgstr "توجد بالفعل بيانات مدرسية تجريبية اصطناعية."
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_res_company__school_is_demo_company
+msgid "TEST / DEMO Company"
+msgstr "شركة TEST / DEMO"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_account_bank_statement_line__school_demo_data
+#: model:ir.model.fields,field_description:school_finance.field_account_move__school_demo_data
+#: model:ir.model.fields,field_description:school_finance.field_account_payment__school_demo_data
+#: model:ir.model.fields,field_description:school_finance.field_res_partner__school_demo_data
+#: model:ir.model.fields,field_description:school_finance.field_res_users__school_demo_data
+#: model:ir.model.fields,field_description:school_finance.field_school_academic_year__school_demo_data
+#: model:ir.model.fields,field_description:school_finance.field_school_department__school_demo_data
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__school_demo_data
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_type__school_demo_data
+#: model:ir.model.fields,field_description:school_finance.field_school_installment_plan__school_demo_data
+msgid "TEST / DEMO Data"
+msgstr "بيانات TEST / DEMO"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch_line__tax_ids
+msgid "Tax"
+msgstr "الضريبة"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__term
+msgid "Term"
+msgstr "الفصل"
+
+#. module: school_finance
+#: model:ir.model.constraint,message:school_finance.constraint_school_academic_year_code_company_unique
+msgid "The academic year code must be unique per company."
+msgstr "يجب أن يكون رمز السنة الدراسية فريدًا لكل شركة."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/master_data.py:0
+msgid "The academic year end date must follow its start date."
+msgstr "يجب أن يأتي تاريخ نهاية السنة الدراسية بعد تاريخ بدايتها."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/master_data.py:0
+msgid "The default fee amount cannot be negative."
+msgstr "لا يمكن أن يكون مبلغ الرسم الافتراضي سالبًا."
+
+#. module: school_finance
+#: model:ir.model.constraint,message:school_finance.constraint_school_department_code_company_unique
+msgid "The department code must be unique per company."
+msgstr "يجب أن يكون رمز القسم فريدًا لكل شركة."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/fee_batch.py:0
+msgid "The due date cannot be earlier than the invoice date."
+msgstr "لا يمكن أن يسبق تاريخ الاستحقاق تاريخ الفاتورة."
+
+#. module: school_finance
+#: model:ir.model.constraint,message:school_finance.constraint_school_fee_type_code_company_unique
+msgid "The fee type code must be unique per company."
+msgstr "يجب أن يكون رمز نوع الرسم فريدًا لكل شركة."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/res_partner.py:0
+msgid "The financially responsible contact must be a guardian."
+msgstr "يجب أن تكون جهة الاتصال المسؤولة ماليًا ولي أمر."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/res_partner.py:0
+msgid "The financially responsible guardian must be linked to the student."
+msgstr "يجب ربط ولي الأمر المسؤول ماليًا بالطالب."
+
+#. module: school_finance
+#: model:ir.model.constraint,message:school_finance.constraint_res_partner_guardian_code_unique
+msgid "The guardian code must be unique."
+msgstr "يجب أن يكون رمز ولي الأمر فريدًا."
+
+#. module: school_finance
+#: model:ir.model.constraint,message:school_finance.constraint_school_installment_plan_code_company_unique
+msgid "The installment plan code must be unique per company."
+msgstr "يجب أن يكون رمز خطة الأقساط فريدًا لكل شركة."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/account_move.py:0
+msgid ""
+"The invoice customer must match the student's configured invoice recipient."
+msgstr "يجب أن يطابق عميل الفاتورة مستلم الفاتورة المحدد للطالب."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/account_move.py:0
+msgid "The selected contact is not marked as a student."
+msgstr "جهة الاتصال المحددة غير معيّنة كطالب."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/account_move.py:0
+msgid "The selected guardian is not marked as a guardian."
+msgstr "جهة الاتصال المحددة غير معيّنة كولي أمر."
+
+#. module: school_finance
+#: model:ir.model.constraint,message:school_finance.constraint_res_partner_student_code_unique
+msgid "The student code must be unique."
+msgstr "يجب أن يكون رمز الطالب فريدًا."
+
+#. module: school_finance
+#: model:ir.model.fields.selection,name:school_finance.selection__account_move__school_term__term_3
+#: model:ir.model.fields.selection,name:school_finance.selection__school_fee_batch__term__term_3
+msgid "Third Term"
+msgstr "الفصل الثالث"
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/account_payment.py:0
+msgid "This payment would make the configured cash balance negative."
+msgstr "ستؤدي هذه الدفعة إلى جعل رصيد الصندوق سالبًا."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/account_payment.py:0
+msgid "This school payment reference has already been used in this journal."
+msgstr "سبق استخدام مرجع دفعة المدرسة هذا في اليومية."
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_demo_generator_form
+msgid ""
+"This tool is blocked unless the database name indicates TEST/DEMO/STAGING/CLONE/CODEX,\n"
+"                    or the selected company is explicitly marked as a TEST / DEMO company."
+msgstr ""
+"هذه الأداة محظورة ما لم يدل اسم قاعدة البيانات على اختبار/تجريب/تجهيز/نسخة،\n"
+"                    أو تكن الشركة المحددة موسومة صراحة بأنها شركة اختبار / تجريب."
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__total_expense
+msgid "Total Expense"
+msgstr "إجمالي المصروفات"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__total_payable
+msgid "Total Payable"
+msgstr "إجمالي الذمم الدائنة"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__total_receivable
+msgid "Total Receivable"
+msgstr "إجمالي الذمم المدينة"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__total_revenue
+msgid "Total Revenue"
+msgstr "إجمالي الإيرادات"
+
+#. module: school_finance
+#: model:ir.model.fields,help:school_finance.field_school_fee_batch__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع النشاط المستثنى في السجل."
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch_line__unit_price
+msgid "Unit Price"
+msgstr "سعر الوحدة"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__unpaid_student_invoice_amount
+msgid "Unpaid Student Invoice Amount"
+msgstr "مبلغ فواتير الطلاب غير المسددة"
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_finance_dashboard__unpaid_student_invoice_count
+msgid "Unpaid Student Invoice Count"
+msgstr "عدد فواتير الطلاب غير المسددة"
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/dashboard.py:0
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
+msgid "Unpaid Student Invoices"
+msgstr "فواتير الطلاب غير المدفوعة"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.res_config_settings_view_form_school_finance
+msgid "Vendor Bill Approval"
+msgstr "اعتماد فواتير الموردين"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.res_config_settings_view_form_school_finance
+msgid "Vendor Payment Approval"
+msgstr "اعتماد مدفوعات الموردين"
+
+#. module: school_finance
+#: model:ir.model.fields.selection,name:school_finance.selection__res_company__school_cash_negative_policy__warn
+msgid "Warn in Chatter"
+msgstr "تحذير في سجل المحادثات"
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/account_payment.py:0
+msgid "Warning: this payment may make the configured cash balance negative."
+msgstr "تحذير: قد تجعل هذه الدفعة الرصيد النقدي المحدد سالبًا."
+
+#. module: school_finance
+#: model:ir.model.fields,field_description:school_finance.field_school_fee_batch__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع الإلكتروني"
+
+#. module: school_finance
+#: model:ir.model.fields,help:school_finance.field_school_fee_batch__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع الإلكتروني"
+
+#. module: school_finance
+#: model:ir.model.fields.selection,name:school_finance.selection__res_partner__school_student_status__withdrawn
+msgid "Withdrawn"
+msgstr "منسحب"
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/account_payment.py:0
+msgid "You are not authorized to use this journal."
+msgstr "غير مصرح لك باستخدام دفتر اليومية هذا."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/approval_mixin.py:0
+msgid "You cannot approve a document that you created."
+msgstr "لا يمكنك اعتماد مستند أنشأته."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/fee_batch.py:0
+msgid "You cannot approve a fee batch that you created."
+msgstr "لا يمكنك اعتماد دفعة رسوم أنشأتها."
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/dashboard.py:0
+msgid "company_id"
+msgstr "الشركة"
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/fee_batch.py:0
+msgid "id"
+msgstr "المعرف"
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/account_move.py:0
+msgid "move_id"
+msgstr "الحركة المحاسبية"
+
+#. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/res_partner.py:0
+msgid "school_student_id"
+msgstr "الطالب"
+
+#. module: school_finance
+#: model:ir.ui.menu,name:school_finance.menu_school_finance_dashboard
+msgid "School Dashboard"
+msgstr "لوحة المدرسة"
+
+#. module: school_finance
+#: model:ir.ui.menu,name:school_finance.menu_school_finance_configuration
+msgid "School Configuration"
+msgstr "إعدادات المدرسة"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
+msgid "<span>Bank accounts:</span>"
+msgstr "<span>الحسابات البنكية:</span>"
+
+#. module: school_finance
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
+msgid "<span>Cash boxes:</span>"
+msgstr "<span>الصناديق النقدية:</span>"

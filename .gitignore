@@ -1,0 +1,35 @@
+# Runtime secrets and local deployment configuration
+.env
+.env.*
+!.env.example
+config/odoo.conf
+docker-compose.yml
+docker-compose.yml.bak
+
+# PostgreSQL data and database backups
+postgresql/
+backups/
+*.dump
+*.sql
+*.sql.gz
+
+# Odoo runtime data
+odoo-web-data/
+sessions/
+filestore/
+
+# Python and test caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Logs, temporary files, and editor metadata
+*.log
+*.pid
+*.swp
+*~
+.DS_Store
+.idea/
+.vscode/

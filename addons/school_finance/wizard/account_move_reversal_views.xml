@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_account_move_reversal_school_finance" model="ir.ui.view">
+        <field name="name">account.move.reversal.school.finance</field>
+        <field name="model">account.move.reversal</field>
+        <field name="inherit_id" ref="account.view_account_move_reversal"/>
+        <field name="arch" type="xml">
+            <field name="reason" position="after">
+                <div class="alert alert-info" role="alert">
+                    A reason is mandatory when creating a credit note for a school fee invoice.
+                </div>
+            </field>
+        </field>
+    </record>
+</odoo>
+

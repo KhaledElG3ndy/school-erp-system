@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_budget_form_school_approval" model="ir.ui.view">
+        <field name="name">crossovered.budget.form.school.approval</field>
+        <field name="model">crossovered.budget</field>
+        <field name="inherit_id" ref="om_account_budget.crossovered_budget_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="action_school_submit" string="Submit for Review" type="object"
+                        class="oe_highlight"
+                        invisible="not school_approval_required or state != 'confirm' or school_approval_state not in ('draft', 'returned', 'rejected')"/>
+                <button name="action_school_review" string="Finance Review" type="object"
+                        class="oe_highlight" groups="school_finance.group_school_finance_reviewer"
+                        invisible="not school_approval_required or state != 'confirm' or school_approval_state != 'submitted'"/>
+                <button name="action_school_approve" string="Finance Approve" type="object"
+                        class="oe_highlight" groups="school_finance.group_school_finance_approver"
+                        invisible="not school_approval_required or state != 'confirm' or school_approval_state != 'reviewed'"/>
+                <field name="school_approval_state" widget="statusbar"
+                       statusbar_visible="draft,submitted,reviewed,approved"
+                       invisible="not school_approval_required"/>
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page string="Finance Approval" invisible="not school_approval_required">
+                    <group>
+                        <field name="school_submitted_by_id" readonly="1"/>
+                        <field name="school_submitted_date" readonly="1"/>
+                        <field name="school_reviewed_by_id" readonly="1"/>
+                        <field name="school_reviewed_date" readonly="1"/>
+                        <field name="school_approved_by_id" readonly="1"/>
+                        <field name="school_approved_date" readonly="1"/>
+                        <field name="school_approval_reason"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_asset_form_school_finance" model="ir.ui.view">
+        <field name="name">account.asset.asset.form.school.finance</field>
+        <field name="model">account.asset.asset</field>
+        <field name="inherit_id" ref="om_account_asset.view_account_asset_asset_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="action_school_submit" string="Submit Disposal" type="object"
+                        class="oe_highlight"
+                        invisible="not school_approval_required or state != 'open' or school_approval_state not in ('draft', 'returned', 'rejected')"/>
+                <button name="action_school_review" string="Review Disposal" type="object"
+                        class="oe_highlight" groups="school_finance.group_school_finance_reviewer"
+                        invisible="not school_approval_required or state != 'open' or school_approval_state != 'submitted'"/>
+                <button name="action_school_approve" string="Approve Disposal" type="object"
+                        class="oe_highlight" groups="school_finance.group_school_finance_approver"
+                        invisible="not school_approval_required or state != 'open' or school_approval_state != 'reviewed'"/>
+                <field name="school_approval_state" widget="statusbar"
+                       statusbar_visible="draft,submitted,reviewed,approved"
+                       invisible="not school_approval_required"/>
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page string="School Asset Control">
+                    <group>
+                        <group>
+                            <field name="school_department_id"/>
+                            <field name="school_asset_location"/>
+                            <field name="school_custodian_id"/>
+                        </group>
+                        <group>
+                            <field name="school_disposal_type"/>
+                            <field name="school_disposal_proceeds"/>
+                            <field name="school_disposal_reason"/>
+                        </group>
+                    </group>
+                </page>
+                <page string="Disposal Approval" invisible="not school_approval_required">
+                    <group>
+                        <field name="school_submitted_by_id" readonly="1"/>
+                        <field name="school_submitted_date" readonly="1"/>
+                        <field name="school_reviewed_by_id" readonly="1"/>
+                        <field name="school_reviewed_date" readonly="1"/>
+                        <field name="school_approved_by_id" readonly="1"/>
+                        <field name="school_approved_date" readonly="1"/>
+                        <field name="school_approval_reason"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

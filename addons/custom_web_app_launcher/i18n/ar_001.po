@@ -1,0 +1,26 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"PO-Revision-Date: 2026-07-26 00:00+0300\n"
+"Last-Translator: KhaledElG3ndy\n"
+"Language-Team: Arabic\n"
+"Language: ar_001\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. module: custom_web_app_launcher
+#: model:ir.actions.client,name:custom_web_app_launcher.action_app_launcher
+msgid "Apps"
+msgstr "التطبيقات"
+
+#. module: custom_web_app_launcher
+#: code:addons/custom_web_app_launcher/static/src/app_launcher/app_launcher.xml:0
+msgid "Back"
+msgstr "العودة"
+
+#. module: custom_web_app_launcher
+#: code:addons/custom_web_app_launcher/static/src/app_launcher/navbar_app_launcher_patch.xml:0
+msgid "Home Menu"
+msgstr "القائمة الرئيسية"

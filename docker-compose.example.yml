@@ -1,0 +1,28 @@
+services:
+  db:
+    image: postgres:16
+    container_name: school-system-db
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-school_system}
+      POSTGRES_USER: ${POSTGRES_USER:-odoo}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    volumes:
+      - ./postgresql:/var/lib/postgresql/data
+    restart: always
+
+  odoo:
+    image: odoo:19.0
+    container_name: school-system-odoo
+    depends_on:
+      - db
+    ports:
+      - "127.0.0.1:8169:8069"
+      - "127.0.0.1:8172:8072"
+    volumes:
+      - ./addons:/mnt/extra-addons
+      - ./config/odoo.conf:/etc/odoo/odoo.conf
+      - odoo-web-data:/var/lib/odoo
+    restart: always
+
+volumes:
+  odoo-web-data:

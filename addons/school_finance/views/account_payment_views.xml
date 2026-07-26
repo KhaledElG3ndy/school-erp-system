@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_account_payment_form_school_finance" model="ir.ui.view">
+        <field name="name">account.payment.form.school.finance</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="action_school_submit" string="Submit for Review" type="object"
+                        class="oe_highlight"
+                        invisible="not school_approval_required or state != 'draft' or school_approval_state not in ('draft', 'returned', 'rejected')"/>
+                <button name="action_school_review" string="Finance Review" type="object"
+                        class="oe_highlight" groups="school_finance.group_school_finance_reviewer"
+                        invisible="not school_approval_required or state != 'draft' or school_approval_state != 'submitted'"/>
+                <button name="action_school_approve" string="Finance Approve" type="object"
+                        class="oe_highlight" groups="school_finance.group_school_finance_approver"
+                        invisible="not school_approval_required or state != 'draft' or school_approval_state != 'reviewed'"/>
+                <button name="action_school_reject" string="Reject" type="object"
+                        groups="school_finance.group_school_finance_reviewer"
+                        invisible="not school_approval_required or state != 'draft' or school_approval_state not in ('submitted', 'reviewed')"/>
+                <button name="action_school_return" string="Return for Correction" type="object"
+                        groups="school_finance.group_school_finance_reviewer"
+                        invisible="not school_approval_required or state != 'draft' or school_approval_state not in ('submitted', 'reviewed', 'approved')"/>
+                <field name="school_approval_state" widget="statusbar"
+                       statusbar_visible="draft,submitted,reviewed,approved"
+                       invisible="not school_approval_required"/>
+            </xpath>
+            <xpath expr="//notebook[@name='payment_notebook']" position="inside">
+                <page string="School Finance">
+                    <group>
+                        <group>
+                            <field name="school_student_id" readonly="state != 'draft'"/>
+                            <field name="school_guardian_id" readonly="state != 'draft'"/>
+                            <field name="school_payment_reference" readonly="state != 'draft'"/>
+                            <field name="school_demo_data" readonly="1"/>
+                        </group>
+                        <group invisible="not school_approval_required">
+                            <field name="school_submitted_by_id" readonly="1"/>
+                            <field name="school_submitted_date" readonly="1"/>
+                            <field name="school_reviewed_by_id" readonly="1"/>
+                            <field name="school_reviewed_date" readonly="1"/>
+                            <field name="school_approved_by_id" readonly="1"/>
+                            <field name="school_approved_date" readonly="1"/>
+                            <field name="school_approval_reason"
+                                   placeholder="Required before Reject or Return for Correction."/>
+                        </group>
+                    </group>
+                    <div class="alert alert-info" role="alert">
+                        Add payment proof using the standard attachment control in the chatter.
+                    </div>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_account_payment_search_school_finance" model="ir.ui.view">
+        <field name="name">account.payment.search.school.finance</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search" position="inside">
+                <field name="school_student_id"/>
+                <field name="school_guardian_id"/>
+                <field name="school_payment_reference"/>
+                <filter name="school_student_payments" string="Student Payments"
+                        domain="[('school_student_id', '!=', False)]"/>
+                <filter name="school_payment_pending_review" string="Pending Finance Review"
+                        domain="[('school_approval_required', '=', True), ('school_approval_state', '=', 'submitted')]"/>
+                <filter name="school_payment_pending_approval" string="Pending Finance Approval"
+                        domain="[('school_approval_required', '=', True), ('school_approval_state', '=', 'reviewed')]"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_school_payments" model="ir.actions.act_window">
+        <field name="name">Student Payments</field>
+        <field name="res_model">account.payment</field>
+        <field name="view_mode">list,kanban,form,graph</field>
+        <field name="domain">[('school_student_id', '!=', False)]</field>
+        <field name="context">{
+            'default_partner_type': 'customer',
+            'default_payment_type': 'inbound',
+            'search_default_school_student_payments': 1
+        }</field>
+    </record>
+</odoo>
+
