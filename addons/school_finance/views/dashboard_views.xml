@@ -4,7 +4,7 @@
         <field name="name">school.finance.dashboard.form</field>
         <field name="model">school.finance.dashboard</field>
         <field name="arch" type="xml">
-            <form string="School Finance Dashboard" delete="false">
+            <form string="School Financial Overview" delete="false">
                 <header>
                     <button name="action_refresh" string="Refresh" type="object" class="oe_highlight"/>
                 </header>
@@ -117,7 +117,7 @@
         </field>
     </record>
     <record id="action_school_finance_dashboard" model="ir.actions.act_window">
-        <field name="name">Finance Dashboard</field>
+        <field name="name">School Financial Overview</field>
         <field name="res_model">school.finance.dashboard</field>
         <field name="view_mode">form</field>
         <field name="view_id" ref="view_school_finance_dashboard_form"/>

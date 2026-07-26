@@ -4,6 +4,12 @@
         <record id="account.menu_finance" model="ir.ui.menu">
             <field name="name">Accounting</field>
         </record>
+        <!-- account.menu_finance belongs to Odoo's account module, whose
+             standard Arabic translation is "Invoicing".  Store the intended
+             Arabic translation on that inherited record as well. -->
+        <record id="account.menu_finance" model="ir.ui.menu" context="{'lang': 'ar_001'}">
+            <field name="name">المحاسبة</field>
+        </record>
 
         <record id="om_account_accountant.menu_finance_entries_accounting_journals" model="ir.ui.menu">
             <field name="name">Journals</field>

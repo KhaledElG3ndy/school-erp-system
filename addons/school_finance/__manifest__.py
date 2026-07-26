@@ -1,7 +1,7 @@
 {
     "name": "Saudi School Finance",
     "summary": "School students, guardians, fees, installments, approvals and finance dashboard",
-    "version": "19.0.1.0.3",
+    "version": "19.0.1.0.4",
     "category": "Accounting",
     "author": "TelNova",
     "license": "LGPL-3",

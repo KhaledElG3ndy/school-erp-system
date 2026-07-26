@@ -477,6 +477,14 @@ class TestSchoolFinance(TransactionCase):
         self.assertIsNotNone(dashboard.bank_balance)
         self.assertIsNotNone(dashboard.cash_box_balance)
         self.assertTrue(dashboard.period_line_ids)
+        self.assertEqual(
+            dashboard.with_context(lang="en_US").display_name,
+            "School Financial Overview",
+        )
+        self.assertEqual(
+            dashboard.with_context(lang="ar_001").display_name,
+            "الملخص المالي للمدرسة",
+        )
 
     def test_sa_localization_arabic_and_correct_lock_date_mapping(self):
         self.assertEqual(
@@ -506,11 +514,19 @@ class TestSchoolFinance(TransactionCase):
         )
         self.assertEqual(
             english_env.ref("school_finance.menu_school_finance_dashboard").name,
-            "School Dashboard",
+            "School Financial Overview",
         )
         self.assertEqual(
             arabic_env.ref("school_finance.menu_school_finance_dashboard").name,
-            "لوحة المدرسة",
+            "الملخص المالي للمدرسة",
+        )
+        self.assertEqual(
+            english_env.ref("account.menu_finance").name,
+            "Accounting",
+        )
+        self.assertEqual(
+            arabic_env.ref("account.menu_finance").name,
+            "المحاسبة",
         )
         self.assertEqual(
             arabic_env["res.lang"]._lang_get("ar_001").direction,

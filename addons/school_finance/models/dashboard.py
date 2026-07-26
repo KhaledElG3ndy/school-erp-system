@@ -5,7 +5,12 @@ from odoo import _, api, fields, models
 
 class SchoolFinanceDashboard(models.TransientModel):
     _name = "school.finance.dashboard"
-    _description = "School Finance Dashboard"
+    _description = "School Financial Overview"
+
+    @api.depends_context("lang")
+    def _compute_display_name(self):
+        for dashboard in self:
+            dashboard.display_name = _("School Financial Overview")
 
     date_from = fields.Date(
         required=True,
@@ -360,7 +365,7 @@ class SchoolFinanceDashboard(models.TransientModel):
 
 class SchoolFinanceDashboardPeriod(models.TransientModel):
     _name = "school.finance.dashboard.period"
-    _description = "School Finance Dashboard Period"
+    _description = "School Financial Overview Period"
     _order = "date_from"
 
     dashboard_id = fields.Many2one(

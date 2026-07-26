@@ -871,9 +871,14 @@ msgid "Finance Approver"
 msgstr "معتمد مالي"
 
 #. module: school_finance
+#. odoo-python
+#: code:addons/school_finance/models/dashboard.py:0
 #: model:ir.actions.act_window,name:school_finance.action_school_finance_dashboard
-msgid "Finance Dashboard"
-msgstr "لوحة المالية"
+#: model:ir.model,name:school_finance.model_school_finance_dashboard
+#: model:ir.ui.menu,name:school_finance.menu_school_finance_dashboard
+#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
+msgid "School Financial Overview"
+msgstr "الملخص المالي للمدرسة"
 
 #. module: school_finance
 #: model:res.groups,name:school_finance.group_school_finance_entry
@@ -1815,15 +1820,9 @@ msgid "School Finance Control"
 msgstr "الرقابة المالية المدرسية"
 
 #. module: school_finance
-#: model:ir.model,name:school_finance.model_school_finance_dashboard
-#: model_terms:ir.ui.view,arch_db:school_finance.view_school_finance_dashboard_form
-msgid "School Finance Dashboard"
-msgstr "لوحة مالية المدرسة"
-
-#. module: school_finance
 #: model:ir.model,name:school_finance.model_school_finance_dashboard_period
-msgid "School Finance Dashboard Period"
-msgstr "فترة لوحة مالية المدرسة"
+msgid "School Financial Overview Period"
+msgstr "فترة الملخص المالي للمدرسة"
 
 #. module: school_finance
 #: model:res.groups,name:school_finance.group_school_finance_manager
@@ -2325,11 +2324,6 @@ msgstr "الحركة المحاسبية"
 #: code:addons/school_finance/models/res_partner.py:0
 msgid "school_student_id"
 msgstr "الطالب"
-
-#. module: school_finance
-#: model:ir.ui.menu,name:school_finance.menu_school_finance_dashboard
-msgid "School Dashboard"
-msgstr "لوحة المدرسة"
 
 #. module: school_finance
 #: model:ir.ui.menu,name:school_finance.menu_school_finance_configuration

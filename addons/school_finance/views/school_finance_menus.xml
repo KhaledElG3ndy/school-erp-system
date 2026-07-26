@@ -7,7 +7,7 @@
         <field name="active" eval="False"/>
     </record>
 
-    <menuitem id="menu_school_finance_dashboard" name="School Dashboard"
+    <menuitem id="menu_school_finance_dashboard" name="School Financial Overview"
               parent="account.menu_finance" action="action_school_finance_dashboard"
               sequence="2" groups="school_finance.group_school_finance_entry"/>
 
