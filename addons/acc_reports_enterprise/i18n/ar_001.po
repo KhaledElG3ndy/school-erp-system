@@ -1445,7 +1445,7 @@ msgstr "ضرائب أخرى (مصر)"
 #. odoo-javascript
 #: code:addons/acc_reports_enterprise/static/src/xml/report_client_action.xml:0
 msgid "PDF"
-msgstr "بي دي إف"
+msgstr "PDF"
 
 #. module: acc_reports_enterprise
 #. odoo-python
@@ -1957,7 +1957,7 @@ msgstr "ضرائب الخصم من المنبع (مصر)"
 #. odoo-javascript
 #: code:addons/acc_reports_enterprise/static/src/xml/report_client_action.xml:0
 msgid "XLSX"
-msgstr "إكس إل إس إكس"
+msgstr "XLSX"
 
 #. module: acc_reports_enterprise
 #. odoo-javascript
